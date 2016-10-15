@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         if (rb.velocity != Vector3.zero)
         {
             rb.rotation = Quaternion.LookRotation(rb.velocity);
-            transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
+            //transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
         }
         //rb.AddForce(horizontal*speed,0, vertical*speed);
 	}
