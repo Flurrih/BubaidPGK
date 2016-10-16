@@ -6,9 +6,9 @@ public class BallTriggerController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber)
         {
-            other.GetComponent<EnemyController>().GetHit();
+            other.GetComponent<PlayerController>().GotHit();
         }
     }
 }

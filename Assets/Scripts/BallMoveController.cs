@@ -12,6 +12,8 @@ public class BallMoveController : MonoBehaviour {
 
     public GameObject player;
 
+    public int playerNumber = 0;
+
     void Start()
     {
         line = transform.GetComponent<LineRenderer>();
@@ -19,8 +21,8 @@ public class BallMoveController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        horizontal2 = Input.GetAxis("Horizontal 2nd");
-        vertical2 = Input.GetAxis("Vertical 2nd");
+        horizontal2 = Input.GetAxis(playerNumber + "Horizontal 2nd");
+        vertical2 = Input.GetAxis(playerNumber + "Vertical 2nd");
 
         Vector3 movePoint;
 
@@ -31,7 +33,7 @@ public class BallMoveController : MonoBehaviour {
         {
             movePoint = player.transform.position + transform.position.normalized * moveRadius;
             transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime * 2);
-            Debug.Log(movePoint);
+            //Debug.Log(movePoint);
         }
         else
         {
