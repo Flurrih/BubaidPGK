@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
             Collider ball = leg.GetComponent<KickTriggerController>().GetCollider();
             if (ball != null)
             {
-                ball.GetComponent<Rigidbody>().AddForce(transform.forward * kickForce);
+                ball.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up / 4).normalized * kickForce);
             }
         }
         else

@@ -9,6 +9,7 @@ public class BallMoveController : MonoBehaviour {
     private float horizontal2;
     private float vertical2;
     private LineRenderer line;
+    private Rigidbody rb;
 
     public GameObject player;
 
@@ -17,6 +18,7 @@ public class BallMoveController : MonoBehaviour {
     void Start()
     {
         line = transform.GetComponent<LineRenderer>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -31,14 +33,16 @@ public class BallMoveController : MonoBehaviour {
 
         if((player.transform.position - transform.position).magnitude > moveRadius)
         {
-            movePoint = player.transform.position + transform.position.normalized * moveRadius;
-            transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime * 2);
+            movePoint = Vector3.ClampMagnitude((player.transform.position - transform.position), moveRadius);
+            //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime * 3);
+            rb.MovePosition(player.transform.position -  movePoint);
             //Debug.Log(movePoint);
         }
         else
         {
             movePoint = new Vector3(transform.position.x + horizontal2 * moveSpeed, transform.position.y, transform.position.z + vertical2 * moveSpeed);
-            transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
+            //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
+            rb.MovePosition(movePoint);
         }
         
     }
