@@ -20,8 +20,10 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate ()
     {
         GameObject leg = transform.FindChild("CubePivot").gameObject;
-        if (Input.GetButton(playerNumber + "Fire1"))
+        //if (Input.GetButton(playerNumber + "Fire1"))
+        if(Input.GetButtonDown(playerNumber + "Fire1"))
         {
+            Debug.Log(playerNumber);
             Collider ball = leg.GetComponent<KickTriggerController>().GetCollider();
             if (ball != null)
             {
@@ -45,10 +47,13 @@ public class PlayerController : MonoBehaviour {
 
     public void GotHit()
     {
-        Debug.Log(playerHealth);
+        GetComponentInChildren<ParticleSystem>().Clear();
+        GetComponentInChildren<ParticleSystem>().time = 0;
+        GetComponentInChildren<ParticleSystem>().Play();
         playerHealth -= 25;
         if (playerHealth <= 0)
             Destroy(transform.parent.gameObject);
+
     }
 
     public int GetHealth()
