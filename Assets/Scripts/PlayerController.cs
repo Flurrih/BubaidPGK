@@ -50,4 +50,9 @@ public class PlayerController : MonoBehaviour {
         if (playerHealth <= 0)
             Destroy(transform.parent.gameObject);
     }
+
+    public int GetHealth()
+    {
+        return playerHealth;
+    }
 }
