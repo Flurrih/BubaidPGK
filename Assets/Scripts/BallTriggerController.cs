@@ -2,12 +2,10 @@
 using System.Collections;
 
 public class BallTriggerController : MonoBehaviour {
-
-    bool canTrigger;
+    
     float timerTrigger;
     void Start()
     {
-        canTrigger = true;
     }
     void OnTriggerEnter(Collider other)
     {

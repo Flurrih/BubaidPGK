@@ -11,29 +11,30 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
 
     private int playerHealth = 100;
+    private GameObject leg;
+    //
+    Collider ball;
+    //
+
+    public GameObject playersBall;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        leg = transform.FindChild("CubePivot").gameObject;
+        ball = leg.GetComponent<KickTriggerController>().GetCollider();
     }
 
 	void FixedUpdate ()
     {
-        GameObject leg = transform.FindChild("CubePivot").gameObject;
-        //if (Input.GetButton(playerNumber + "Fire1"))
-        if(Input.GetButtonDown(playerNumber + "Fire1"))
-        {
-            Debug.Log(playerNumber);
-            Collider ball = leg.GetComponent<KickTriggerController>().GetCollider();
-            if (ball != null)
-            {
-                ball.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up / 4).normalized * kickForce);
-            }
-        }
-        else
-        {
-            leg.transform.rotation = Quaternion.identity;
-        }
+        ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        FireButton();
+        PullButton();
+        playerMovement();
+	}
+
+    void playerMovement()
+    {
         horizontal = Input.GetAxis(playerNumber + "Horizontal");
         vertical = Input.GetAxis(playerNumber + "Vertical");
         rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
@@ -43,13 +44,42 @@ public class PlayerController : MonoBehaviour {
             //transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
         }
         //rb.AddForce(horizontal*speed,0, vertical*speed);
-	}
+    }
+
+    /*
+     * Ball kick must be recoded.
+     * It's player controller not ball's - u can't move ball here
+     */
+    void FireButton()
+    {
+        if (Input.GetButton(playerNumber + "Fire1"))
+        {
+            if (ball != null)
+            {
+                ball.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up / 4).normalized * kickForce);
+            }
+        }
+        else
+        {
+            leg.transform.rotation = Quaternion.identity;
+        }
+    }
+
+    void PullButton()
+    {
+        if(Input.GetButton(playerNumber + "Pull"))
+        {
+            playersBall.GetComponent<BallMoveController>().PullBallToPlayer();
+        }
+    }
 
     public void GotHit()
     {
+        //Blood particle
         GetComponentInChildren<ParticleSystem>().Clear();
         GetComponentInChildren<ParticleSystem>().time = 0;
         GetComponentInChildren<ParticleSystem>().Play();
+
         playerHealth -= 25;
         if (playerHealth <= 0)
             Destroy(transform.parent.gameObject);

@@ -495,6 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b83aef993c1f0e429a1f0c1a3ea6f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pullSpeed: 7
+  holdRadius: 1
   moveRadius: 7.5
   moveSpeed: 0.2
   player: {fileID: 1000011705692608}
@@ -536,6 +538,7 @@ MonoBehaviour:
   playerNumber: 1
   speed: 10
   kickForce: 5000
+  playersBall: {fileID: 1000011330177062}
 --- !u!120 &120000012410131030
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -611,7 +614,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011084292316}
   serializedVersion: 4
-  lengthInSec: 0.5
+  lengthInSec: 0.1
   startDelay:
     scalar: 0
     maxCurve:
@@ -659,7 +662,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1033,7 +1036,7 @@ ParticleSystem:
     gravityModifier: 0
     maxNumParticles: 10
     size3D: 0
-    rotation3D: 1
+    rotation3D: 0
   ShapeModule:
     serializedVersion: 2
     enabled: 1

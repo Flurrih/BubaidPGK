@@ -3,6 +3,9 @@ using System.Collections;
 
 public class BallMoveController : MonoBehaviour {
 
+    public float pullSpeed;
+
+    public float holdRadius = 1.0f;
     public float moveRadius = 2.5f;
     public float moveSpeed = 5;
 
@@ -45,5 +48,20 @@ public class BallMoveController : MonoBehaviour {
             rb.MovePosition(movePoint);
         }
         
+    }
+
+    public void PullBallToPlayer()
+    {
+        if ((player.transform.position - transform.position).magnitude < holdRadius)
+        {
+            StickToPlayer();
+        }
+        else
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, pullSpeed * Time.deltaTime);
+    }
+
+    private void StickToPlayer()
+    {
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z + 1.0f);
     }
 }
