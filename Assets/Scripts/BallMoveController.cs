@@ -52,16 +52,18 @@ public class BallMoveController : MonoBehaviour {
 
     public void PullBallToPlayer()
     {
-        if ((player.transform.position - transform.position).magnitude < holdRadius)
-        {
-            StickToPlayer();
-        }
-        else
+        //if ((player.transform.position - transform.position).magnitude < holdRadius)
+        //{
+        //    StickToPlayer();
+        //}
+        //else
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, pullSpeed * Time.deltaTime);
     }
 
-    private void StickToPlayer()
+    public void HoldBall()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z + 1.0f);
+        Debug.Log((player.transform.position - transform.position).magnitude);
+        if ((player.transform.position - transform.position).magnitude < holdRadius)
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z + 1.0f);
     }
 }

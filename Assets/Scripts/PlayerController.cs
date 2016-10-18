@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviour {
         {
             playersBall.GetComponent<BallMoveController>().PullBallToPlayer();
         }
+
+        if(Input.GetButton(playerNumber + "Hold"))
+        {
+            playersBall.GetComponent<BallMoveController>().HoldBall();
+        }
     }
 
     public void GotHit()

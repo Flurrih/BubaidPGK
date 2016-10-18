@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullSpeed: 7
-  holdRadius: 1
+  holdRadius: 1.5
   moveRadius: 7.5
   moveSpeed: 0.2
   player: {fileID: 1000011705692608}
