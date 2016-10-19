@@ -18,6 +18,8 @@ public class BallMoveController : MonoBehaviour {
 
     public int playerNumber = 0;
 
+    Vector3 targetPos;
+
     void Start()
     {
         line = transform.GetComponent<LineRenderer>();
@@ -34,20 +36,27 @@ public class BallMoveController : MonoBehaviour {
         line.SetPosition(0, transform.position);
         line.SetPosition(1, player.transform.position);
 
-        if((player.transform.position - transform.position).magnitude > moveRadius)
-        {
-            movePoint = Vector3.ClampMagnitude((player.transform.position - transform.position), moveRadius);
-            //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime * 3);
-            rb.MovePosition(player.transform.position -  movePoint);
-            //Debug.Log(movePoint);
-        }
-        else
-        {
-            movePoint = new Vector3(transform.position.x + horizontal2 * moveSpeed, transform.position.y, transform.position.z + vertical2 * moveSpeed);
-            //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
-            rb.MovePosition(movePoint);
-        }
-        
+        //if((player.transform.position - transform.position).magnitude > moveRadius)
+        //{
+        //    movePoint = Vector3.ClampMagnitude((player.transform.position - transform.position), moveRadius);
+        //    //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime * 3);
+        //    rb.MovePosition(player.transform.position -  movePoint);
+        //    //Debug.Log(movePoint);
+        //}
+        //else
+        //{
+        //    movePoint = new Vector3(transform.position.x + horizontal2 * moveSpeed, transform.position.y, transform.position.z + vertical2 * moveSpeed);
+        //    //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
+        //    rb.MovePosition(movePoint);
+        //}
+
+
+        targetPos.x += horizontal2 * moveSpeed;
+        targetPos.z += vertical2 * moveSpeed;
+
+        targetPos = Vector3.ClampMagnitude(targetPos - player.transform.position, moveRadius) + player.transform.position;
+
+        rb.MovePosition(Vector3.MoveTowards(rb.position, targetPos, moveSpeed));
     }
 
     public void PullBallToPlayer()
