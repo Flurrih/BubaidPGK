@@ -39,8 +39,6 @@ public class BallTriggerController : MonoBehaviour {
             {
                 other.GetComponent<PlayerController>().GotHit();
                 timerTrigger = 0.0f;
-
-               
             }
         }
     }

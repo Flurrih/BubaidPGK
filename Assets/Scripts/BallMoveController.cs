@@ -24,6 +24,7 @@ public class BallMoveController : MonoBehaviour {
     {
         line = transform.GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody>();
+        targetPos = rb.transform.position;
     }
 
     void FixedUpdate()
@@ -31,7 +32,7 @@ public class BallMoveController : MonoBehaviour {
         horizontal2 = Input.GetAxis(playerNumber + "Horizontal 2nd");
         vertical2 = Input.GetAxis(playerNumber + "Vertical 2nd");
 
-        Vector3 movePoint;
+        //Vector3 movePoint;
 
         line.SetPosition(0, transform.position);
         line.SetPosition(1, player.transform.position);
@@ -49,10 +50,12 @@ public class BallMoveController : MonoBehaviour {
         //    //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
         //    rb.MovePosition(movePoint);
         //}
+        if(horizontal2 != 0|| vertical2 != 0)
+        {
+            targetPos.x += horizontal2 * moveSpeed;
+            targetPos.z += vertical2 * moveSpeed;
+        }
 
-
-        targetPos.x += horizontal2 * moveSpeed;
-        targetPos.z += vertical2 * moveSpeed;
 
         targetPos = Vector3.ClampMagnitude(targetPos - player.transform.position, moveRadius) + player.transform.position;
 
@@ -71,8 +74,26 @@ public class BallMoveController : MonoBehaviour {
 
     public void HoldBall()
     {
+        /*
         Debug.Log((player.transform.position - transform.position).magnitude);
         if ((player.transform.position - transform.position).magnitude < holdRadius)
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z + 1.0f);
+            */
+    }
+
+    public void KickBall()
+    {
+        targetPos = player.transform.forward * player.GetComponent<PlayerController>().kickForce;
+        //targetPos = new Vector3(player.transform.forward.x * player.GetComponent<PlayerController>().kickForce, transform.position.y, player.transform.forward.y * player.GetComponent<PlayerController>().kickForce);
+        rb.velocity = targetPos;
+        //rb.AddForce(player.transform.forward * player.GetComponent<PlayerController>().kickForce * Time.deltaTime);
+        //Vector3 kickEndPosition = player.transform.position + player.transform.forward * player.GetComponent<PlayerController>().kickForce;
+        //rb.MovePosition(
+        //    Vector3.MoveTowards(
+        //        rb.transform.position, 
+        //        kickEndPosition ,
+        //        5.0f
+        //        ));
+        //targetPos = transform.position;
     }
 }

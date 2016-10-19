@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour {
         horizontal = Input.GetAxis(playerNumber + "Horizontal");
         vertical = Input.GetAxis(playerNumber + "Vertical");
         rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
+
         if (rb.velocity != Vector3.zero)
         {
             rb.rotation = Quaternion.LookRotation(rb.velocity);
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (ball != null)
             {
-                ball.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up / 4).normalized * kickForce);
+                playersBall.GetComponent<BallMoveController>().KickBall();
             }
         }
         else
