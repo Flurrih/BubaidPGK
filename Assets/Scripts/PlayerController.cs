@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
     //
     Collider ball;
     //
+    private float bonusTimeLeft = 10;
+    private bool isBonus = false;
 
     public GameObject playersBall;
 
@@ -31,7 +33,8 @@ public class PlayerController : MonoBehaviour {
         FireButton();
         PullButton();
         playerMovement();
-	}
+        SpeedBonus();
+    }
 
     void playerMovement()
     {
@@ -95,5 +98,44 @@ public class PlayerController : MonoBehaviour {
     public int GetHealth()
     {
         return playerHealth;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bonus Box"))
+        {
+            return;
+        }
+        else if (other.gameObject.CompareTag("Bonus"))
+        {
+            other.gameObject.SetActive(false);
+            isBonus = true;
+            // Destroy(other.transform.parent.gameObject);
+        }
+        else if (other.gameObject.CompareTag("Debuff"))
+        {
+            playerHealth -= 25;
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    void SpeedBonus()
+    {
+        if (isBonus)
+        {
+            if (bonusTimeLeft > 0)
+            {
+                speed = 20;
+                bonusTimeLeft -= Time.deltaTime;
+                Debug.Log(bonusTimeLeft);
+            }
+            else
+            {
+                speed = 10;
+                bonusTimeLeft = 10;
+                isBonus = false;
+                return;
+            }
+        }
     }
 }

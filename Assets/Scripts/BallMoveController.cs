@@ -96,4 +96,16 @@ public class BallMoveController : MonoBehaviour {
         //        ));
         //targetPos = transform.position;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bonus Box"))
+        {
+            // other.transform.DetachChildren();
+            // other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<BonusBoxController>().GotHit(other);
+            //box.GetComponent<BonusBoxController>().GotHit();
+           // Destroy(other.transform.parent.gameObject);
+        }
+    }
 }
