@@ -34,8 +34,8 @@ public class BallMoveController : MonoBehaviour {
 
         //Vector3 movePoint;
 
-        line.SetPosition(0, transform.position);
-        line.SetPosition(1, player.transform.position);
+        //line.SetPosition(0, transform.position);
+       // line.SetPosition(1, player.transform.position);
 
         //if((player.transform.position - transform.position).magnitude > moveRadius)
         //{

@@ -19,10 +19,10 @@ TagManager:
   - 
   - 
   - chain
-  - 
-  - 
-  - 
-  - 
+  - playerJoint
+  - player
+  - ball
+  - ballJoint
   - 
   - 
   - 
