@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DebuffController : MonoBehaviour {
+public class ExplosiveBoxesBonusController : MonoBehaviour {
 
+    public GameObject explosiveBox;
     private double explosionTimeLeft = 0.3;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         InitializeExplosion();
     }
@@ -21,9 +22,10 @@ public class DebuffController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().GotHit();
-            //Debug.Log(player.GetComponent<PlayerController>().GetHealth());
-            Destroy(this.gameObject);
+            StartCoroutine(CreateExplosiveBoxes());
+            MeshRenderer render = this.gameObject.GetComponent<MeshRenderer>();
+            render.enabled = false;
+            GetComponent<Collider>().enabled = false;
         }
     }
 
@@ -43,5 +45,16 @@ public class DebuffController : MonoBehaviour {
 
             explosionTimeLeft -= Time.deltaTime;
         }
+    }
+
+    IEnumerator CreateExplosiveBoxes()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Instantiate(explosiveBox, new Vector3(Random.Range(-13, 19), 20, Random.Range(-8, 10)), transform.rotation);
+            yield return new WaitForSeconds(2);
+        }
+
+        Destroy(gameObject);
     }
 }

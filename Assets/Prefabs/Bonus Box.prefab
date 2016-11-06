@@ -196,9 +196,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f663a41f50dac94d96dcb84382e4975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box: {fileID: 1000011623327014}
-  bonus: {fileID: 1000013702842702, guid: 1f61c332b2c9c984e91a675fafd78552, type: 2}
-  bonusMaterial: {fileID: 2100000, guid: 1fad32c68778ff442b5cdc10aa96c3f3, type: 2}
   bonuses:
   - {fileID: 1000013702842702, guid: 1f61c332b2c9c984e91a675fafd78552, type: 2}
   - {fileID: 1000013651673024, guid: b8fa2b52f7900c544a2c895c923913ea, type: 2}
+  - {fileID: 1000011112162804, guid: 2a5fa17e256417345ab068500f15cdbd, type: 2}
+  - {fileID: 1000011698259942, guid: 9d0aa7b2a65fff74dbeeb6ccf8c5820b, type: 2}
+  - {fileID: 1000010339393896, guid: fecb857a345aea645b628128366c65bc, type: 2}
+  - {fileID: 1000012487365766, guid: 6263950f0048a1442a81b16cc6a77f95, type: 2}
+  - {fileID: 1000013012237380, guid: e1c5950264608414f834c4a0a0f536eb, type: 2}
+  fragments: {fileID: 1000014256613124, guid: da9dad83803eda94c8f7aaa3bfbbf391, type: 2}

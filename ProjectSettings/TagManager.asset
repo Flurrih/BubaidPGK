@@ -9,6 +9,7 @@ TagManager:
   - Bonus Box
   - Bonus
   - Debuff
+  - Ground
   layers:
   - Default
   - TransparentFX

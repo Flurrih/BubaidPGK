@@ -13,6 +13,7 @@ public class BallMoveController : MonoBehaviour {
     private float vertical2;
     private LineRenderer line;
     private Rigidbody rb;
+    private int invertMovement = 1;
 
     public GameObject player;
 
@@ -29,13 +30,13 @@ public class BallMoveController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        horizontal2 = Input.GetAxis(playerNumber + "Horizontal 2nd");
-        vertical2 = Input.GetAxis(playerNumber + "Vertical 2nd");
+        horizontal2 = invertMovement*Input.GetAxis(playerNumber + "Horizontal 2nd");
+        vertical2 = invertMovement*Input.GetAxis(playerNumber + "Vertical 2nd");
 
         //Vector3 movePoint;
 
-        //line.SetPosition(0, transform.position);
-       // line.SetPosition(1, player.transform.position);
+        line.SetPosition(0, transform.position);
+        line.SetPosition(1, player.transform.position);
 
         //if((player.transform.position - transform.position).magnitude > moveRadius)
         //{
@@ -97,15 +98,10 @@ public class BallMoveController : MonoBehaviour {
         //targetPos = transform.position;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void SetMovement(int value)
     {
-        if (other.gameObject.CompareTag("Bonus Box"))
-        {
-            // other.transform.DetachChildren();
-            // other.gameObject.SetActive(false);
-            other.gameObject.GetComponent<BonusBoxController>().GotHit(other);
-            //box.GetComponent<BonusBoxController>().GotHit();
-           // Destroy(other.transform.parent.gameObject);
-        }
+        invertMovement = value;
     }
+
+
 }

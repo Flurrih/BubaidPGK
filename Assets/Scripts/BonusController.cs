@@ -4,8 +4,8 @@ using System.Collections;
 public class BonusController : MonoBehaviour {
 
     private float bonusTimeLeft = 10;
+    private double explosionTimeLeft = 0.3;
     private bool isBonus = false;
-    public GameObject player;
     private Collider collider;
 
     // Use this for initialization
@@ -17,6 +17,7 @@ public class BonusController : MonoBehaviour {
     void FixedUpdate()
     {
         SpeedBonus();
+        InitializeExplosion();
     }
 
     void OnTriggerEnter(Collider other)
@@ -52,6 +53,24 @@ public class BonusController : MonoBehaviour {
                 Destroy(this.gameObject);
                 return;
             }
+        }
+    }
+
+    void InitializeExplosion()
+    {
+        if (explosionTimeLeft > 0)
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 5);
+
+            foreach (Collider hit in colliders)
+            {
+                Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                    rb.AddExplosionForce(500, transform.position, 5, 3.0F);
+            }
+
+            explosionTimeLeft -= Time.deltaTime;
         }
     }
 
