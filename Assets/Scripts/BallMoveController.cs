@@ -13,6 +13,7 @@ public class BallMoveController : MonoBehaviour {
     private float vertical2;
     private LineRenderer line;
     private Rigidbody rb;
+    private int invertMovement = 1;
 
     public GameObject player;
 
@@ -29,8 +30,8 @@ public class BallMoveController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        horizontal2 = Input.GetAxis(playerNumber + "Horizontal 2nd");
-        vertical2 = Input.GetAxis(playerNumber + "Vertical 2nd");
+        horizontal2 = invertMovement*Input.GetAxis(playerNumber + "Horizontal 2nd");
+        vertical2 = invertMovement*Input.GetAxis(playerNumber + "Vertical 2nd");
 
         //Vector3 movePoint;
 
@@ -97,5 +98,10 @@ public class BallMoveController : MonoBehaviour {
         //targetPos = transform.position;
     }
 
-    
+    public void SetMovement(int value)
+    {
+        invertMovement = value;
+    }
+
+
 }
