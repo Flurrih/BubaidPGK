@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
-        rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
+        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
         if (rb.velocity != Vector3.zero)
         {
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void GotHit()
+    public void GotHit(int dmg)
     {
         if(isInviolability == false)
         {
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour {
             GetComponentInChildren<ParticleSystem>().time = 0;
             GetComponentInChildren<ParticleSystem>().Play();
 
-            playerHealth -= 25;
+            playerHealth -= dmg;
         } 
 
         if (playerHealth <= 0)

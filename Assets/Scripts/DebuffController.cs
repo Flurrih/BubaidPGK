@@ -21,7 +21,7 @@ public class DebuffController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().GotHit();
+            other.GetComponent<PlayerController>().GotHit(25);
             //Debug.Log(player.GetComponent<PlayerController>().GetHealth());
             Destroy(this.gameObject);
         }

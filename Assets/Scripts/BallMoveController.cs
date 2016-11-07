@@ -51,16 +51,17 @@ public class BallMoveController : MonoBehaviour {
         //    //rb.transform.position = Vector3.Lerp(transform.position, movePoint, Time.fixedDeltaTime);
         //    rb.MovePosition(movePoint);
         //}
-        if(horizontal2 != 0|| vertical2 != 0)
-        {
-            targetPos.x += horizontal2 * moveSpeed;
-            targetPos.z += vertical2 * moveSpeed;
-        }
+        //if(horizontal2 != 0|| vertical2 != 0)
+        //{
+        //    targetPos.x += horizontal2 * moveSpeed;
+        //    targetPos.z += vertical2 * moveSpeed;
+        //}
 
 
-        targetPos = Vector3.ClampMagnitude(targetPos - player.transform.position, moveRadius) + player.transform.position;
+        //targetPos = Vector3.ClampMagnitude(targetPos - player.transform.position, moveRadius) + player.transform.position;
 
-        rb.MovePosition(Vector3.MoveTowards(rb.position, targetPos, moveSpeed));
+        //rb.MovePosition(Vector3.MoveTowards(rb.position, targetPos, moveSpeed));
+        rb.AddForce(new Vector3(horizontal2 * moveSpeed, 0, vertical2 * moveSpeed), ForceMode.VelocityChange);
     }
 
     public void PullBallToPlayer()
@@ -84,9 +85,10 @@ public class BallMoveController : MonoBehaviour {
 
     public void KickBall()
     {
-        targetPos = player.transform.forward * player.GetComponent<PlayerController>().kickForce;
+        //targetPos = player.transform.forward * player.GetComponent<PlayerController>().kickForce;
         //targetPos = new Vector3(player.transform.forward.x * player.GetComponent<PlayerController>().kickForce, transform.position.y, player.transform.forward.y * player.GetComponent<PlayerController>().kickForce);
-        rb.velocity = targetPos;
+        //rb.velocity = targetPos;
+        rb.AddForce((player.transform.forward + Vector3.up * 0.25f) * player.GetComponent<PlayerController>().kickForce);
         //rb.AddForce(player.transform.forward * player.GetComponent<PlayerController>().kickForce * Time.deltaTime);
         //Vector3 kickEndPosition = player.transform.position + player.transform.forward * player.GetComponent<PlayerController>().kickForce;
         //rb.MovePosition(

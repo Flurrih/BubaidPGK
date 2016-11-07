@@ -14,7 +14,7 @@ public class BallTriggerController : MonoBehaviour {
         {
             if(timerTrigger >= 2.0f)
             {
-                other.GetComponent<PlayerController>().GotHit();
+                other.GetComponent<PlayerController>().GotHit(25);
                 timerTrigger = 0.0f;
             }
 
@@ -37,7 +37,7 @@ public class BallTriggerController : MonoBehaviour {
         {
            if(timerTrigger >= 2.0f)
             {
-                other.GetComponent<PlayerController>().GotHit();
+                other.GetComponent<PlayerController>().GotHit(5);
                 timerTrigger = 0.0f;
             }
         }
