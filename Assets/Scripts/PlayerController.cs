@@ -2,46 +2,49 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+
+    // General
+    private Rigidbody rb;
     public int playerNumber = 0;
     public float speed = 20;
     public float kickForce = 50;
-    public GameObject joint;
-    private GameObject jointCopy;
+    private int playerHealth = 100;
+    private GameObject kickTrigger;
+    Collider ball;
 
+    //Effects
     private int invertMovement = 1;
-    private float horizontal;
-    private float vertical;
-    private Rigidbody rb;
     private bool isInviolability = false;
     public bool isBallReleased { get; private set; }
 
-    private int playerHealth = 100;
-    private GameObject leg;
-    //
-    Collider ball;
-    //
     
+    // Input
+    private float horizontal;
+    private float vertical;
+    // Chain
+    public GameObject joint;
+    private GameObject jointCopy;
 
     public GameObject playersBall;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        leg = transform.FindChild("CubePivot").gameObject;
-        if(leg.GetComponent<KickTriggerController>().GetCollider() != null)
-            if(leg.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
-                ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        kickTrigger = transform.FindChild("CubePivot").gameObject;
+
+        if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
+           // if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
+                ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
 
     }
 
 	void FixedUpdate ()
     {
-        ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
         FireButton();
         ReleaseButton();
         playerMovement(invertMovement);
-        
     }
 
     void playerMovement(int invert)
@@ -58,10 +61,7 @@ public class PlayerController : MonoBehaviour {
         //rb.AddForce(horizontal*speed,0, vertical*speed);
     }
 
-    /*
-     * Ball kick must be recoded.
-     * It's player controller not ball's - u can't move ball here
-     */
+
     void FireButton()
     {
         if (Input.GetButton(playerNumber + "Fire1"))
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            leg.transform.rotation = Quaternion.identity;
+            kickTrigger.transform.rotation = Quaternion.identity;
         }
     }
 
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour {
                 isBallReleased = true;
                 Destroy(joint.GetComponent<ConfigurableJoint>());
             }
-            else if(leg.GetComponent<KickTriggerController>().GetCollider() != null)
+            else if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
             {
                 isBallReleased = false;
                 joint.AddComponent<ConfigurableJoint>();
