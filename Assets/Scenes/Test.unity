@@ -161,7 +161,7 @@ Prefab:
     - target: {fileID: 114000010196179522, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
         type: 2}
       propertyPath: moveSpeed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 153000010686964406, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
         type: 2}
@@ -386,6 +386,36 @@ Prefab:
         type: 2}
       propertyPath: m_AngularYMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: joint
+      value: 
+      objectReference: {fileID: 1305494650}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011959593810, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_TagString
+      value: Chain Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
@@ -941,7 +971,7 @@ Prefab:
     - target: {fileID: 114000010196179522, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
         type: 2}
       propertyPath: moveSpeed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 153000010686964406, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
         type: 2}
@@ -1163,6 +1193,36 @@ Prefab:
       propertyPath: m_AngularYMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: joint
+      value: 
+      objectReference: {fileID: 1361867885}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011959593810, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_TagString
+      value: Chain Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
   m_IsPrefabParent: 0
@@ -1263,6 +1323,16 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013734794468, guid: 6f186c78c9afa7f41892dbb066b510ef,
     type: 2}
   m_PrefabInternal: {fileID: 430558038}
+--- !u!1 &1305494650 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011959593810, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 31470197}
+--- !u!1 &1361867885 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011959593810, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 959480324}
 --- !u!1 &1518688618
 GameObject:
   m_ObjectHideFlags: 0

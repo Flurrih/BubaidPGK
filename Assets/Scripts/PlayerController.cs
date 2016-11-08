@@ -5,12 +5,15 @@ public class PlayerController : MonoBehaviour {
     public int playerNumber = 0;
     public float speed = 20;
     public float kickForce = 50;
+    public GameObject joint;
+    private GameObject jointCopy;
 
     private int invertMovement = 1;
     private float horizontal;
     private float vertical;
     private Rigidbody rb;
     private bool isInviolability = false;
+    public bool isBallReleased { get; private set; }
 
     private int playerHealth = 100;
     private GameObject leg;
@@ -25,14 +28,18 @@ public class PlayerController : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         leg = transform.FindChild("CubePivot").gameObject;
-        ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        if(leg.GetComponent<KickTriggerController>().GetCollider() != null)
+            if(leg.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
+                ball = leg.GetComponent<KickTriggerController>().GetCollider();
+
+
     }
 
 	void FixedUpdate ()
     {
         ball = leg.GetComponent<KickTriggerController>().GetCollider();
         FireButton();
-        PullButton();
+        ReleaseButton();
         playerMovement(invertMovement);
         
     }
@@ -70,16 +77,31 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void PullButton()
+    void ReleaseButton()
     {
-        if(Input.GetButton(playerNumber + "Pull"))
+        if(Input.GetButtonUp(playerNumber + "Release"))
         {
-            playersBall.GetComponent<BallMoveController>().PullBallToPlayer();
-        }
+            if (!isBallReleased)
+            {
+                jointCopy = joint;
 
-        if(Input.GetButton(playerNumber + "Hold"))
-        {
-            playersBall.GetComponent<BallMoveController>().HoldBall();
+                isBallReleased = true;
+                Destroy(joint.GetComponent<ConfigurableJoint>());
+            }
+            else if(leg.GetComponent<KickTriggerController>().GetCollider() != null)
+            {
+                isBallReleased = false;
+                joint.AddComponent<ConfigurableJoint>();
+                joint.transform.position = rb.position;
+                joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+            }
         }
     }
 

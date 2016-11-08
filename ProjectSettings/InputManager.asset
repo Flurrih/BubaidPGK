@@ -342,7 +342,7 @@ InputManager:
     axis: 4
     joyNum: 1
   - serializedVersion: 3
-    m_Name: 1Pull
+    m_Name: 1Release
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -374,7 +374,7 @@ InputManager:
     axis: 5
     joyNum: 1
   - serializedVersion: 3
-    m_Name: 2Pull
+    m_Name: 2Release
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
