@@ -101,6 +101,9 @@ public class PlayerController : MonoBehaviour {
                 joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
                 joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
                 joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
             }
         }
     }
