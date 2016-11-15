@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 381d3a76c0a261241998e13d4e8c489a
+timeCreated: 1479210000
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: galeria
+    100004: galeria001
+    100006: kolumna
+    100008: kolumna001
+    100010: kolumna002
+    100012: kolumna003
+    100014: Plane001
+    100016: rampa
+    100018: rampa001
+    100020: rampa002
+    100022: rampa003
+    100024: scianka
+    100026: scianka001
+    100028: sciany dookola
+    100030: ukryty pokoj
+    400000: //RootNode
+    400002: galeria
+    400004: galeria001
+    400006: kolumna
+    400008: kolumna001
+    400010: kolumna002
+    400012: kolumna003
+    400014: Plane001
+    400016: rampa
+    400018: rampa001
+    400020: rampa002
+    400022: rampa003
+    400024: scianka
+    400026: scianka001
+    400028: sciany dookola
+    400030: ukryty pokoj
+    2300000: galeria
+    2300002: galeria001
+    2300004: kolumna
+    2300006: kolumna001
+    2300008: kolumna002
+    2300010: kolumna003
+    2300012: Plane001
+    2300014: rampa
+    2300016: rampa001
+    2300018: rampa002
+    2300020: rampa003
+    2300022: scianka
+    2300024: scianka001
+    2300026: sciany dookola
+    2300028: ukryty pokoj
+    3300000: galeria
+    3300002: galeria001
+    3300004: kolumna
+    3300006: kolumna001
+    3300008: kolumna002
+    3300010: kolumna003
+    3300012: Plane001
+    3300014: rampa
+    3300016: rampa001
+    3300018: rampa002
+    3300020: rampa003
+    3300022: scianka
+    3300024: scianka001
+    3300026: sciany dookola
+    3300028: ukryty pokoj
+    4300000: Plane001
+    4300002: galeria
+    4300004: rampa
+    4300006: rampa001
+    4300008: galeria001
+    4300010: rampa002
+    4300012: rampa003
+    4300014: kolumna
+    4300016: kolumna001
+    4300018: kolumna002
+    4300020: kolumna003
+    4300022: scianka
+    4300024: scianka001
+    4300026: sciany dookola
+    4300028: ukryty pokoj
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
