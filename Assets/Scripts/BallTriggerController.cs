@@ -4,9 +4,7 @@ using System.Collections;
 public class BallTriggerController : MonoBehaviour {
     
     float timerTrigger;
-    void Start()
-    {
-    }
+
     void OnTriggerEnter(Collider other)
     {
        
@@ -20,15 +18,6 @@ public class BallTriggerController : MonoBehaviour {
 
         }
     }
-
-    /*void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber)
-        {
-            canTrigger = true;
-        }
-        timerTrigger = 0.0f;
-    }*/
 
     void OnTriggerStay(Collider other)
     {

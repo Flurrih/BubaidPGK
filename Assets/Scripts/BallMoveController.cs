@@ -9,10 +9,12 @@ public class BallMoveController : MonoBehaviour {
     public float moveRadius = 2.5f;
     public float moveSpeed = 5;
 
+    //input
     private float horizontal2;
     private float vertical2;
-    private LineRenderer line;
+    
     private Rigidbody rb;
+
     private int invertMovement = 1;
 
     public GameObject player;
@@ -25,7 +27,6 @@ public class BallMoveController : MonoBehaviour {
 
     void Start()
     {
-        line = transform.GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody>();
         targetPos = rb.transform.position;
     }
@@ -37,9 +38,7 @@ public class BallMoveController : MonoBehaviour {
         vertical2 = invertMovement*Input.GetAxis(playerNumber + "Vertical 2nd");
 
         //Vector3 movePoint;
-
-        line.SetPosition(0, transform.position);
-        line.SetPosition(1, player.transform.position);
+        
 
         //if((player.transform.position - transform.position).magnitude > moveRadius)
         //{
@@ -68,15 +67,6 @@ public class BallMoveController : MonoBehaviour {
             rb.AddForce(new Vector3(horizontal2 * moveSpeed, 0, vertical2 * moveSpeed), ForceMode.VelocityChange);
     }
 
-    public void PullBallToPlayer()
-    {
-        //if ((player.transform.position - transform.position).magnitude < holdRadius)
-        //{
-        //    StickToPlayer();
-        //}
-        //else
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, pullSpeed * Time.deltaTime);
-    }
 
     public void HoldBall()
     {
