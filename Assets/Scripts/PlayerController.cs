@@ -7,10 +7,13 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     public int playerNumber = 0;
     public float speed = 20;
-    public float kickForce = 50;
-    public float jumpForce = 8;
+    public float kickForce = 5000;
+    public float jumpForce = 250;
+    public float dashForce = 250;
     private int playerHealth = 100;
-    private bool jumping = false;
+    private bool isJumping = false;
+    private bool isDashing = false;
+    public float dashCooldown = 2.0f;
     private GameObject kickTrigger;
     Collider ball;
 
@@ -38,12 +41,15 @@ public class PlayerController : MonoBehaviour {
            // if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
                 ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
-
+        StartCoroutine(Dash());
     }
 
 	void FixedUpdate ()
     {
+        Vector3 oldRot = rb.transform.rotation.eulerAngles;
+        rb.transform.rotation = Quaternion.Euler(0, oldRot.y, 0);
         ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
+
         FireButton();
         ReleaseButton();
         playerMovement(invertMovement);
@@ -54,7 +60,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
-        if(!jumping)
+        if(!isJumping & !isDashing)
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
         if (rb.velocity != Vector3.zero)
@@ -67,10 +73,29 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        if(Input.GetButton(playerNumber + "Jump") && !jumping)
+        if(Input.GetButton(playerNumber + "Jump") && !isJumping)
         {
-            jumping = true;
+            isJumping = true;
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        
+        while (true)
+        {
+            if (Input.GetButton(playerNumber + "Dash"))
+            {
+                isDashing = true;               
+                rb.velocity = Vector3.zero;
+                rb.AddForce(new Vector3(rb.transform.forward.x,0,rb.transform.forward.z) * dashForce, ForceMode.Impulse);
+                yield return new WaitForSeconds(dashCooldown/4);
+                isDashing = false;
+                yield return new WaitForSeconds(dashCooldown * 3 / 4);
+            }
+            
+            yield return null;
         }
     }
 
@@ -177,6 +202,7 @@ public class PlayerController : MonoBehaviour {
     // Collider functions
     void OnCollisionStay(Collision collisionInfo)
     {
-        jumping = false;
+        if(collisionInfo.collider.tag == "Untagged")
+            isJumping = false;
     }
 }
