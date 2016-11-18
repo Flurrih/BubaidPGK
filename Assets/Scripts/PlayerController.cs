@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour {
     public int playerNumber = 0;
     public float speed = 20;
     public float kickForce = 50;
+    public float jumpForce = 8;
     private int playerHealth = 100;
+    private bool jumping = false;
     private GameObject kickTrigger;
     Collider ball;
 
@@ -45,13 +47,15 @@ public class PlayerController : MonoBehaviour {
         FireButton();
         ReleaseButton();
         playerMovement(invertMovement);
+        Jump();
     }
 
     void playerMovement(int invert)
     {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
-        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
+        if(!jumping)
+            rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
         if (rb.velocity != Vector3.zero)
         {
@@ -61,6 +65,14 @@ public class PlayerController : MonoBehaviour {
         //rb.AddForce(horizontal*speed,0, vertical*speed);
     }
 
+    void Jump()
+    {
+        if(Input.GetButton(playerNumber + "Jump") && !jumping)
+        {
+            jumping = true;
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        }
+    }
 
     void FireButton()
     {
@@ -160,5 +172,11 @@ public class PlayerController : MonoBehaviour {
     public void SetInviolability(bool value)
     {
         isInviolability = value;
+    }
+
+    // Collider functions
+    void OnCollisionStay(Collision collisionInfo)
+    {
+        jumping = false;
     }
 }
