@@ -31,11 +31,11 @@ public class ExplosiveSphereController : MonoBehaviour {
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
 
                 if (rb != null)
-                    rb.AddExplosionForce(600, transform.position, 5, 3.0F);
+                    rb.AddExplosionForce(50, transform.position, 5, 3.0F);
 
                 if(hit.gameObject.CompareTag("Player") && PlayerDamageCounter == 0)
                 {
-                    hit.GetComponent<PlayerController>().GotHit();   //SetHealth(-20);
+                    hit.GetComponent<PlayerController>().GotHit(20);   //SetHealth(-20);
                     PlayerDamageCounter = 1;
                 }
 

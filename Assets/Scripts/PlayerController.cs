@@ -2,46 +2,56 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+
+    // General
+    private Rigidbody rb;
     public int playerNumber = 0;
     public float speed = 20;
     public float kickForce = 50;
+    private int playerHealth = 100;
+    private GameObject kickTrigger;
+    Collider ball;
 
+    //Effects
     private int invertMovement = 1;
+    private bool isInviolability = false;
+    public bool isBallReleased { get; private set; }
+
+    
+    // Input
     private float horizontal;
     private float vertical;
-    private Rigidbody rb;
-    private bool isInviolability = false;
-
-    private int playerHealth = 100;
-    private GameObject leg;
-    //
-    Collider ball;
-    //
-    
+    // Chain
+    public GameObject joint;
+    private GameObject jointCopy;
 
     public GameObject playersBall;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        leg = transform.FindChild("CubePivot").gameObject;
-        ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        kickTrigger = transform.FindChild("CubePivot").gameObject;
+
+        if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
+           // if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
+                ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
+
+
     }
 
 	void FixedUpdate ()
     {
-        ball = leg.GetComponent<KickTriggerController>().GetCollider();
+        ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
         FireButton();
-        PullButton();
+        ReleaseButton();
         playerMovement(invertMovement);
-        
     }
 
     void playerMovement(int invert)
     {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
-        rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
+        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
         if (rb.velocity != Vector3.zero)
         {
@@ -51,10 +61,7 @@ public class PlayerController : MonoBehaviour {
         //rb.AddForce(horizontal*speed,0, vertical*speed);
     }
 
-    /*
-     * Ball kick must be recoded.
-     * It's player controller not ball's - u can't move ball here
-     */
+
     void FireButton()
     {
         if (Input.GetButton(playerNumber + "Fire1"))
@@ -66,24 +73,42 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            leg.transform.rotation = Quaternion.identity;
+            kickTrigger.transform.rotation = Quaternion.identity;
         }
     }
 
-    void PullButton()
+    void ReleaseButton()
     {
-        if(Input.GetButton(playerNumber + "Pull"))
+        if(Input.GetButtonUp(playerNumber + "Release"))
         {
-            playersBall.GetComponent<BallMoveController>().PullBallToPlayer();
-        }
+            if (!isBallReleased)
+            {
+                jointCopy = joint;
 
-        if(Input.GetButton(playerNumber + "Hold"))
-        {
-            playersBall.GetComponent<BallMoveController>().HoldBall();
+                isBallReleased = true;
+                Destroy(joint.GetComponent<ConfigurableJoint>());
+            }
+            else if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
+            {
+                isBallReleased = false;
+                joint.AddComponent<ConfigurableJoint>();
+                joint.transform.position = rb.position;
+                joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+            }
         }
     }
 
-    public void GotHit()
+    public void GotHit(int dmg)
     {
         if(isInviolability == false)
         {
@@ -92,7 +117,7 @@ public class PlayerController : MonoBehaviour {
             GetComponentInChildren<ParticleSystem>().time = 0;
             GetComponentInChildren<ParticleSystem>().Play();
 
-            playerHealth -= 25;
+            playerHealth -= dmg;
         } 
 
         if (playerHealth <= 0)

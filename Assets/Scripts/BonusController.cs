@@ -6,7 +6,7 @@ public class BonusController : MonoBehaviour {
     private float bonusTimeLeft = 10;
     private double explosionTimeLeft = 0.3;
     private bool isBonus = false;
-    private Collider collider;
+    private Collider col;
 
     // Use this for initialization
     void Start ()
@@ -25,7 +25,7 @@ public class BonusController : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             isBonus = true;
-            collider = other;
+            col = other;
             MeshRenderer render = this.gameObject.GetComponent<MeshRenderer>();
             render.enabled = false;
         }
@@ -39,7 +39,7 @@ public class BonusController : MonoBehaviour {
             if (bonusTimeLeft > 0)
             {
                 // speed = 20;
-                collider.GetComponent<PlayerController>().SetSpeed(20);
+                col.GetComponent<PlayerController>().SetSpeed(20);
                 bonusTimeLeft -= Time.deltaTime;
                 //Debug.Log(player.GetComponent<PlayerController>().GetSpeed());
                 Debug.Log(bonusTimeLeft);
@@ -48,7 +48,7 @@ public class BonusController : MonoBehaviour {
             {
                 // speed = 10;
                 bonusTimeLeft = 10;
-                collider.GetComponent<PlayerController>().SetSpeed(10);
+                col.GetComponent<PlayerController>().SetSpeed(10);
                 isBonus = false;
                 Destroy(this.gameObject);
                 return;

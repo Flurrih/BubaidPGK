@@ -3,23 +3,29 @@ using System.Collections;
 
 public class KickTriggerController : MonoBehaviour {
 
-    Collider collider;
+    Collider col;
 
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Ball")
         {
-            collider = other;
+            col = other;
         }
+        
+        if(other.tag == "Chain Holder")
+        {
+            col = other;
+        }
+
     }
 
     void OnTriggerExit(Collider other)
     {
-        collider = null;
+        col = null;
     }
 
     public Collider GetCollider()
     {
-        return collider;
+        return col;
     }
 }
