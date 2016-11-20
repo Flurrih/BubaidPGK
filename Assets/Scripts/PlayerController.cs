@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 250;
     public float dashForce = 250;
     private int playerHealth = 100;
-    private bool isJumping = false;
+    private bool isJumping = true;
     private bool isDashing = false;
     public float dashCooldown = 2.0f;
     private GameObject kickTrigger;
@@ -46,8 +46,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate ()
     {
-        Vector3 oldRot = rb.transform.rotation.eulerAngles;
-        rb.transform.rotation = Quaternion.Euler(0, oldRot.y, 0);
+        
         ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         FireButton();
@@ -61,7 +60,10 @@ public class PlayerController : MonoBehaviour {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
         if(!isJumping & !isDashing)
-            rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
+            rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
+
+        if(isJumping)
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
 
         if (rb.velocity != Vector3.zero)
         {
@@ -202,7 +204,15 @@ public class PlayerController : MonoBehaviour {
     // Collider functions
     void OnCollisionStay(Collision collisionInfo)
     {
-        if(collisionInfo.collider.tag == "Untagged")
+        if (collisionInfo.collider.tag == "Untagged")
             isJumping = false;
     }
+
+    void OnCollisionExit(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Untagged")
+            isJumping = true;
+
+    }
+
 }

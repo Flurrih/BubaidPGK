@@ -1994,7 +1994,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &54000014211955958
 Rigidbody:
@@ -2426,7 +2426,7 @@ MonoBehaviour:
   playerNumber: 1
   speed: 10
   kickForce: 5000
-  jumpForce: 250
+  jumpForce: 400
   dashForce: 2000
   dashCooldown: 2
   joint: {fileID: 1000011959593810}
@@ -6127,7 +6127,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 42f5ec8951198a74a9e5af41fe3c5c2f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
