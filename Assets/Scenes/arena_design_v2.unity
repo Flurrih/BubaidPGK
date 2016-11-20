@@ -422,6 +422,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 42f5ec8951198a74a9e5af41fe3c5c2f, type: 2}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: jumpForce
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
   m_IsPrefabParent: 0
@@ -487,6 +492,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17be5a82ac64e774392c3e848d22fa5d, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &139233101 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010368415336, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 31470197}
 --- !u!1 &141739140
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +525,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: 1Horizontal
+  m_VerticalAxis: 1Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -1679,6 +1689,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8a8dbbc3eed1dc64896a1119266754d2, type: 2}
+    - target: {fileID: 100000, guid: c96fa50897b6fea4784b0b1ed2c4fc53, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c96fa50897b6fea4784b0b1ed2c4fc53, type: 3}
   m_IsPrefabParent: 0
@@ -1998,6 +2012,11 @@ Prefab:
     - target: {fileID: 4000011311228402, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011874425428, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+        type: 2}
+      propertyPath: jumpForce
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7ec2ce534f2c448b4d6826c16217e9, type: 2}
@@ -2452,6 +2471,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011959593810, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
     type: 2}
   m_PrefabInternal: {fileID: 959480324}
+--- !u!1 &1374802222 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010368415336, guid: 9c7ec2ce534f2c448b4d6826c16217e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 959480324}
 --- !u!1 &1514875679 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 17be5a82ac64e774392c3e848d22fa5d, type: 3}
@@ -2590,6 +2614,7 @@ GameObject:
   - 92: {fileID: 1683018465}
   - 124: {fileID: 1683018464}
   - 81: {fileID: 1683018463}
+  - 114: {fileID: 1683018468}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2665,6 +2690,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1683018468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683018462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19784ea5c7b12fd4aa73051553e162d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 139233101}
+  - {fileID: 1374802222}
 --- !u!1 &1722734335 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: c96fa50897b6fea4784b0b1ed2c4fc53, type: 3}
