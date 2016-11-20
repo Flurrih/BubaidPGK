@@ -16,6 +16,9 @@ ModelImporter:
     100016: rampy
     100018: secretRoom
     100020: zabudowa dookola
+    100022: podesty
+    100024: podloga
+    100026: sciany
     400000: arena
     400002: //RootNode
     400004: kolumna001
@@ -27,6 +30,9 @@ ModelImporter:
     400016: rampy
     400018: secretRoom
     400020: zabudowa dookola
+    400022: podesty
+    400024: podloga
+    400026: sciany
     2300000: arena
     2300002: kolumna001
     2300004: kolumna002
@@ -37,6 +43,9 @@ ModelImporter:
     2300014: rampy
     2300016: secretRoom
     2300018: zabudowa dookola
+    2300020: podesty
+    2300022: podloga
+    2300024: sciany
     3300000: arena
     3300002: kolumna001
     3300004: kolumna002
@@ -47,6 +56,9 @@ ModelImporter:
     3300014: rampy
     3300016: secretRoom
     3300018: zabudowa dookola
+    3300020: podesty
+    3300022: podloga
+    3300024: sciany
     4300000: arena
     4300002: kolumna001
     4300004: kolumna002
@@ -57,6 +69,9 @@ ModelImporter:
     4300014: zabudowa dookola
     4300016: rampy
     4300018: secretRoom
+    4300020: podloga
+    4300022: sciany
+    4300024: podesty
   materials:
     importMaterials: 1
     materialName: 0
