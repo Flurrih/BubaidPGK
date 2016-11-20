@@ -53,6 +53,12 @@ public class PlayerController : MonoBehaviour {
         ReleaseButton();
         playerMovement(invertMovement);
         Jump();
+
+
+        if (Input.GetAxis("Reset") > 0)
+        {
+            Application.LoadLevel("arena_design_v2");
+        }
     }
 
     void playerMovement(int invert)
