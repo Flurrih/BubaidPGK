@@ -60,14 +60,11 @@ public class PlayerController : MonoBehaviour {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
         if(!isJumping & !isDashing)
-            rb.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
-
-        if(isJumping)
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
+            rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
         if (rb.velocity != Vector3.zero)
         {
-            rb.rotation = Quaternion.LookRotation(rb.velocity);
+            rb.rotation = Quaternion.LookRotation(new Vector3(rb.velocity.x, 0, rb.velocity.z));
             //transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
         }
         //rb.AddForce(horizontal*speed,0, vertical*speed);
@@ -206,13 +203,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (collisionInfo.collider.tag == "Untagged")
             isJumping = false;
-    }
-
-    void OnCollisionExit(Collision collisionInfo)
-    {
-        if (collisionInfo.collider.tag == "Untagged")
-            isJumping = true;
-
     }
 
 }

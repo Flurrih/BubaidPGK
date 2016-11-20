@@ -2426,7 +2426,7 @@ MonoBehaviour:
   playerNumber: 1
   speed: 10
   kickForce: 5000
-  jumpForce: 400
+  jumpForce: 250
   dashForce: 2000
   dashCooldown: 2
   joint: {fileID: 1000011959593810}
