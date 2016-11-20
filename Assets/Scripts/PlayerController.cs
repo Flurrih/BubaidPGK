@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
         if(!isJumping & !isDashing)
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
 
-        if (rb.velocity != Vector3.zero)
+        if (rb.velocity != new Vector3(0,rb.velocity.y,0))
         {
             rb.rotation = Quaternion.LookRotation(new Vector3(rb.velocity.x, 0, rb.velocity.z));
             //transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
