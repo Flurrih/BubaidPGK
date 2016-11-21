@@ -2415,7 +2415,9 @@ MonoBehaviour:
   kickForce: 5000
   jumpForce: 250
   dashForce: 2000
+  smashForce: 13000
   dashCooldown: 2
+  smashCooldown: 5
   joint: {fileID: 1000011959593810}
   playersBall: {fileID: 1000013548561900}
 --- !u!114 &114000012093461654

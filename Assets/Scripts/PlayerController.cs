@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -11,10 +10,12 @@ public class PlayerController : MonoBehaviour {
     public float kickForce = 5000;
     public float jumpForce = 250;
     public float dashForce = 250;
+    public float smashForce = 500;
     private int playerHealth = 100;
     private bool isJumping = true;
     private bool isDashing = false;
     public float dashCooldown = 2.0f;
+    public float smashCooldown = 10.0f;
     private GameObject kickTrigger;
     Collider ball;
 
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour {
                 ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         StartCoroutine(Dash());
+        StartCoroutine(Skills());
     }
 
 	void FixedUpdate ()
@@ -58,7 +60,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetAxis("Reset") > 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
     }
 
@@ -101,6 +103,24 @@ public class PlayerController : MonoBehaviour {
                 yield return new WaitForSeconds(dashCooldown * 3 / 4);
             }
             
+            yield return null;
+        }
+    }
+
+    IEnumerator Skills()
+    {
+        while (true)
+        {
+            if(Input.GetButton(playerNumber + "Skill"))
+            {
+                if(playersBall.tag == "Ball")
+                {
+                    Debug.Log("Smash");
+                    playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
+                }
+                yield return new WaitForSeconds(smashCooldown);
+            }
+
             yield return null;
         }
     }
