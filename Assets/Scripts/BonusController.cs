@@ -17,7 +17,7 @@ public class BonusController : MonoBehaviour {
     void FixedUpdate()
     {
         SpeedBonus();
-        InitializeExplosion();
+        //InitializeExplosion();
     }
 
     void OnTriggerEnter(Collider other)
@@ -56,7 +56,7 @@ public class BonusController : MonoBehaviour {
         }
     }
 
-    void InitializeExplosion()
+    /*void InitializeExplosion()
     {
         if (explosionTimeLeft > 0)
         {
@@ -72,7 +72,7 @@ public class BonusController : MonoBehaviour {
 
             explosionTimeLeft -= Time.deltaTime;
         }
-    }
+    }*/
 
 
 }
