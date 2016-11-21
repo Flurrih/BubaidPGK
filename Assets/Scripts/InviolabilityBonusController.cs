@@ -16,7 +16,6 @@ public class InviolabilityBonusController : MonoBehaviour {
     {
         players = GameObject.FindGameObjectsWithTag("Player");
         inviolabilityMat = Resources.Load("Inviolability Bonus Material", typeof(Material)) as Material;
-        playerMat = Resources.Load("Player Mat2", typeof(Material)) as Material;
     }
 
     // Update is called once per frame
@@ -30,6 +29,7 @@ public class InviolabilityBonusController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            playerMat = other.GetComponent<Renderer>().material;
             tmpCollider = other;
             isBonus = true;
             MeshRenderer render = gameObject.GetComponent<MeshRenderer>();
@@ -47,7 +47,7 @@ public class InviolabilityBonusController : MonoBehaviour {
             {
                 tmpCollider.GetComponent<MeshRenderer>().material = inviolabilityMat;
                 tmpCollider.GetComponent<PlayerController>().SetInviolability(true);
-
+                Debug.Log(bonusTimeLeft);
                 bonusTimeLeft -= Time.deltaTime;
             }
             else
