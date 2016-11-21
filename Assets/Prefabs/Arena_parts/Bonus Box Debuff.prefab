@@ -292,6 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f663a41f50dac94d96dcb84382e4975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonuses: []
+  fragments: {fileID: 0}
 --- !u!135 &135000014182238986
 SphereCollider:
   m_ObjectHideFlags: 1
