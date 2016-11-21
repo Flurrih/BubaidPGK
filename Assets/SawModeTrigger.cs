@@ -19,7 +19,6 @@ public class SawModeTrigger : MonoBehaviour {
     {
         if(col.tag == "Ball")
         {
-            Debug.Log("x");
             gameModeObject.GetComponent<SawMode>().SetAction();
         }
     }
