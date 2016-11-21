@@ -9,8 +9,11 @@ public class ExplosiveBoxController : MonoBehaviour {
     void Update()
     {
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime * 2);
+    }
 
-        if(transform.position.y < 1.7)
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
         {
             Instantiate(sphere, transform.position, transform.rotation);
             Instantiate(fragments, transform.position, transform.rotation);
