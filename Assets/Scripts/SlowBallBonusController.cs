@@ -19,7 +19,6 @@ public class SlowBallBonusController : MonoBehaviour {
     void Update()
     {
         SlowBonus();
-        InitializeExplosion();
     }
 
     void OnTriggerEnter(Collider other)
@@ -45,7 +44,7 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().playersBall.GetComponent<BallMoveController>().moveSpeed = 0.08f;
+                        player.GetComponent<PlayerController>().SetSpeed(4);
                     }
                 }
 
@@ -57,7 +56,7 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().playersBall.GetComponent<BallMoveController>().moveSpeed = 0.2f;
+                        player.GetComponent<PlayerController>().SetSpeed(10);
                     }
                 }
 
@@ -69,21 +68,4 @@ public class SlowBallBonusController : MonoBehaviour {
         }
     }
 
-    void InitializeExplosion()
-    {
-        if (explosionTimeLeft > 0)
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 5);
-
-            foreach (Collider hit in colliders)
-            {
-                Rigidbody rb = hit.GetComponent<Rigidbody>();
-
-                if (rb != null)
-                    rb.AddExplosionForce(500, transform.position, 5, 3.0F);
-            }
-
-            explosionTimeLeft -= Time.deltaTime;
-        }
-    }
 }
