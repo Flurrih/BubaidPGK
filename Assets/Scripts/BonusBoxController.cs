@@ -25,6 +25,12 @@ public class BonusBoxController : MonoBehaviour {
         {
             GotHit();
         }
+
+        if (other.gameObject.CompareTag("ExplosiveWave"))
+        {
+            Debug.Log("yes");
+            GotHit();
+        }
     }
 
     public void GotHit()
