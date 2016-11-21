@@ -1103,7 +1103,7 @@ GameObject:
   - 64: {fileID: 405552606}
   m_Layer: 0
   m_Name: podloga
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   - 4: {fileID: 558369813}
   m_Layer: 0
   m_Name: design_v2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
