@@ -8,6 +8,7 @@ public class SlowBallBonusController : MonoBehaviour {
     private bool isBonus = false;
     private Collider tmpCollider;
     private GameObject[] players;
+    public int speedValue;
 
     // Use this for initialization
     void Start()
@@ -44,7 +45,7 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetSpeed(4);
+                        player.GetComponent<PlayerController>().SetSpeed(speedValue);
                     }
                 }
 

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public float dashCooldown = 2.0f;
     private GameObject kickTrigger;
     Collider ball;
+    private Material playerMaterial;
 
     //Effects
     private int invertMovement = 1;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour {
                 ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         StartCoroutine(Dash());
+        playerMaterial = GetComponent<Renderer>().material;
     }
 
 	void FixedUpdate ()
@@ -193,6 +195,11 @@ public class PlayerController : MonoBehaviour {
     {
         return speed;
     }  
+
+    public Material GetPlayerMaterial()
+    {
+        return playerMaterial;
+    }
 
     public void SetMovement(int value)
     {
