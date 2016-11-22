@@ -6,6 +6,7 @@ public class BonusSpawnerController : MonoBehaviour {
     public GameObject[] bonuses;
     BonusSpawnerState spawnerState = BonusSpawnerState.Free;
     private float actionTime = 0.0f;
+    public float spawnTime;
 
     // Use this for initialization
     void Start ()
@@ -32,7 +33,7 @@ public class BonusSpawnerController : MonoBehaviour {
         if(spawnerState == BonusSpawnerState.Free)
         {
             actionTime += Time.deltaTime;
-            if(actionTime >= 15)
+            if(actionTime >= spawnTime)
             {
                 Instantiate(bonuses[Random.Range(0, bonuses.Length)], new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
                 spawnerState = BonusSpawnerState.Spawned;

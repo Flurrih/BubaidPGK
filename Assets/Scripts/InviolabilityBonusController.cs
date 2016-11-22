@@ -9,7 +9,6 @@ public class InviolabilityBonusController : MonoBehaviour {
     private Collider tmpCollider;
     private GameObject[] players;
     private Material inviolabilityMat;
-    private Material playerMat;
 
     // Use this for initialization
     void Start()
@@ -29,7 +28,6 @@ public class InviolabilityBonusController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerMat = other.GetComponent<Renderer>().material;
             tmpCollider = other;
             isBonus = true;
             MeshRenderer render = gameObject.GetComponent<MeshRenderer>();
@@ -52,7 +50,7 @@ public class InviolabilityBonusController : MonoBehaviour {
             }
             else
             {
-                tmpCollider.GetComponent<MeshRenderer>().material = playerMat;
+                tmpCollider.GetComponent<MeshRenderer>().material = tmpCollider.GetComponent<PlayerController>().GetPlayerMaterial();
                 tmpCollider.GetComponent<PlayerController>().SetInviolability(false);
                 bonusTimeLeft = 6;
                 isBonus = false;

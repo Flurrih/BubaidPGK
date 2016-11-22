@@ -97,6 +97,7 @@ MonoBehaviour:
   - {fileID: 1000010339393896, guid: fecb857a345aea645b628128366c65bc, type: 2}
   - {fileID: 1000013012237380, guid: e1c5950264608414f834c4a0a0f536eb, type: 2}
   - {fileID: 1000012487365766, guid: 6263950f0048a1442a81b16cc6a77f95, type: 2}
+  spawnTime: 10
 --- !u!136 &136000012223429498
 CapsuleCollider:
   m_ObjectHideFlags: 1
