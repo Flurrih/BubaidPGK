@@ -2337,6 +2337,7 @@ MonoBehaviour:
   smashForce: 13000
   dashCooldown: 2
   smashCooldown: 5
+  cam: {fileID: 0}
   joint: {fileID: 1000011959593810}
   playersBall: {fileID: 1000013548561900}
 --- !u!114 &114000012093461654

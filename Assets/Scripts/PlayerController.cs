@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
     public float smashCooldown = 10.0f;
     private GameObject kickTrigger;
     Collider ball;
+    [SerializeField]
+    Camera cam;
 
     //Effects
     private int invertMovement = 1;
@@ -47,7 +49,6 @@ public class PlayerController : MonoBehaviour {
         hold = PlayerHoldState.HoldingBall;
         rb = GetComponent<Rigidbody>();
         kickTrigger = transform.FindChild("CubePivot").gameObject;
-
         if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
            // if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
                 ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
@@ -77,8 +78,14 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert)*Input.GetAxis(playerNumber + "Horizontal");
         vertical = (invert)*Input.GetAxis(playerNumber + "Vertical");
-        if(!isJumping & !isDashing)
+        if (!isJumping & !isDashing)
+        {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
+            Transform temp = cam.transform;
+            temp.rotation = Quaternion.Euler( new Vector3(0,temp.rotation.eulerAngles.y, 0));
+            Vector3 moveDirection = temp.TransformDirection(rb.velocity);
+            rb.velocity = moveDirection;
+        }
 
         if (rb.velocity != new Vector3(0,rb.velocity.y,0))
         {
@@ -126,8 +133,10 @@ public class PlayerController : MonoBehaviour {
                 {
                     if (playersBall.tag == "Ball")
                     {
+                       
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
                         playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
+                        rb.AddForce(-Vector3.up * smashForce);
                     }
                     yield return new WaitForSeconds(smashCooldown);
                 }
