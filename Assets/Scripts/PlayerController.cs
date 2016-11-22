@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetAxis("Reset") > 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-            Application.LoadLevel("arena_design_v2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -260,8 +261,7 @@ public class PlayerController : MonoBehaviour {
     // Collider functions
     void OnCollisionStay(Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "Ground")
-        if (collisionInfo.collider.tag == "Untagged")
+        if (collisionInfo.collider.tag == "Ground" || collisionInfo.collider.tag == "Untagged")
             isJumping = false;
     }
 
