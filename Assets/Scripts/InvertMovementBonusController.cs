@@ -20,7 +20,7 @@ public class InvertMovementBonusController : MonoBehaviour
     void Update()
     {
         InvertBonus();
-        InitializeExplosion();
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -72,21 +72,5 @@ public class InvertMovementBonusController : MonoBehaviour
         }
     }
 
-    void InitializeExplosion()
-    {
-        if (explosionTimeLeft > 0)
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 5);
-
-            foreach (Collider hit in colliders)
-            {
-                Rigidbody rb = hit.GetComponent<Rigidbody>();
-
-                if (rb != null)
-                    rb.AddExplosionForce(500, transform.position, 5, 3.0F);
-            }
-
-            explosionTimeLeft -= Time.deltaTime;
-        }
-    }
+   
 }

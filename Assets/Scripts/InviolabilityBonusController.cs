@@ -22,7 +22,7 @@ public class InviolabilityBonusController : MonoBehaviour {
     void Update()
     {
         InviolabilityBonus();
-        InitializeExplosion();
+        //InitializeExplosion();
     }
 
     void OnTriggerEnter(Collider other)
@@ -62,7 +62,7 @@ public class InviolabilityBonusController : MonoBehaviour {
         }
     }
 
-    void InitializeExplosion()
+    /*void InitializeExplosion()
     {
         if (explosionTimeLeft > 0)
         {
@@ -78,5 +78,5 @@ public class InviolabilityBonusController : MonoBehaviour {
 
             explosionTimeLeft -= Time.deltaTime;
         }
-    }
+    }*/
 }
