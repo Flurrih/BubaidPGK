@@ -11,7 +11,7 @@ public class BallTriggerController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
        
-        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber && GetComponent<BallMoveController>().State == BallMoveController.BallState.Normal)
+        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber)
         {
             if (GetComponent<BallMoveController>().State == BallMoveController.BallState.Normal)
             {
@@ -38,7 +38,7 @@ public class BallTriggerController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
 
-        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber && GetComponent<BallMoveController>().State == BallMoveController.BallState.Normal)
+        if (other.tag == "Player" && this.GetComponent<BallMoveController>().playerNumber != other.GetComponent<PlayerController>().playerNumber)
         {
            if(timerTrigger >= 2.0f)
             {
