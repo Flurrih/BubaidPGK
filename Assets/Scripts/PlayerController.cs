@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject kickTrigger;
     Collider ball;
     [SerializeField]
-    Camera cam = Camera.main;
+    Camera cam;
     private Material playerMaterial;
 
     //Effects
@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
+        cam = Camera.main;
         hold = PlayerHoldState.HoldingBall;
         rb = GetComponent<Rigidbody>();
         kickTrigger = transform.FindChild("CubePivot").gameObject;
@@ -74,7 +75,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetAxis("Reset") > 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-            Application.LoadLevel("arena_design_v2");
         }
     }
 
