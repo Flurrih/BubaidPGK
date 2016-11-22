@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject kickTrigger;
     Collider ball;
     [SerializeField]
-    Camera cam;
+    Camera cam = Camera.main;
     private Material playerMaterial;
 
     //Effects
@@ -261,7 +261,6 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionStay(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Ground")
-        if (collisionInfo.collider.tag == "Untagged")
             isJumping = false;
     }
 
