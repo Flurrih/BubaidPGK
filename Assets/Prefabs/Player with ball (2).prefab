@@ -2542,6 +2542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eab1a89eb2719f45805a28f7ae0c4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundedLimit: 2
 --- !u!114 &114000014214744798
 MonoBehaviour:
   m_ObjectHideFlags: 1

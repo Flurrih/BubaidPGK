@@ -3,6 +3,15 @@ using System.Collections;
 
 public class BallMoveController : MonoBehaviour {
 
+    public enum BallState
+    {
+        Normal,
+        Smashed,
+        Grounded
+    }
+
+    public BallState State { get; set; }
+
     public float pullSpeed;
 
     public float holdRadius = 1.0f;
@@ -25,10 +34,13 @@ public class BallMoveController : MonoBehaviour {
 
     Vector3 targetPos;
 
+    Vector3 tempSize;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         targetPos = rb.transform.position;
+        tempSize = GetComponent<BoxCollider>().size;
     }
 
     void FixedUpdate()
@@ -36,6 +48,16 @@ public class BallMoveController : MonoBehaviour {
         released = player.GetComponent<PlayerController>().isBallReleased;
         horizontal2 = invertMovement*Input.GetAxis(playerNumber + "Horizontal 2nd");
         vertical2 = invertMovement*Input.GetAxis(playerNumber + "Vertical 2nd");
+
+        if (State == BallState.Smashed)
+        {
+            GetComponent<BoxCollider>().size = new Vector3(tempSize.x * 3, tempSize.y, tempSize.z * 3);
+        }
+
+        if(State == BallState.Grounded)
+        {
+            GetComponent<BoxCollider>().size = new Vector3(tempSize.x, tempSize.y, tempSize.z);
+        }
 
         //Vector3 movePoint;
         

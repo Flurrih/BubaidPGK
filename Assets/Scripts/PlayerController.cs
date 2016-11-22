@@ -3,6 +3,14 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    public enum PlayerHoldState
+    {
+        Free,
+        HoldingBall
+    }
+
+    public PlayerHoldState hold { get; set; }
+
     // General
     private Rigidbody rb;
     public int playerNumber = 0;
@@ -36,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
+        hold = PlayerHoldState.HoldingBall;
         rb = GetComponent<Rigidbody>();
         kickTrigger = transform.FindChild("CubePivot").gameObject;
 
@@ -111,14 +120,17 @@ public class PlayerController : MonoBehaviour {
     {
         while (true)
         {
-            if(Input.GetButton(playerNumber + "Skill"))
+            if (hold != PlayerHoldState.Free)
             {
-                if(playersBall.tag == "Ball")
+                if (Input.GetButton(playerNumber + "Skill"))
                 {
-                    Debug.Log("Smash");
-                    playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
+                    if (playersBall.tag == "Ball")
+                    {
+                        playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
+                        playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
+                    }
+                    yield return new WaitForSeconds(smashCooldown);
                 }
-                yield return new WaitForSeconds(smashCooldown);
             }
 
             yield return null;
@@ -150,6 +162,7 @@ public class PlayerController : MonoBehaviour {
 
                 isBallReleased = true;
                 Destroy(joint.GetComponent<ConfigurableJoint>());
+                hold = PlayerHoldState.Free;
             }
             else if(kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
             {
@@ -167,6 +180,7 @@ public class PlayerController : MonoBehaviour {
                 joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
                 joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
                 joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                hold = PlayerHoldState.HoldingBall;
             }
         }
     }
