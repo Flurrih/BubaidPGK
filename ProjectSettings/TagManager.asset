@@ -11,6 +11,7 @@ TagManager:
   - Debuff
   - Ground
   - Chain Holder
+  - BoxParticle
   layers:
   - Default
   - TransparentFX

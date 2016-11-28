@@ -25,7 +25,7 @@ GameObject:
   - 54: {fileID: 54000013486249602}
   m_Layer: 0
   m_Name: Cube fragment (4)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - 54: {fileID: 54000013905174450}
   m_Layer: 0
   m_Name: Cube fragment (3)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - 54: {fileID: 54000013689002562}
   m_Layer: 0
   m_Name: Cube fragment
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - 54: {fileID: 54000013295875596}
   m_Layer: 0
   m_Name: Cube fragment (7)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - 54: {fileID: 54000012580196432}
   m_Layer: 0
   m_Name: Cube fragment (5)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - 54: {fileID: 54000011822461200}
   m_Layer: 0
   m_Name: Cube fragment (2)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - 54: {fileID: 54000013397890510}
   m_Layer: 0
   m_Name: Cube fragment (6)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - 54: {fileID: 54000010832958016}
   m_Layer: 0
   m_Name: Cube fragment (1)
-  m_TagString: Untagged
+  m_TagString: BoxParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
