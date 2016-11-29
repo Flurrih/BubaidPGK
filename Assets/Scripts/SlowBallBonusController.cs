@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SlowBallBonusController : MonoBehaviour {
 
-    private double explosionTimeLeft = 0.3;
+    //private double explosionTimeLeft = 0.3;
     private float bonusTimeLeft = 10;
     private bool isBonus = false;
     private Collider tmpCollider;
@@ -13,12 +13,13 @@ public class SlowBallBonusController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         SlowBonus();
     }
 
@@ -45,7 +46,7 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetSpeed(speedValue);
+                        player.GetComponent<PlayerController>().SetSpeed(speedValue);  
                     }
                 }
 
@@ -57,7 +58,7 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetSpeed(10);
+                        player.GetComponent<PlayerController>().SetSpeed(10);            
                     }
                 }
 

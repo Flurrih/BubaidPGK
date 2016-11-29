@@ -8,6 +8,7 @@ public class ExplosiveWaveController : MonoBehaviour
     private float effect_y = 5;
     private float effect_z = 5;
 
+    private bool raycasting = true;
     private double explosionTimeLeft = 1;
     private double pullTimeLeft = 4;
     private bool isExplosion = false;
@@ -73,30 +74,35 @@ public class ExplosiveWaveController : MonoBehaviour
         if (explosionTimeLeft > 0 && isExplosion == true)
         {
             
-
-            for (int i = 0; i < 360; i++)
+            if(raycasting)
             {
-                spreadAngle = Quaternion.AngleAxis(i, new Vector3(0, 1, 0));
-                castingVector = spreadAngle * noAngle;
-
-                if (Physics.Raycast(p1, castingVector, out hit, 100) && hit.transform.tag == "Player")
+                for (int i = 0; i < 360; i++)
                 {
-                    Debug.Log(hit.distance);
-                    Debug.DrawRay(p1, castingVector, Color.green);
-                    if (hit.transform.GetComponent<PlayerController>().playerNumber == 1 && playerOneDamageCounter == 0)
-                    {
-                        hit.transform.GetComponent<PlayerController>().GotHit(20);
-                        playerOneDamageCounter = 1;
-                    }
+                    spreadAngle = Quaternion.AngleAxis(i, new Vector3(0, 1, 0));
+                    castingVector = spreadAngle * noAngle;
 
-                    if (hit.transform.GetComponent<PlayerController>().playerNumber == 2 && playerTwoDamageCounter == 0)
+                    if (Physics.Raycast(p1, castingVector, out hit, 100) && hit.transform.tag == "Player")
                     {
-                        hit.transform.GetComponent<PlayerController>().GotHit(20);
-                        playerTwoDamageCounter = 1;
-                    }
+                        Debug.Log(hit.distance);
+                        Debug.DrawRay(p1, castingVector, Color.green);
+                        if (hit.transform.GetComponent<PlayerController>().playerNumber == 1 && playerOneDamageCounter == 0)
+                        {
+                            hit.transform.GetComponent<PlayerController>().GotHit(20);
+                            playerOneDamageCounter = 1;
+                        }
 
+                        if (hit.transform.GetComponent<PlayerController>().playerNumber == 2 && playerTwoDamageCounter == 0)
+                        {
+                            hit.transform.GetComponent<PlayerController>().GotHit(20);
+                            playerTwoDamageCounter = 1;
+                        }
+
+                    }
                 }
+
+                raycasting = false;
             }
+            
 
 
             explosionTimeLeft -= Time.deltaTime;

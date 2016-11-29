@@ -15,7 +15,7 @@ public class ExplosiveBoxesBonusController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        InitializeExplosion();
+        //InitializeExplosion();
     }
 
     void OnTriggerEnter(Collider other)
@@ -29,7 +29,7 @@ public class ExplosiveBoxesBonusController : MonoBehaviour {
         }
     }
 
-    void InitializeExplosion()
+    /*void InitializeExplosion()
     {
         if (explosionTimeLeft > 0)
         {
@@ -45,7 +45,7 @@ public class ExplosiveBoxesBonusController : MonoBehaviour {
 
             explosionTimeLeft -= Time.deltaTime;
         }
-    }
+    }*/
 
     IEnumerator CreateExplosiveBoxes()
     {
