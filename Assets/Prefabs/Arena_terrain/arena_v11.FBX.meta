@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 547504b107034c1408edc00f9be6ed76
+timeCreated: 1480799972
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: drzwi
+    100004: drzwi001
+    100006: drzwi002
+    100008: drzwi003
+    100010: ground
+    100012: Island
+    100014: kolumna zew
+    100016: 'platformy '
+    100018: platformy 001
+    100020: pochodnia
+    100022: pochodnia001
+    100024: pochodnia002
+    100026: pochodnia003
+    100028: pochodnia004
+    100030: pochodnia005
+    100032: rampa002
+    100034: rampa003
+    100036: rampa004
+    100038: rampa005
+    100040: trybuny
+    100042: zakonczenie trybun
+    400000: //RootNode
+    400002: drzwi
+    400004: drzwi001
+    400006: drzwi002
+    400008: drzwi003
+    400010: ground
+    400012: Island
+    400014: kolumna zew
+    400016: 'platformy '
+    400018: platformy 001
+    400020: pochodnia
+    400022: pochodnia001
+    400024: pochodnia002
+    400026: pochodnia003
+    400028: pochodnia004
+    400030: pochodnia005
+    400032: rampa002
+    400034: rampa003
+    400036: rampa004
+    400038: rampa005
+    400040: trybuny
+    400042: zakonczenie trybun
+    2300000: drzwi
+    2300002: drzwi001
+    2300004: drzwi002
+    2300006: drzwi003
+    2300008: ground
+    2300010: Island
+    2300012: kolumna zew
+    2300014: 'platformy '
+    2300016: platformy 001
+    2300018: pochodnia
+    2300020: pochodnia001
+    2300022: pochodnia002
+    2300024: pochodnia003
+    2300026: pochodnia004
+    2300028: pochodnia005
+    2300030: rampa002
+    2300032: rampa003
+    2300034: rampa004
+    2300036: rampa005
+    2300038: trybuny
+    2300040: zakonczenie trybun
+    3300000: drzwi
+    3300002: drzwi001
+    3300004: drzwi002
+    3300006: drzwi003
+    3300008: ground
+    3300010: Island
+    3300012: kolumna zew
+    3300014: 'platformy '
+    3300016: platformy 001
+    3300018: pochodnia
+    3300020: pochodnia001
+    3300022: pochodnia002
+    3300024: pochodnia003
+    3300026: pochodnia004
+    3300028: pochodnia005
+    3300030: rampa002
+    3300032: rampa003
+    3300034: rampa004
+    3300036: rampa005
+    3300038: trybuny
+    3300040: zakonczenie trybun
+    4300000: Island
+    4300002: ground
+    4300004: 'platformy '
+    4300006: rampa002
+    4300008: rampa003
+    4300010: trybuny
+    4300012: rampa004
+    4300014: platformy 001
+    4300016: rampa005
+    4300018: zakonczenie trybun
+    4300020: kolumna zew
+    4300022: drzwi
+    4300024: drzwi001
+    4300026: drzwi002
+    4300028: drzwi003
+    4300030: pochodnia
+    4300032: pochodnia001
+    4300034: pochodnia002
+    4300036: pochodnia003
+    4300038: pochodnia004
+    4300040: pochodnia005
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
