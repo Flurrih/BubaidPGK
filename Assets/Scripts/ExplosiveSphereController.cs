@@ -33,16 +33,10 @@ public class ExplosiveSphereController : MonoBehaviour {
                 if (rb != null)
                     rb.AddExplosionForce(50, transform.position, 5, 3.0F);
 
-                if(hit.gameObject.CompareTag("Player") && PlayerDamageCounter == 0)
+                if(hit.gameObject.CompareTag("Player") && PlayerDamageCounter == 0 && hit.gameObject != null)
                 {
                     hit.GetComponent<PlayerController>().GotHit(20);   //SetHealth(-20);
                     PlayerDamageCounter = 1;
-                }
-
-                if(hit.gameObject.CompareTag("Bonus Box") && boxDamageCounter == 0)
-                {
-                    hit.GetComponent<BonusBoxController>().DecreaseDurability(25);
-                    boxDamageCounter = 1;
                 }
             }
 
