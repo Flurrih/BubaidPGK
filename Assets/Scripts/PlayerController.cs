@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public PlayerHoldState hold { get; set; }
+
 
     // General
     private Rigidbody rb;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     private int playerHealth = 100;
     private bool isJumping = true;
     private bool isDashing = false;
+    private bool isDashingCooldown = false;
+    private bool isSmashing = false;
     public float dashCooldown = 2.0f;
     public float smashCooldown = 10.0f;
     private GameObject kickTrigger;
@@ -116,11 +120,13 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetButton(playerNumber + "Dash"))
             {
                 isDashing = true;
+                isDashingCooldown = true;
                 rb.velocity = Vector3.zero;
                 rb.AddForce(new Vector3(rb.transform.forward.x, 0, rb.transform.forward.z) * dashForce, ForceMode.Impulse);
                 yield return new WaitForSeconds(dashCooldown / 4);
                 isDashing = false;
                 yield return new WaitForSeconds(dashCooldown * 3 / 4);
+                isDashingCooldown = false;
             }
             
             yield return null;
@@ -137,12 +143,13 @@ public class PlayerController : MonoBehaviour {
                 {
                     if (playersBall.tag == "Ball")
                     {
-                       
+                        isSmashing = true;
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
                         playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
                         rb.AddForce(-Vector3.up * smashForce);
                     }
                     yield return new WaitForSeconds(smashCooldown);
+                    isSmashing = false;
                 }
             }
 
@@ -252,9 +259,19 @@ public class PlayerController : MonoBehaviour {
         invertMovement = value;
     }
 
+    public int getInvert()
+    {
+        return invertMovement;
+    }
+
     public void SetInviolability(bool value)
     {
         isInviolability = value;
+    }
+
+    public bool IsInviolability()
+    {
+        return isInviolability;
     }
 
     // Collider functions
@@ -263,5 +280,26 @@ public class PlayerController : MonoBehaviour {
         if (collisionInfo.collider.tag == "Ground")
             isJumping = false;
     }
+
+    public bool IsJumping()
+    {
+        return isJumping;
+    }
+
+    public bool IsDashing()
+    {
+        return isDashing;
+    }
+
+    public bool IsSmashing()
+    {
+        return isSmashing;
+    }
+
+    public bool IsDashingCooldown()
+    {
+        return isDashingCooldown;
+    }
+
 
 }
