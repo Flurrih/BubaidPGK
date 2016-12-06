@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name />
+  <hideFlags>None</hideFlags>
+  <player1>
+    <playerNumber>1</playerNumber>
+    <Jump>Joystick1Button0</Jump>
+    <Dash>Joystick1Button1</Dash>
+    <Kick>Joystick1Button7</Kick>
+    <Release>Joystick1Button6</Release>
+    <Skill>Joystick1Button2</Skill>
+    <AxisVertical1>
+      <AxisName>Joystick1AxisYInvert</AxisName>
+    </AxisVertical1>
+    <AxisHorizontal1>
+      <AxisName>Joystick1AxisX</AxisName>
+    </AxisHorizontal1>
+    <AxisVertical2>
+      <AxisName>Joystick1Axis4Invert</AxisName>
+    </AxisVertical2>
+    <AxisHorizontal2>
+      <AxisName>Joystick1Axis3</AxisName>
+    </AxisHorizontal2>
+  </player1>
+  <player2>
+    <playerNumber>2</playerNumber>
+    <Jump>Joystick2Button1</Jump>
+    <Dash>Joystick2Button0</Dash>
+    <Kick>Joystick2Button7</Kick>
+    <Release>Joystick2Button5</Release>
+    <Skill>Joystick2Button2</Skill>
+    <AxisVertical1>
+      <AxisName>Joystick2AxisYInvert</AxisName>
+    </AxisVertical1>
+    <AxisHorizontal1>
+      <AxisName>Joystick2AxisX</AxisName>
+    </AxisHorizontal1>
+    <AxisVertical2>
+      <AxisName>Joystick2Axis6</AxisName>
+    </AxisVertical2>
+    <AxisHorizontal2>
+      <AxisName>Joystick2Axis3Invert</AxisName>
+    </AxisHorizontal2>
+  </player2>
+</GameInput>

@@ -46,8 +46,8 @@ public class BallMoveController : MonoBehaviour {
     void FixedUpdate()
     {
         released = player.GetComponent<PlayerController>().isBallReleased;
-        horizontal2 = invertMovement*Input.GetAxis(playerNumber + "Horizontal 2nd");
-        vertical2 = invertMovement*Input.GetAxis(playerNumber + "Vertical 2nd");
+        horizontal2 = invertMovement*Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal2.AxisName);
+        vertical2 = invertMovement*Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical2.AxisName);
 
         if (State == BallState.Smashed)
         {

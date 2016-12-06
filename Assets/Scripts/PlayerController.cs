@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 
         StartCoroutine(Dash());
         StartCoroutine(Skills());
+        StartCoroutine(ReleaseButton());
         playerMaterial = GetComponent<Renderer>().material;
     }
 
@@ -71,7 +72,6 @@ public class PlayerController : MonoBehaviour {
         ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         FireButton();
-        ReleaseButton();
         playerMovement(invertMovement);
         Jump();
 
@@ -84,8 +84,8 @@ public class PlayerController : MonoBehaviour {
 
     void playerMovement(int invert)
     {
-        horizontal = (invert) * Input.GetAxis(playerNumber + "Horizontal");
-        vertical = (invert) * Input.GetAxis(playerNumber + "Vertical");
+        horizontal = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal1.AxisName);
+        vertical = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical1.AxisName);
         if (!isJumping & !isDashing)
         {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        if (Input.GetButton(playerNumber + "Jump") && !isJumping)
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Jump.ToString()) && !isJumping)
         {
             isJumping = true;
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
 
         while (true)
         {
-            if (Input.GetButton(playerNumber + "Dash"))
+            if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Dash.ToString()))
             {
                 isDashing = true;
                 isDashingCooldown = true;
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (hold != PlayerHoldState.Free)
             {
-                if (Input.GetButton(playerNumber + "Skill"))
+                if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Skill.ToString()))
                 {
                     if (playersBall.tag == "Ball")
                     {
@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour {
 
     void FireButton()
     {
-        if (Input.GetButton(playerNumber + "Fire1"))
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Kick.ToString()))
         {
             if (ball != null)
             {
@@ -172,36 +172,41 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void ReleaseButton()
+    IEnumerator ReleaseButton()
     {
-        if (Input.GetButtonUp(playerNumber + "Release"))
+        while (true)
         {
-            if (!isBallReleased)
+            if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Release.ToString()))
             {
-                jointCopy = joint;
+                if (!isBallReleased)
+                {
+                    jointCopy = joint;
 
-                isBallReleased = true;
-                Destroy(joint.GetComponent<ConfigurableJoint>());
-                hold = PlayerHoldState.Free;
+                    isBallReleased = true;
+                    Destroy(joint.GetComponent<ConfigurableJoint>());
+                    hold = PlayerHoldState.Free;
+                }
+                else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
+                {
+                    isBallReleased = false;
+                    joint.AddComponent<ConfigurableJoint>();
+                    joint.transform.position = rb.position;
+                    joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                    joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                    joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                    joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                    joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                    joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                    hold = PlayerHoldState.HoldingBall;
+                }
+                yield return new WaitForSeconds(0.2f);
             }
-            else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
-            {
-                isBallReleased = false;
-                joint.AddComponent<ConfigurableJoint>();
-                joint.transform.position = rb.position;
-                joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
-                joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
-                joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
-                joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
-                joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
-                joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
-                joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
-                hold = PlayerHoldState.HoldingBall;
-            }
+            yield return null;
         }
     }
 
