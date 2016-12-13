@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - Chain Holder
   - BoxParticle
+  - PlayerInterface2
   layers:
   - Default
   - TransparentFX

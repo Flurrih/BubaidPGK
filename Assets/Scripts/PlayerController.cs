@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public PlayerHoldState hold { get; set; }
+
 
     // General
     private Rigidbody rb;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     private int playerHealth = 100;
     private bool isJumping = true;
     private bool isDashing = false;
+    private bool isDashingCooldown = false;
+    private bool isSmashing = false;
     public float dashCooldown = 2.0f;
     public float smashCooldown = 10.0f;
     private GameObject kickTrigger;
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 
         StartCoroutine(Dash());
         StartCoroutine(Skills());
+        StartCoroutine(ReleaseButton());
         playerMaterial = GetComponent<Renderer>().material;
     }
 
@@ -67,7 +72,6 @@ public class PlayerController : MonoBehaviour {
         ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         FireButton();
-        ReleaseButton();
         playerMovement(invertMovement);
         Jump();
 
@@ -80,8 +84,8 @@ public class PlayerController : MonoBehaviour {
 
     void playerMovement(int invert)
     {
-        horizontal = (invert) * Input.GetAxis(playerNumber + "Horizontal");
-        vertical = (invert) * Input.GetAxis(playerNumber + "Vertical");
+        horizontal = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal1.AxisName);
+        vertical = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical1.AxisName);
         if (!isJumping & !isDashing)
         {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
@@ -101,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        if (Input.GetButton(playerNumber + "Jump") && !isJumping)
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Jump.ToString()) && !isJumping)
         {
             isJumping = true;
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
@@ -113,14 +117,16 @@ public class PlayerController : MonoBehaviour {
 
         while (true)
         {
-            if (Input.GetButton(playerNumber + "Dash"))
+            if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Dash.ToString()))
             {
                 isDashing = true;
+                isDashingCooldown = true;
                 rb.velocity = Vector3.zero;
                 rb.AddForce(new Vector3(rb.transform.forward.x, 0, rb.transform.forward.z) * dashForce, ForceMode.Impulse);
                 yield return new WaitForSeconds(dashCooldown / 4);
                 isDashing = false;
                 yield return new WaitForSeconds(dashCooldown * 3 / 4);
+                isDashingCooldown = false;
             }
             
             yield return null;
@@ -133,16 +139,17 @@ public class PlayerController : MonoBehaviour {
         {
             if (hold != PlayerHoldState.Free)
             {
-                if (Input.GetButton(playerNumber + "Skill"))
+                if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Skill.ToString()))
                 {
                     if (playersBall.tag == "Ball")
                     {
-                       
+                        isSmashing = true;
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
                         playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
                         rb.AddForce(-Vector3.up * smashForce);
                     }
                     yield return new WaitForSeconds(smashCooldown);
+                    isSmashing = false;
                 }
             }
 
@@ -152,7 +159,7 @@ public class PlayerController : MonoBehaviour {
 
     void FireButton()
     {
-        if (Input.GetButton(playerNumber + "Fire1"))
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Kick.ToString()))
         {
             if (ball != null)
             {
@@ -165,36 +172,41 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void ReleaseButton()
+    IEnumerator ReleaseButton()
     {
-        if (Input.GetButtonUp(playerNumber + "Release"))
+        while (true)
         {
-            if (!isBallReleased)
+            if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Release.ToString()))
             {
-                jointCopy = joint;
+                if (!isBallReleased)
+                {
+                    jointCopy = joint;
 
-                isBallReleased = true;
-                Destroy(joint.GetComponent<ConfigurableJoint>());
-                hold = PlayerHoldState.Free;
+                    isBallReleased = true;
+                    Destroy(joint.GetComponent<ConfigurableJoint>());
+                    hold = PlayerHoldState.Free;
+                }
+                else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
+                {
+                    isBallReleased = false;
+                    joint.AddComponent<ConfigurableJoint>();
+                    joint.transform.position = rb.position;
+                    joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                    joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                    joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                    joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                    joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                    joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                    joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                    hold = PlayerHoldState.HoldingBall;
+                }
+                yield return new WaitForSeconds(0.2f);
             }
-            else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
-            {
-                isBallReleased = false;
-                joint.AddComponent<ConfigurableJoint>();
-                joint.transform.position = rb.position;
-                joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
-                joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
-                joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
-                joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
-                joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
-                joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
-                joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
-                joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
-                hold = PlayerHoldState.HoldingBall;
-            }
+            yield return null;
         }
     }
 
@@ -252,9 +264,19 @@ public class PlayerController : MonoBehaviour {
         invertMovement = value;
     }
 
+    public int getInvert()
+    {
+        return invertMovement;
+    }
+
     public void SetInviolability(bool value)
     {
         isInviolability = value;
+    }
+
+    public bool IsInviolability()
+    {
+        return isInviolability;
     }
 
     // Collider functions
@@ -263,5 +285,26 @@ public class PlayerController : MonoBehaviour {
         if (collisionInfo.collider.tag == "Ground")
             isJumping = false;
     }
+
+    public bool IsJumping()
+    {
+        return isJumping;
+    }
+
+    public bool IsDashing()
+    {
+        return isDashing;
+    }
+
+    public bool IsSmashing()
+    {
+        return isSmashing;
+    }
+
+    public bool IsDashingCooldown()
+    {
+        return isDashingCooldown;
+    }
+
 
 }
