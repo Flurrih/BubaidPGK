@@ -39,7 +39,8 @@ public class JumpIconController : MonoBehaviour {
                     isBonus = false;
                 }
 
-                jumpActive.fillAmount = Mathf.Lerp(jumpActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                //jumpActive.fillAmount = Mathf.Lerp(jumpActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                jumpActive.fillAmount += Time.deltaTime * 0.8f;
             }
 
             if (player.GetComponent<PlayerController>().IsJumping() == false)

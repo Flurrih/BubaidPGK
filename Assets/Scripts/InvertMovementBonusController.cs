@@ -7,6 +7,7 @@ public class InvertMovementBonusController : MonoBehaviour
     private double explosionTimeLeft = 0.3;
     private float bonusTimeLeft = 8;
     private bool isBonus = false;
+    private bool isBonusNotSet = true;
     private Collider tmpCollider;
     private GameObject[] players;
 
@@ -46,11 +47,16 @@ public class InvertMovementBonusController : MonoBehaviour
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetMovement(-1);
-                        player.GetComponent<PlayerController>().playersBall.GetComponent<BallMoveController>().SetMovement(-1);
+                        if(isBonusNotSet)
+                        {
+                            player.GetComponent<PlayerController>().SetMovement(-1);
+                            player.GetComponent<PlayerController>().playersBall.GetComponent<BallMoveController>().SetMovement(-1);
+                            isBonusNotSet = false;
+                        }
+                        
                     }
                 }
-
+                Debug.Log(bonusTimeLeft);
                 bonusTimeLeft -= Time.deltaTime;
             }
             else

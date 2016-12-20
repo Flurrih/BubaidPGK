@@ -39,7 +39,8 @@ public class DashIconController : MonoBehaviour {
                     isBonus = false;
                 }
 
-                dashActive.fillAmount = Mathf.Lerp(dashActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                //dashActive.fillAmount = Mathf.Lerp(dashActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                dashActive.fillAmount += Time.deltaTime * 0.5f;
             }
 
             if (player.GetComponent<PlayerController>().IsDashingCooldown() == false)

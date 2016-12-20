@@ -6,7 +6,10 @@ public class BonusController : MonoBehaviour {
     private float bonusTimeLeft = 10;
     private double explosionTimeLeft = 0.3;
     private bool isBonus = false;
+    private bool isSpeedNotSet = true;
     private Collider col;
+    [SerializeField]
+    private int speed;
 
     // Use this for initialization
     void Start ()
@@ -39,7 +42,12 @@ public class BonusController : MonoBehaviour {
             if (bonusTimeLeft > 0)
             {
                 // speed = 20;
-                col.GetComponent<PlayerController>().SetSpeed(20);
+                if(isSpeedNotSet)
+                {
+                    col.GetComponent<PlayerController>().SetSpeed(speed);
+                    isSpeedNotSet = false;
+                }
+                
                 bonusTimeLeft -= Time.deltaTime;
                 //Debug.Log(player.GetComponent<PlayerController>().GetSpeed());
                 Debug.Log(bonusTimeLeft);
@@ -47,8 +55,11 @@ public class BonusController : MonoBehaviour {
             else
             {
                 // speed = 10;
-                bonusTimeLeft = 10;
-                col.GetComponent<PlayerController>().SetSpeed(10);
+                if(col.GetComponent<PlayerController>().GetSpeed() == speed)
+                    col.GetComponent<PlayerController>().SetSpeed(10);
+
+
+                bonusTimeLeft = 10;              
                 isBonus = false;
                 Destroy(this.gameObject);
                 return;
