@@ -38,6 +38,7 @@ public class GameInput {
             this.Dash = Dash;
             this.Release = Release;
             this.Skill = Skill;
+            this.Reset = Reset;
             this.AxisVertical1 = AxisVertical1;
             this.AxisHorizontal1 = AxisHorizontal1;
             this.AxisVertical2 = AxisVertical2;

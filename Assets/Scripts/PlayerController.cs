@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour {
     Collider ball;
     [SerializeField]
     Camera cam;
+    [SerializeField]
+    ParticleSystem bloodParticle, dashParticle;
     private Material playerMaterial;
 
     //Effects
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour {
         Jump();
 
 
-        if (Input.GetAxis("Reset") > 0)
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Reset.ToString()))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
@@ -119,13 +121,15 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Dash.ToString()))
             {
+                dashParticle.Play();
                 isDashing = true;
                 isDashingCooldown = true;
                 rb.velocity = Vector3.zero;
                 rb.AddForce(new Vector3(rb.transform.forward.x, 0, rb.transform.forward.z) * dashForce, ForceMode.Impulse);
-                yield return new WaitForSeconds(dashCooldown / 4);
+                yield return new WaitForSeconds(dashCooldown / 16);
                 isDashing = false;
-                yield return new WaitForSeconds(dashCooldown * 3 / 4);
+                dashParticle.Stop();
+                yield return new WaitForSeconds(dashCooldown * 15 / 16);
                 isDashingCooldown = false;
             }
             
@@ -215,9 +219,9 @@ public class PlayerController : MonoBehaviour {
         if (isInviolability == false)
         {
             //Blood particle
-            GetComponentInChildren<ParticleSystem>().Clear();
-            GetComponentInChildren<ParticleSystem>().time = 0;
-            GetComponentInChildren<ParticleSystem>().Play();
+            bloodParticle.Clear();
+            bloodParticle.time = 0;
+            bloodParticle.Play();
 
             playerHealth -= dmg;
         }
