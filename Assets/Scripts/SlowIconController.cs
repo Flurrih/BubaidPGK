@@ -46,11 +46,11 @@ public class SlowIconController : MonoBehaviour {
                 {
                     if (gameObject.CompareTag("PlayerInterface2"))
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 128.2f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 212f);
                     }
                     else
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 128.2f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 212f);
                     }
                     
                     isPostionLocked = true;
@@ -59,11 +59,11 @@ public class SlowIconController : MonoBehaviour {
                 {
                     if (gameObject.CompareTag("PlayerInterface2"))
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 99.6f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 241f);
                     }
                     else
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 99.6f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 241f);
                     }
                     
                     isPostionLocked = true;
@@ -72,11 +72,11 @@ public class SlowIconController : MonoBehaviour {
                 {
                     if (gameObject.CompareTag("PlayerInterface2"))
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 99.6f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 241f);
                     }
                     else
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 99.6f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 241f);
                     }
                     
                     isPostionLocked = true;
@@ -85,20 +85,20 @@ public class SlowIconController : MonoBehaviour {
                 {
                     if (gameObject.CompareTag("PlayerInterface2"))
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 70.9f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(780.8f, 270f);
                     }
                     else
                     {
-                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 70.9f);
+                        gameObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(24.89f, 270f);
                     }
                     
                     isPostionLocked = true;
                 }
 
-                slowActive.fillAmount = Mathf.Lerp(slowActive.fillAmount, 0, Time.deltaTime * lerpSpeed);
+                slowActive.fillAmount -= Time.deltaTime * 0.1f;
             }
 
-            if (player.GetComponent<PlayerController>().GetSpeed() == 10)
+            if (player.GetComponent<PlayerController>().GetSpeed() > 5)
             {
                 slowActive.fillAmount = 0;
                 isBonus = true;

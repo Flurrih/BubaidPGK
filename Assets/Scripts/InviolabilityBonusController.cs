@@ -6,6 +6,7 @@ public class InviolabilityBonusController : MonoBehaviour {
     private double explosionTimeLeft = 0.3;
     private float bonusTimeLeft = 6;
     private bool isBonus = false;
+    private bool isBonusNotSet = true;
     private Collider tmpCollider;
     private GameObject[] players;
     private Material inviolabilityMat;
@@ -43,8 +44,14 @@ public class InviolabilityBonusController : MonoBehaviour {
 
             if (bonusTimeLeft > 0)
             {
-                tmpCollider.GetComponent<MeshRenderer>().material = inviolabilityMat;
-                tmpCollider.GetComponent<PlayerController>().SetInviolability(true);
+                
+                if(isBonusNotSet)
+                {
+                    tmpCollider.GetComponent<MeshRenderer>().material = inviolabilityMat;
+                    tmpCollider.GetComponent<PlayerController>().SetInviolability(true);
+                    isBonusNotSet = false;
+                }
+                
                 Debug.Log(bonusTimeLeft);
                 bonusTimeLeft -= Time.deltaTime;
             }

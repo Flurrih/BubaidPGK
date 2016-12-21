@@ -39,7 +39,8 @@ public class SmashIconController : MonoBehaviour {
                     isBonus = false;
                 }
 
-                smashActive.fillAmount = Mathf.Lerp(smashActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                //smashActive.fillAmount = Mathf.Lerp(smashActive.fillAmount, 1, Time.deltaTime * lerpSpeed);
+                smashActive.fillAmount += Time.deltaTime * 0.2f;
             }
 
             if (player.GetComponent<PlayerController>().IsSmashing() == false)

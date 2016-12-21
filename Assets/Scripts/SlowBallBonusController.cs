@@ -6,6 +6,7 @@ public class SlowBallBonusController : MonoBehaviour {
     //private double explosionTimeLeft = 0.3;
     private float bonusTimeLeft = 10;
     private bool isBonus = false;
+    private bool isSpeedNotSet = true;
     private Collider tmpCollider;
     private GameObject[] players;
     public int speedValue;
@@ -46,7 +47,12 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetSpeed(speedValue);  
+                        if(isSpeedNotSet)
+                        {
+                            player.GetComponent<PlayerController>().SetSpeed(speedValue);
+                            isSpeedNotSet = false;
+                        }
+                        
                     }
                 }
 
@@ -58,7 +64,8 @@ public class SlowBallBonusController : MonoBehaviour {
                 {
                     if (player.GetComponent<PlayerController>().playerNumber != tmpCollider.GetComponent<PlayerController>().playerNumber)
                     {
-                        player.GetComponent<PlayerController>().SetSpeed(10);            
+                        if(player.GetComponent<PlayerController>().GetSpeed() == speedValue)
+                            player.GetComponent<PlayerController>().SetSpeed(10);            
                     }
                 }
 
