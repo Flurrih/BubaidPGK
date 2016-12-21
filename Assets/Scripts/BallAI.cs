@@ -21,12 +21,17 @@ public class BallAI : MonoBehaviour {
     {
         targetPlayer = GameObject.FindWithTag("Player").transform; //target the player
 
+        StartCoroutine(Follow());
     }
 
 
     void Update()
     {
-        if (Vector3.Distance(myTransform.position, targetPlayer.position) > 1.5f)
+    }
+
+    IEnumerator Follow()
+    {
+        while(Vector3.Distance(myTransform.position, targetPlayer.position) > 1.5f)
         {
             //rotate to look at the player
             myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
@@ -35,8 +40,8 @@ public class BallAI : MonoBehaviour {
 
             //move towards the player
             myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+            yield return null;
         }
-
 
     }
 }
