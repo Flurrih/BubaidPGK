@@ -3,13 +3,12 @@ using System.Collections;
 
 public class BallAI : MonoBehaviour {
 
-    Transform targetPlayer; //the enemy's target
+    GameObject targetPlayer; //the enemy's target
     float moveSpeed = 3; //move speed
     float rotationSpeed = 3; //speed of turning
 
 
     Transform myTransform; //current transform data of this enemy
-
 
     void Awake()
     {
@@ -19,7 +18,6 @@ public class BallAI : MonoBehaviour {
 
     void Start()
     {
-        targetPlayer = GameObject.FindWithTag("Player").transform; //target the player
 
         StartCoroutine(Follow());
     }
@@ -31,7 +29,7 @@ public class BallAI : MonoBehaviour {
 
     IEnumerator Follow()
     {
-        while(Vector3.Distance(myTransform.position, targetPlayer.position) > 1.5f)
+        while(Vector3.Distance(myTransform.position, targetPlayer.transform.position) > 1.5f && targetPlayer != null)
         {
             //rotate to look at the player
             myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
@@ -43,5 +41,10 @@ public class BallAI : MonoBehaviour {
             yield return null;
         }
 
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetPlayer = target;
     }
 }
