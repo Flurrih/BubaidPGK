@@ -5,6 +5,8 @@ public class BallTriggerController : MonoBehaviour {
     
     float timerTrigger;
     float groudedTime;
+    public ParticleSystem particle;
+    public ParticleSystem particleGround;
 
     public float groundedLimit = 2;
 
@@ -49,8 +51,13 @@ public class BallTriggerController : MonoBehaviour {
 
         if (other.tag == "Ground" && GetComponent<BallMoveController>().State == BallMoveController.BallState.Smashed)
         {
-            GetComponent<Rigidbody>().mass = 1000;
             GetComponent<BallMoveController>().State = BallMoveController.BallState.Grounded;
+            particle.startColor = other.gameObject.GetComponent<Renderer>().material.color;
+            Color groundColor = other.gameObject.GetComponent<Renderer>().material.color;
+            groundColor = new Color(groundColor.r + 0.2f, groundColor.g + 0.2f, groundColor.b + 0.2f);
+            //particleGround.startColor = groundColor;
+            particle.Play();
+            particleGround.Play();
         }
     }
 
@@ -64,7 +71,6 @@ public class BallTriggerController : MonoBehaviour {
 
             if (groudedTime >= groundedLimit)
             {
-                GetComponent<Rigidbody>().mass = 5;
                 GetComponent<BallMoveController>().State = BallMoveController.BallState.Normal;
                 groudedTime = 0.0f;
             }

@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject jointCopy;
 
     public GameObject playersBall;
+    public GameObject playersChain;
 
     void Start()
     {
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal1.AxisName);
         vertical = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical1.AxisName);
-        if (!isJumping & !isDashing)
+        if (!isDashing)
         {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
             Transform temp = cam.transform;
@@ -149,14 +150,14 @@ public class PlayerController : MonoBehaviour {
                     {
                         isSmashing = true;
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
-                        playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
-                        rb.AddForce(-Vector3.up * smashForce);
+                        playersBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        playersBall.GetComponent<Rigidbody>().AddForce((transform.up + transform.forward).normalized * smashForce);
+                        rb.AddForce((-transform.up + -transform.forward) * smashForce);
                     }
                     yield return new WaitForSeconds(smashCooldown);
                     isSmashing = false;
                 }
             }
-
             yield return null;
         }
     }
@@ -188,6 +189,7 @@ public class PlayerController : MonoBehaviour {
 
                     isBallReleased = true;
                     Destroy(joint.GetComponent<ConfigurableJoint>());
+                    playersChain.transform.parent = transform.parent;
                     hold = PlayerHoldState.Free;
                 }
                 else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
@@ -203,9 +205,10 @@ public class PlayerController : MonoBehaviour {
                     joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
                     joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
                     joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
-                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
                     joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
                     joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                    playersChain.transform.parent = transform;
                     hold = PlayerHoldState.HoldingBall;
                 }
                 yield return new WaitForSeconds(0.2f);

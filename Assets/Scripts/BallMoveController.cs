@@ -6,6 +6,7 @@ public class BallMoveController : MonoBehaviour {
     public enum BallState
     {
         Normal,
+        PreSmash,
         Smashed,
         Grounded
     }
@@ -29,6 +30,7 @@ public class BallMoveController : MonoBehaviour {
     public GameObject player;
 
     public int playerNumber = 0;
+    public Collider skillCollider;
 
     private bool released = false;
 
@@ -60,7 +62,7 @@ public class BallMoveController : MonoBehaviour {
         }
 
         //Vector3 movePoint;
-        
+
 
         //if((player.transform.position - transform.position).magnitude > moveRadius)
         //{
@@ -85,8 +87,20 @@ public class BallMoveController : MonoBehaviour {
         //targetPos = Vector3.ClampMagnitude(targetPos - player.transform.position, moveRadius) + player.transform.position;
 
         //rb.MovePosition(Vector3.MoveTowards(rb.position, targetPos, moveSpeed));
-        if(!released)
-            rb.AddForce(new Vector3(horizontal2 * moveSpeed, 0, vertical2 * moveSpeed), ForceMode.VelocityChange);
+        if (State == BallState.Normal)
+        {
+            if (!released)
+                rb.AddForce(new Vector3(horizontal2 * moveSpeed, 0, vertical2 * moveSpeed), ForceMode.VelocityChange);
+        }
+
+        if(State == BallState.PreSmash)
+        {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(-8,0,0), Time.deltaTime * 25);
+            if(skillCollider.bounds.Contains(transform.position))
+            {
+                State = BallState.Smashed;
+            }
+        }
     }
 
 
