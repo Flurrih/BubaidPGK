@@ -52,10 +52,11 @@ public class BallTriggerController : MonoBehaviour {
         if (other.tag == "Ground" && GetComponent<BallMoveController>().State == BallMoveController.BallState.Smashed)
         {
             GetComponent<BallMoveController>().State = BallMoveController.BallState.Grounded;
-            particle.startColor = other.gameObject.GetComponent<Renderer>().material.color;
+            //particle.startColor = other.gameObject.GetComponent<Renderer>().material.color;
             Color groundColor = other.gameObject.GetComponent<Renderer>().material.color;
-            groundColor = new Color(groundColor.r + 0.2f, groundColor.g + 0.2f, groundColor.b + 0.2f);
-            //particleGround.startColor = groundColor;
+            groundColor = new Color(groundColor.r - 0.5f, groundColor.g - 0.5f, groundColor.b - 0.5f);
+            particleGround.startColor = groundColor;
+            particle.startColor = groundColor;
             particle.Play();
             particleGround.Play();
         }

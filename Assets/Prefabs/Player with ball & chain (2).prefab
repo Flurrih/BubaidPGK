@@ -117,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010980877536
 GameObject:
   m_ObjectHideFlags: 1
@@ -187,7 +187,7 @@ GameObject:
   - 4: {fileID: 4000013130759506}
   - 65: {fileID: 65000012377771846}
   - 114: {fileID: 114000010613107072}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CubePivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011636424452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.36, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -503,7 +503,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014062644510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.319, z: 0}
+  m_LocalPosition: {x: -14.046181, y: 0.73, z: -0.737082}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1573,7 +1573,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.96000034, y: 0, z: 0.15645894}
+  m_ConnectedAnchor: {x: 0.96000034, y: 0, z: 0.15645804}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1665,7 +1665,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.1016984, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.10169828, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1757,7 +1757,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.15645878, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600006, y: 0.000000014901161, z: 0.15645869}
+  m_ConnectedAnchor: {x: 0.9600006, y: -0.00000016391277, z: 0.15645869}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1849,7 +1849,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.15645888, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600022, y: 0, z: 0.15645885}
+  m_ConnectedAnchor: {x: 0.9600022, y: 0, z: 0.15646033}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1941,7 +1941,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.0492277, y: -0.00000011920929, z: 0.7692307}
+  m_ConnectedAnchor: {x: 2.0492277, y: 0.00000059604645, z: 0.7692307}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2033,7 +2033,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.15645888, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600011, y: 0, z: 0.15645885}
+  m_ConnectedAnchor: {x: 0.9600011, y: 0, z: 0.1564585}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2217,7 +2217,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600029, y: 0.000000014901161, z: 0.15645906}
+  m_ConnectedAnchor: {x: 0.9600029, y: -0.00000071525574, z: 0.15645887}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2309,7 +2309,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.960001, y: -0.000000014901161, z: 0.15645906}
+  m_ConnectedAnchor: {x: 0.960001, y: 0.00000035762787, z: 0.15645887}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2398,9 +2398,9 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012794609540}
   serializedVersion: 4
-  lengthInSec: 2
+  lengthInSec: 3
   startDelay:
-    scalar: 0.1
+    scalar: 0
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -2441,12 +2441,12 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 756785718
+  randomSeed: 619372894
   InitialModule:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2604,10 +2604,10 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 0.9137255, g: 0.8862745, b: 0.67058825, a: 1}
-      maxColor: {r: 0.6784314, g: 0.6666667, b: 0.5921569, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 0
     startSize:
-      scalar: 0.1
+      scalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2818,7 +2818,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     gravityModifier: 5
-    maxNumParticles: 100
+    maxNumParticles: 500
     size3D: 0
     rotation3D: 0
   ShapeModule:
@@ -2840,13 +2840,13 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    randomDirection: 0
+    randomDirection: 1
   EmissionModule:
     enabled: 1
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 100
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2880,11 +2880,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 100
+    cnt0: 500
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 100
+    cntmax0: 500
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
@@ -6305,7 +6305,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     randomizeRotationDirection: 0
-    gravityModifier: 0
+    gravityModifier: 100
     maxNumParticles: 1
     size3D: 0
     rotation3D: 0
@@ -7495,10 +7495,10 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
-    collisionMode: 1
+    collisionMode: 0
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}

@@ -149,10 +149,12 @@ public class PlayerController : MonoBehaviour {
                     if (playersBall.tag == "Ball")
                     {
                         isSmashing = true;
-                        playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
+                        
                         playersBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         playersBall.GetComponent<Rigidbody>().AddForce((transform.up + transform.forward).normalized * smashForce);
                         rb.AddForce((-transform.up + -transform.forward) * smashForce);
+                        yield return new WaitForFixedUpdate();
+                        playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
                     }
                     yield return new WaitForSeconds(smashCooldown);
                     isSmashing = false;
