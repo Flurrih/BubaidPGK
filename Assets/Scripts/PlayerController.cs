@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal1.AxisName);
         vertical = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical1.AxisName);
-        if (!isDashing)
+        if (!isDashing && !isJumping)
         {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
             Transform temp = cam.transform;
