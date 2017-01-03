@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour {
     Collider ball;
     [SerializeField]
     Camera cam;
+    [SerializeField]
+    ParticleSystem bloodParticle, dashParticle;
     private Material playerMaterial;
 
     //Effects
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject jointCopy;
 
     public GameObject playersBall;
+    public GameObject playersChain;
 
     void Start()
     {
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour {
         Jump();
 
 
-        if (Input.GetAxis("Reset") > 0)
+        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Reset.ToString()))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
@@ -86,7 +89,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisHorizontal1.AxisName);
         vertical = (invert) * Input.GetAxis(InputManager.gameInput.getPlayerInput(playerNumber).AxisVertical1.AxisName);
-        if (!isJumping & !isDashing)
+        if (!isDashing && !isJumping)
         {
             rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
             Transform temp = cam.transform;
@@ -119,13 +122,15 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Dash.ToString()))
             {
+                dashParticle.Play();
                 isDashing = true;
                 isDashingCooldown = true;
                 rb.velocity = Vector3.zero;
                 rb.AddForce(new Vector3(rb.transform.forward.x, 0, rb.transform.forward.z) * dashForce, ForceMode.Impulse);
-                yield return new WaitForSeconds(dashCooldown / 4);
+                yield return new WaitForSeconds(dashCooldown / 16);
                 isDashing = false;
-                yield return new WaitForSeconds(dashCooldown * 3 / 4);
+                dashParticle.Stop();
+                yield return new WaitForSeconds(dashCooldown * 15 / 16);
                 isDashingCooldown = false;
             }
             
@@ -144,15 +149,17 @@ public class PlayerController : MonoBehaviour {
                     if (playersBall.tag == "Ball")
                     {
                         isSmashing = true;
+                        
+                        playersBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        playersBall.GetComponent<Rigidbody>().AddForce((transform.up + transform.forward).normalized * smashForce);
+                        rb.AddForce((-transform.up + -transform.forward) * smashForce);
+                        yield return new WaitForFixedUpdate();
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
-                        playersBall.GetComponent<Rigidbody>().AddForce(Vector3.up * smashForce);
-                        rb.AddForce(-Vector3.up * smashForce);
                     }
                     yield return new WaitForSeconds(smashCooldown);
                     isSmashing = false;
                 }
             }
-
             yield return null;
         }
     }
@@ -184,6 +191,7 @@ public class PlayerController : MonoBehaviour {
 
                     isBallReleased = true;
                     Destroy(joint.GetComponent<ConfigurableJoint>());
+                    playersChain.transform.parent = transform.parent;
                     hold = PlayerHoldState.Free;
                 }
                 else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
@@ -199,9 +207,10 @@ public class PlayerController : MonoBehaviour {
                     joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
                     joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
                     joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
-                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
                     joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
                     joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                    playersChain.transform.parent = transform;
                     hold = PlayerHoldState.HoldingBall;
                 }
                 yield return new WaitForSeconds(0.2f);
@@ -215,9 +224,9 @@ public class PlayerController : MonoBehaviour {
         if (isInviolability == false)
         {
             //Blood particle
-            GetComponentInChildren<ParticleSystem>().Clear();
-            GetComponentInChildren<ParticleSystem>().time = 0;
-            GetComponentInChildren<ParticleSystem>().Play();
+            bloodParticle.Clear();
+            bloodParticle.time = 0;
+            bloodParticle.Play();
 
             playerHealth -= dmg;
         }

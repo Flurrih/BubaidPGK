@@ -5,7 +5,7 @@ public class chainscript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<ConfigurableJoint>().projectionDistance = 0.1f;
+        GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
         GetComponent<ConfigurableJoint>().projectionAngle = 180;
         GetComponent<ConfigurableJoint>().projectionMode= JointProjectionMode.PositionAndRotation;
 
