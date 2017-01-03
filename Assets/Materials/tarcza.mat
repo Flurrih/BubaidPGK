@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: skrzynia
+  m_Name: tarcza
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: dbf72cdad77d4ba4f8c6f23592ed7c50, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ea74bc7f59cd2a4abd11f6f0ed398ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -48,19 +48,19 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: b98a7419b17bbcc4c8054f85afd8a748, type: 3}
+        m_Texture: {fileID: 2800000, guid: bfd4049b098caac478dc5bb856338b13, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
-        m_Texture: {fileID: 2800000, guid: 5cfa0829b076ee1429734129a2e86731, type: 3}
+        m_Texture: {fileID: 2800000, guid: c83e16a08a3de4d439e16e64edde4af4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _OcclusionMap
       second:
-        m_Texture: {fileID: 2800000, guid: 7af1169fd7501cd4db4998b9e7825226, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3a1295523c52c794d9546030b849db16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
