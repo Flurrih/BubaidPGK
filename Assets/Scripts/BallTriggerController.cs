@@ -54,7 +54,7 @@ public class BallTriggerController : MonoBehaviour {
             GetComponent<BallMoveController>().State = BallMoveController.BallState.Grounded;
             //particle.startColor = other.gameObject.GetComponent<Renderer>().material.color;
             Color groundColor = other.gameObject.GetComponent<Renderer>().material.color;
-            groundColor = new Color(groundColor.r - 0.5f, groundColor.g - 0.5f, groundColor.b - 0.5f);
+            groundColor = new Color(groundColor.r - 0.4f, groundColor.g - 0.4f, groundColor.b - 0.4f);
             particleGround.startColor = groundColor;
             particle.startColor = groundColor;
             particle.Play();
