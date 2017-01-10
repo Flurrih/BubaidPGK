@@ -224,9 +224,9 @@ public class PlayerController : MonoBehaviour {
         if (isInviolability == false)
         {
             //Blood particle
-            bloodParticle.Clear();
-            bloodParticle.time = 0;
-            bloodParticle.Play();
+            //bloodParticle.Clear();
+            //bloodParticle.time = 0;
+            //bloodParticle.Play();
 
             playerHealth -= dmg;
         }
