@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour {
     }
 
 
+
     private enum MenuSelected
     {
         Play,
@@ -19,51 +20,73 @@ public class MenuController : MonoBehaviour {
         Exit
     }
 
+    public GameObject settings;
+
     private MenuSelected selected;
 
     private Animator animator;
     private AnimatorStateInfo animatorState;
 
+    private bool settingsEntered;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         StartCoroutine(MenuMove());
+        settingsEntered = settings.activeSelf;
     }
 
     void Update()
     {
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
-        if (animatorState.IsName(Const.PlayAnim))
+        settingsEntered = settings.activeSelf;
+        if (!settingsEntered)
         {
-            selected = MenuSelected.Play;
-        }
-        else if (animatorState.IsName(Const.SettingsAnim))
-        {
-            selected = MenuSelected.Settings;
-        }
-        else if (animatorState.IsName(Const.ExitAnim))
-        {
-            selected = MenuSelected.Exit;
-        }
+            if (!animator.isActiveAndEnabled)
+            {
+                animator.enabled = true;
+                animator.Play(Const.SettingsAnim);
+                StartCoroutine(MenuMove());
+            }
+            if (animatorState.IsName(Const.PlayAnim))
+            {
+                selected = MenuSelected.Play;
+            }
+            else if (animatorState.IsName(Const.SettingsAnim))
+            {
+                selected = MenuSelected.Settings;
+            }
+            else if (animatorState.IsName(Const.ExitAnim))
+            {
+                selected = MenuSelected.Exit;
+            }
 
-        if (Input.GetButton(InputManager.gameInput.player1.Jump.ToString()) || Input.GetButton(InputManager.gameInput.player2.Jump.ToString()))
+            if (Input.GetButton(InputManager.gameInput.player1.Jump.ToString()) || Input.GetButton(InputManager.gameInput.player2.Jump.ToString()))
+            {
+
+                if (selected == MenuSelected.Play)
+                {
+                    Debug.Log("Play");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("viking_arena");
+                }
+                if (selected == MenuSelected.Exit)
+                {
+                    Debug.Log("Exit");
+                    Application.Quit();
+                }
+                if (selected == MenuSelected.Settings)
+                {
+                    Debug.Log("Settings");
+                    settings.SetActive(true);
+                }
+            }
+        } else
         {
-            
-            if(selected == MenuSelected.Play)
-            {
-                Debug.Log("Play");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("viking_arena");
-            }
-            if(selected == MenuSelected.Exit)
-            {
-                Debug.Log("Exit");
-                Application.Quit();
-            }
-            if(selected == MenuSelected.Settings)
-            {
-                Debug.Log("Settings");
-            }
+            StopCoroutine(MenuMove());
+            animator.Stop();
+            animator.enabled = false;
         }
+        
     }
 
     IEnumerator MenuMove()

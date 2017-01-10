@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <name />
-  <hideFlags>None</hideFlags>
   <player1>
     <playerNumber>1</playerNumber>
     <Jump>Joystick1Button0</Jump>
@@ -9,6 +7,7 @@
     <Kick>Joystick1Button7</Kick>
     <Release>Joystick1Button6</Release>
     <Skill>Joystick1Button2</Skill>
+    <Reset>None</Reset>
     <AxisVertical1>
       <AxisName>Joystick1AxisYInvert</AxisName>
     </AxisVertical1>
@@ -29,6 +28,7 @@
     <Kick>Joystick2Button7</Kick>
     <Release>Joystick2Button5</Release>
     <Skill>Joystick2Button2</Skill>
+    <Reset>None</Reset>
     <AxisVertical1>
       <AxisName>Joystick2AxisYInvert</AxisName>
     </AxisVertical1>
