@@ -524,6 +524,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &61396128
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -571,6 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &61396131
 Transform:
   m_ObjectHideFlags: 0
@@ -3390,6 +3412,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &567768370
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3437,6 +3480,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &567768373
 Transform:
   m_ObjectHideFlags: 0
@@ -4596,68 +4640,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.80317557, y: 1.0408974, z: 0.7950194}
   m_Center: {x: 0.000000014901161, y: 0.000000029802322, z: -3.330669e-16}
---- !u!1001 &757512448
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 27.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.18344322
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9830303
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -20.875002
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-  m_IsPrefabParent: 0
---- !u!1 &757512449 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100032, guid: 9f833a37a73ff46439864051b5d574d0, type: 3}
-  m_PrefabInternal: {fileID: 757512448}
---- !u!65 &757512450
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 757512449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &771041171 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 17be5a82ac64e774392c3e848d22fa5d, type: 3}
@@ -5288,6 +5270,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &917206306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5335,6 +5338,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &917206309
 Transform:
   m_ObjectHideFlags: 0
@@ -6180,6 +6184,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1006463811
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6227,6 +6252,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1006463814
 Transform:
   m_ObjectHideFlags: 0
@@ -6762,6 +6788,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1104371772
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6809,6 +6856,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1104371775
 Transform:
   m_ObjectHideFlags: 0
@@ -7129,6 +7177,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1150507389
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7176,6 +7245,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1150507392
 Transform:
   m_ObjectHideFlags: 0
@@ -7862,6 +7932,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1330238964
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7909,6 +8000,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1330238967
 Transform:
   m_ObjectHideFlags: 0
@@ -8304,6 +8396,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1486653929
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8351,6 +8464,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1486653932
 Transform:
   m_ObjectHideFlags: 0
@@ -8806,6 +8920,122 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1001 &1540458688
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 41.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.18344322
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9830303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012167213202, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010512592644, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+      propertyPath: m_Name
+      value: doorasset
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 391f42b41faa22544b3946220f310a2f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1540458689 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011731753302, guid: 391f42b41faa22544b3946220f310a2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540458688}
+--- !u!1 &1540458690 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011787597602, guid: 391f42b41faa22544b3946220f310a2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540458688}
+--- !u!1 &1540458691 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010693532778, guid: 391f42b41faa22544b3946220f310a2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540458688}
+--- !u!1 &1540458692 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010891936190, guid: 391f42b41faa22544b3946220f310a2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540458688}
+--- !u!136 &1540458693
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540458689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.61
+  m_Height: 5.33
+  m_Direction: 2
+  m_Center: {x: 5.574526, y: -2.0163136, z: 1.9113729}
+--- !u!65 &1540458694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540458690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.2693944, y: 0.8244586, z: 13.159221}
+  m_Center: {x: -2.1570141, y: 0.20766358, z: 6.5796103}
+--- !u!136 &1540458695
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540458691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.61
+  m_Height: 5.33
+  m_Direction: 2
+  m_Center: {x: 0.00012379837, y: -2.0163136, z: 1.9113729}
+--- !u!65 &1540458696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540458692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.269394, y: 0.8244586, z: 13.159221}
+  m_Center: {x: 0.00000047683716, y: 0.20766364, z: 6.5796103}
 --- !u!4 &1557099683 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012523626966, guid: a76159e7468e0094cbb8b990b1d289ba,
@@ -10709,6 +10939,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &1946985470
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10756,6 +11007,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &1946985473
 Transform:
   m_ObjectHideFlags: 0
@@ -11351,6 +11603,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &2028603167
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11398,6 +11671,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &2028603170
 Transform:
   m_ObjectHideFlags: 0
@@ -11735,6 +12009,27 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quads: []
+  _sharedIndices: []
+  _vertices: []
+  _uv: []
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors: []
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid: 
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!33 &2106374935
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11782,6 +12077,7 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!4 &2106374938
 Transform:
   m_ObjectHideFlags: 0
