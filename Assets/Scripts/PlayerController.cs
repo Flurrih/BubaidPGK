@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     private bool isDashing = false;
     private bool isDashingCooldown = false;
     private bool isSmashing = false;
+    private bool isDead = false;
     public float dashCooldown = 2.0f;
     public float smashCooldown = 10.0f;
     private GameObject kickTrigger;
@@ -232,7 +233,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (playerHealth <= 0)
-            Destroy(transform.parent.gameObject);
+            isDead = true;
+            //Destroy(transform.parent.gameObject);
 
     }
 
@@ -315,5 +317,8 @@ public class PlayerController : MonoBehaviour {
         return isDashingCooldown;
     }
 
-
+    public bool IsDead()
+    {
+        return isDead;
+    }
 }
