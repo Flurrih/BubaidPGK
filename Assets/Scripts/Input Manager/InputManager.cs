@@ -160,16 +160,23 @@ public class InputManager : MonoBehaviour {
         return KeyCode.ScrollLock;
     }
 
-    public static string getJoystick1Axis()
+    public static GameInput.Axis getJoystick1Axis()
     {
         float x = 0.0f;
+
+        GameInput.Axis axis = new GameInput.Axis();
+        axis.AxisName = null;
 
         x = Input.GetAxis("Joystick1AxisX");
 
         if(x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis X:" + x);
-            return "Joystick1AxisX";
+            
+            axis.AxisName = "Joystick1AxisX";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1AxisY");
@@ -177,7 +184,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis Y:" + x);
-            return "Joystick1AxisY";
+            axis.AxisName = "Joystick1AxisY";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis3");
@@ -185,7 +195,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 3:" + x);
-            return "Joystick1Axis3";
+            axis.AxisName = "Joystick1Axis3";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis4");
@@ -193,7 +206,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 4:" + x);
-            return "Joystick1Axis4";
+            axis.AxisName = "Joystick1Axis4";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis5");
@@ -201,7 +217,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 5:" + x);
-            return "Joystick1Axis5";
+            axis.AxisName = "Joystick1Axis5";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis6");
@@ -209,7 +228,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 6:" + x);
-            return "Joystick1Axis6";
+            axis.AxisName = "Joystick1Axis6";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis7");
@@ -217,7 +239,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 7:" + x);
-            return "Joystick1Axis7";
+            axis.AxisName = "Joystick1Axis7";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis8");
@@ -225,7 +250,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 8:" + x);
-            return "Joystick1Axis8";
+            axis.AxisName = "Joystick1Axis8";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis9");
@@ -233,7 +261,10 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 9:" + x);
-            return "Joystick1Axis9";
+            axis.AxisName = "Joystick1Axis9";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis10");
@@ -241,85 +272,131 @@ public class InputManager : MonoBehaviour {
         if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 10:" + x);
-            return "Joystick1Axis10";
+            axis.AxisName = "Joystick1Axis10";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
-        return null;
+        return axis;
     }
 
-    void getJoystick2Axis()
+    public static GameInput.Axis getJoystick2Axis()
     {
         float x = 0.0f;
 
+        GameInput.Axis axis = new GameInput.Axis();
+        axis.AxisName = null;
+
         x = Input.GetAxis("Joystick2AxisX");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis X:" + x);
+            axis.AxisName = "Joystick2AxisX";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2AxisY");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis Y:" + x);
+            axis.AxisName = "Joystick2AxisY";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis3");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 3:" + x);
+            axis.AxisName = "Joystick2Axis3";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis4");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 4:" + x);
+            axis.AxisName = "Joystick2Axis4";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis5");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 5:" + x);
+            axis.AxisName = "Joystick2Axis5";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis6");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 6:" + x);
+            axis.AxisName = "Joystick2Axis6";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis7");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 7:" + x);
+            axis.AxisName = "Joystick2Axis7";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis8");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 8:" + x);
+            axis.AxisName = "Joystick2Axis8";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis9");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 9:" + x);
+            axis.AxisName = "Joystick2Axis9";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis10");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 10:" + x);
+            axis.AxisName = "Joystick2Axis10";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
-
+        return axis;
     }
 
     void Awake()
