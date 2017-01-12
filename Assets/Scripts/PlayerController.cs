@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour {
                 isDashing = true;
                 isDashingCooldown = true;
                 rb.velocity = Vector3.zero;
-                rb.AddForce(new Vector3(rb.transform.forward.x, 0, rb.transform.forward.z) * dashForce, ForceMode.Impulse);
+                rb.AddForce(new Vector3(transform.forward.x, 0, transform.forward.z) * dashForce, ForceMode.Impulse);
                 yield return new WaitForSeconds(dashCooldown / 16);
                 isDashing = false;
                 dashParticle.Stop();
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour {
                         playersBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         playersBall.GetComponent<Rigidbody>().AddForce((transform.up + transform.forward).normalized * smashForce);
                         rb.AddForce((-transform.up + -transform.forward) * smashForce);
-                        yield return new WaitForFixedUpdate();
+                        yield return new WaitForSeconds(0.1f);
                         playersBall.GetComponent<BallMoveController>().State = BallMoveController.BallState.Smashed;
                     }
                     yield return new WaitForSeconds(smashCooldown);

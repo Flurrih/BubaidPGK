@@ -21,7 +21,11 @@ public class KeybindController : MonoBehaviour {
         blh1, blh2,
         blv1, blv2;
 
+    [SerializeField]
+    private GameObject settings;
+
     private KeyCode changedValue;
+    private GameInput.Axis changedAxis;
     private State state;
 	
 	void Start () {
@@ -65,7 +69,7 @@ public class KeybindController : MonoBehaviour {
     {
         while (true)
         {
-            changedValue = KeyCode.ScrollLock;
+            
             if (button.rectTransform.parent.name.Contains("1"))
             {
                 if(button.rectTransform.parent.name.Contains("Jump") || button.rectTransform.parent.name.Contains("Dash") || button.rectTransform.parent.name.Contains("Skill") || button.rectTransform.parent.name.Contains("Release") || button.rectTransform.parent.name.Contains("Kick"))
@@ -75,6 +79,7 @@ public class KeybindController : MonoBehaviour {
                 else
                 {
                     changedValue = KeyCode.ScrollLock;
+                    changedAxis = InputManager.getJoystick1Axis();
                 }
             }
             if (button.rectTransform.parent.name.Contains("2"))
@@ -86,9 +91,10 @@ public class KeybindController : MonoBehaviour {
                 else
                 {
                     changedValue = KeyCode.ScrollLock;
+                    changedAxis = InputManager.getJoystick2Axis();
                 }
             }
-            if (changedValue != KeyCode.ScrollLock)
+            if (changedValue != KeyCode.ScrollLock || changedAxis.AxisName != null)
             {
                 if (button == jumpValue1)
                     InputManager.gameInput.player1.Jump = changedValue;
@@ -115,6 +121,27 @@ public class KeybindController : MonoBehaviour {
                 if (button == skillValue2)
                     InputManager.gameInput.player2.Skill = changedValue;
 
+
+                if (button == plh1)
+                    InputManager.gameInput.player1.AxisHorizontal1 = changedAxis;
+                if (button == plh2)
+                    InputManager.gameInput.player2.AxisHorizontal1 = changedAxis;
+
+                if (button == plv1)
+                    InputManager.gameInput.player1.AxisVertical1 = changedAxis;
+                if (button == plv2)
+                    InputManager.gameInput.player2.AxisVertical1 = changedAxis;
+
+                if (button == blh1)
+                    InputManager.gameInput.player1.AxisHorizontal2 = changedAxis;
+                if (button == blh2)
+                    InputManager.gameInput.player2.AxisHorizontal2 = changedAxis;
+
+                if (button == blv1)
+                    InputManager.gameInput.player1.AxisVertical2 = changedAxis;
+                if (button == blv2)
+                    InputManager.gameInput.player2.AxisVertical2 = changedAxis;
+
                 GameInput.Save(InputManager.gameInput, "GameInput.xml");
                 Init();
                 state = State.Free;
@@ -123,5 +150,10 @@ public class KeybindController : MonoBehaviour {
             }
             yield return null;
         }
+    }
+
+    public void OnBackClick()
+    {
+        settings.SetActive(false);
     }
 }
