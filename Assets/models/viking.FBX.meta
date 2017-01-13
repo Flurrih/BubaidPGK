@@ -1,22 +1,73 @@
 fileFormatVersion: 2
-guid: 2880615ddfb558c45abfe1356efa36ec
-timeCreated: 1476639062
+guid: 511291369be8a9c4bac469d412987171
+timeCreated: 1484038312
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Plane001
-    100004: sciany_areny
-    400000: //RootNode
-    400002: Plane001
-    400004: sciany_areny
-    2300000: Plane001
-    2300002: sciany_areny
-    3300000: Plane001
-    3300002: sciany_areny
-    4300000: Plane001
-    4300002: sciany_areny
+    100000: but lewy
+    100002: but prawy
+    100004: cloth
+    100006: helm
+    100008: klamra
+    100010: lowerBody
+    100012: oko1
+    100014: oko2
+    100016: pasek
+    100018: przywieszka
+    100020: skora
+    100022: upperbody
+    100024: //RootNode
+    400000: but lewy
+    400002: but prawy
+    400004: cloth
+    400006: helm
+    400008: klamra
+    400010: lowerBody
+    400012: oko1
+    400014: oko2
+    400016: pasek
+    400018: przywieszka
+    400020: skora
+    400022: upperbody
+    400024: //RootNode
+    2300000: but lewy
+    2300002: but prawy
+    2300004: cloth
+    2300006: helm
+    2300008: klamra
+    2300010: lowerBody
+    2300012: oko1
+    2300014: oko2
+    2300016: pasek
+    2300018: przywieszka
+    2300020: skora
+    2300022: upperbody
+    3300000: but lewy
+    3300002: but prawy
+    3300004: cloth
+    3300006: helm
+    3300008: klamra
+    3300010: lowerBody
+    3300012: oko1
+    3300014: oko2
+    3300016: pasek
+    3300018: przywieszka
+    3300020: skora
+    3300022: upperbody
+    4300000: upperbody
+    4300002: lowerBody
+    4300004: but prawy
+    4300006: but lewy
+    4300008: cloth
+    4300010: pasek
+    4300012: klamra
+    4300014: skora
+    4300016: przywieszka
+    4300018: oko1
+    4300020: helm
+    4300022: oko2
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +126,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

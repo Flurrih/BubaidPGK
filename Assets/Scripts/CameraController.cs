@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
 	
 	void Update () {
 
-        float x=0, z=0;
+        float x=0, z=0, y=0;
         int i = 0;
 
         foreach (GameObject player in players)
@@ -19,11 +19,12 @@ public class CameraController : MonoBehaviour {
             {
                 x = x + player.transform.position.x;
                 z = z + player.transform.position.z;
+                y = y + player.transform.position.y;
                 i++;
             }
         }
 
-        targetPoint = new Vector3(x / i, 0, z / i);
+        targetPoint = new Vector3(x / i, y / i, z / i);
 
         transform.LookAt(targetPoint);
     }

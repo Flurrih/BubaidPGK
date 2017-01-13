@@ -17,282 +17,386 @@ public class InputManager : MonoBehaviour {
 
     }
 
-    void getJoystick1Button()
+    public static KeyCode getJoystick1Button()
     {
         if (Input.GetButton("Joystick1Button0"))
         {
-            Debug.Log("Joystic 1 button 0 pressed");
+            return KeyCode.Joystick1Button0;
+
         }
 
         if (Input.GetButton("Joystick1Button1"))
         {
-            Debug.Log("Joystic 1 button 1 pressed");
+            return KeyCode.Joystick1Button1;
+
         }
 
         if (Input.GetButton("Joystick1Button2"))
         {
-            Debug.Log("Joystic 1 button 2 pressed");
+            return KeyCode.Joystick1Button2;
+
         }
 
         if (Input.GetButton("Joystick1Button3"))
         {
-            Debug.Log("Joystic 1 button 3 pressed");
+            return KeyCode.Joystick1Button3;
+
         }
 
         if (Input.GetButton("Joystick1Button4"))
         {
-            Debug.Log("Joystic 1 button 4 pressed");
+            return KeyCode.Joystick1Button4;
+
         }
 
         if (Input.GetButton("Joystick1Button5"))
         {
-            Debug.Log("Joystic 1 button 5 pressed");
+            return KeyCode.Joystick1Button5;
+
         }
 
         if (Input.GetButton("Joystick1Button6"))
         {
-            Debug.Log("Joystic 1 button 6 pressed");
+            return KeyCode.Joystick1Button6;
+
         }
 
         if (Input.GetButton("Joystick1Button7"))
         {
-            Debug.Log("Joystic 1 button 7 pressed");
+            return KeyCode.Joystick1Button7;
+
         }
 
         if (Input.GetButton("Joystick1Button8"))
         {
-            Debug.Log("Joystic 1 button 8 pressed");
+            return KeyCode.Joystick1Button8;
+
         }
 
         if (Input.GetButton("Joystick1Button9"))
         {
-            Debug.Log("Joystic 1 button 9 pressed");
+            return KeyCode.Joystick1Button9;
+
         }
 
         if (Input.GetButton("Joystick1Button10"))
         {
-            Debug.Log("Joystic 1 button 10 pressed");
+            return KeyCode.Joystick1Button10;
+
         }
 
         if (Input.GetButton("Joystick1Button11"))
         {
-            Debug.Log("Joystic 1 button 11 pressed");
+            return KeyCode.Joystick1Button11;
         }
+        return KeyCode.ScrollLock;
     }
 
-    void getJoystick2Button()
+    public static KeyCode getJoystick2Button()
     {
         if (Input.GetButton("Joystick2Button0"))
         {
-            Debug.Log("Joystic 2 button 0 pressed");
+            
+            return KeyCode.Joystick2Button0;
         }
 
         if (Input.GetButton("Joystick2Button1"))
         {
-            Debug.Log("Joystic 2 button 1 pressed");
+            
+            return KeyCode.Joystick2Button1;
         }
 
         if (Input.GetButton("Joystick2Button2"))
         {
-            Debug.Log("Joystic 2 button 2 pressed");
+            
+            return KeyCode.Joystick2Button2;
         }
 
         if (Input.GetButton("Joystick2Button3"))
         {
-            Debug.Log("Joystic 2 button 3 pressed");
+            
+            return KeyCode.Joystick2Button3;
         }
 
         if (Input.GetButton("Joystick2Button4"))
         {
-            Debug.Log("Joystic 2 button 4 pressed");
+            return KeyCode.Joystick2Button4;
         }
 
         if (Input.GetButton("Joystick2Button5"))
         {
-            Debug.Log("Joystic 2 button 5 pressed");
+            return KeyCode.Joystick2Button5;
         }
 
         if (Input.GetButton("Joystick2Button6"))
         {
-            Debug.Log("Joystic 2 button 6 pressed");
+            return KeyCode.Joystick2Button6;
         }
 
         if (Input.GetButton("Joystick2Button7"))
         {
-            Debug.Log("Joystic 2 button 7 pressed");
+            return KeyCode.Joystick2Button7;
         }
 
         if (Input.GetButton("Joystick2Button8"))
         {
-            Debug.Log("Joystic 2 button 8 pressed");
+            return KeyCode.Joystick2Button8;
         }
 
         if (Input.GetButton("Joystick2Button9"))
         {
-            Debug.Log("Joystic 2 button 9 pressed");
+            return KeyCode.Joystick2Button9;
         }
 
         if (Input.GetButton("Joystick2Button10"))
         {
-            Debug.Log("Joystic 2 button 10 pressed");
+            return KeyCode.Joystick2Button10;
         }
 
         if (Input.GetButton("Joystick2Button11"))
         {
-            Debug.Log("Joystic 2 button 11 pressed");
+            return KeyCode.Joystick2Button11;
         }
+        return KeyCode.ScrollLock;
     }
 
-    void getJoystick1Axis()
+    public static GameInput.Axis getJoystick1Axis()
     {
         float x = 0.0f;
 
+        GameInput.Axis axis = new GameInput.Axis();
+        axis.AxisName = null;
+
         x = Input.GetAxis("Joystick1AxisX");
 
-        if(x != 0.0f)
+        if(x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis X:" + x);
+            
+            axis.AxisName = "Joystick1AxisX";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1AxisY");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis Y:" + x);
+            axis.AxisName = "Joystick1AxisY";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis3");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 3:" + x);
+            axis.AxisName = "Joystick1Axis3";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis4");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 4:" + x);
+            axis.AxisName = "Joystick1Axis4";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis5");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 5:" + x);
+            axis.AxisName = "Joystick1Axis5";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis6");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 6:" + x);
+            axis.AxisName = "Joystick1Axis6";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis7");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 7:" + x);
+            axis.AxisName = "Joystick1Axis7";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis8");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 8:" + x);
+            axis.AxisName = "Joystick1Axis8";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis9");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 9:" + x);
+            axis.AxisName = "Joystick1Axis9";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick1Axis10");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 1 Axis 10:" + x);
+            axis.AxisName = "Joystick1Axis10";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
-
+        return axis;
     }
 
-    void getJoystick2Axis()
+    public static GameInput.Axis getJoystick2Axis()
     {
         float x = 0.0f;
 
+        GameInput.Axis axis = new GameInput.Axis();
+        axis.AxisName = null;
+
         x = Input.GetAxis("Joystick2AxisX");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis X:" + x);
+            axis.AxisName = "Joystick2AxisX";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2AxisY");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis Y:" + x);
+            axis.AxisName = "Joystick2AxisY";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis3");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 3:" + x);
+            axis.AxisName = "Joystick2Axis3";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis4");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 4:" + x);
+            axis.AxisName = "Joystick2Axis4";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis5");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 5:" + x);
+            axis.AxisName = "Joystick2Axis5";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis6");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 6:" + x);
+            axis.AxisName = "Joystick2Axis6";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis7");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 7:" + x);
+            axis.AxisName = "Joystick2Axis7";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis8");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 8:" + x);
+            axis.AxisName = "Joystick2Axis8";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis9");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 9:" + x);
+            axis.AxisName = "Joystick2Axis9";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
 
         x = Input.GetAxis("Joystick2Axis10");
 
-        if (x != 0.0f)
+        if (x >= 0.75f || (x <= -0.5f && x >= -0.9f))
         {
             Debug.Log("Joystick 2 Axis 10:" + x);
+            axis.AxisName = "Joystick2Axis10";
+            if (x < 0)
+                axis.AxisName = axis.AxisName + "Invert";
+            return axis;
         }
-
+        return axis;
     }
 
     void Awake()

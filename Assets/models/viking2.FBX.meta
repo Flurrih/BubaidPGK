@@ -1,17 +1,78 @@
 fileFormatVersion: 2
-guid: 17df8e2f084eb3d43a64a487d4b0481f
-timeCreated: 1482176347
+guid: 2d018dd6d7de3574daa9d7b22f14b75f
+timeCreated: 1484057527
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Default-Material
-    100002: //RootNode
-    400000: Default-Material
-    400002: //RootNode
-    2300000: Default-Material
-    3300000: Default-Material
-    4300000: Default-Material
+    100000: but prawy
+    100002: but prawy001
+    100004: cloth
+    100006: helm
+    100008: klamra
+    100010: lowerBody
+    100012: oko1
+    100014: oko2
+    100016: pasek
+    100018: przywieszka
+    100020: skora
+    100022: upperbody
+    100024: //RootNode
+    100026: oko002
+    400000: but prawy
+    400002: but prawy001
+    400004: cloth
+    400006: helm
+    400008: klamra
+    400010: lowerBody
+    400012: oko1
+    400014: oko2
+    400016: pasek
+    400018: przywieszka
+    400020: skora
+    400022: upperbody
+    400024: //RootNode
+    400026: oko002
+    2300000: but prawy
+    2300002: but prawy001
+    2300004: cloth
+    2300006: helm
+    2300008: klamra
+    2300010: lowerBody
+    2300012: oko1
+    2300014: oko2
+    2300016: pasek
+    2300018: przywieszka
+    2300020: skora
+    2300022: upperbody
+    2300024: oko002
+    3300000: but prawy
+    3300002: but prawy001
+    3300004: cloth
+    3300006: helm
+    3300008: klamra
+    3300010: lowerBody
+    3300012: oko1
+    3300014: oko2
+    3300016: pasek
+    3300018: przywieszka
+    3300020: skora
+    3300022: upperbody
+    3300024: oko002
+    4300000: upperbody
+    4300002: lowerBody
+    4300004: but prawy
+    4300006: cloth
+    4300008: pasek
+    4300010: klamra
+    4300012: skora
+    4300014: przywieszka
+    4300016: oko1
+    4300018: helm
+    4300020: oko2
+    4300022: but prawy001
+    4300024: oko002
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +131,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

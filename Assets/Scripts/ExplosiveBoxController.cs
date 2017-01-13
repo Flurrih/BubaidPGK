@@ -13,7 +13,7 @@ public class ExplosiveBoxController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player"))
         {
             Instantiate(sphere, transform.position, transform.rotation);
             Instantiate(fragments, transform.position, transform.rotation);
