@@ -24,6 +24,7 @@ GameObject:
   - 124: {fileID: 124000012671991984}
   - 81: {fileID: 81000013881817170}
   - 114: {fileID: 114000010598390274}
+  - 114: {fileID: 114000012131823708}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011665935828}
   m_LocalRotation: {x: 0.2922048, y: 0, z: 0, w: 0.95635575}
-  m_LocalPosition: {x: -3.7, y: 22.1, z: -30.2}
+  m_LocalPosition: {x: 0, y: 31.27, z: -25.5}
   m_LocalScale: {x: 0.9427567, y: 0.9427559, z: 0.9427559}
   m_LocalEulerAnglesHint: {x: 33.98, y: 0, z: 0}
   m_Children: []
@@ -52,8 +53,8 @@ Camera:
   m_GameObject: {fileID: 1000011665935828}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.57190746, g: 0.7012147, b: 0.9044118, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -69,11 +70,11 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -106,6 +107,47 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &114000012131823708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011665935828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
+  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
+  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
+    type: 3}
+  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
+  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
+    type: 3}
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
+  m_Debug: 0
+  m_Z: 1
+  m_NearClip: 0.1
+  m_FarClipMax: 100
+  m_GlobalDensityMult: 1
+  m_ConstantFog: 1.8
+  m_HeightFogAmount: 0.02
+  m_HeightFogExponent: 0.5
+  m_HeightFogOffset: 8.07
+  m_NoiseFogAmount: 0.812
+  m_NoiseFogScale: 0.33
+  m_Wind: {fileID: 0}
+  m_Anisotropy: 0.487
+  m_GlobalIntensityMult: 1
+  m_AmbientLightIntensity: 8.33
+  m_AmbientLightColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BlurShadowmap: 0
+  m_ShadowmapDownsample: 1
+  m_BlurSize: 3
+  m_BlurIterations: 2
 --- !u!124 &124000012671991984
 Behaviour:
   m_ObjectHideFlags: 1

@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
         kickTrigger = transform.FindChild("CubePivot").gameObject;
 
         if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
-            // if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
+            //if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
             ball = kickTrigger.GetComponent<KickTriggerController>().GetCollider();
 
         StartCoroutine(Dash());
@@ -171,7 +171,8 @@ public class PlayerController : MonoBehaviour {
         {
             if (ball != null)
             {
-                playersBall.GetComponent<BallMoveController>().KickBall();
+                if(ball.tag == "Ball")
+                    playersBall.GetComponent<BallMoveController>().KickBall();
             }
         }
         else
