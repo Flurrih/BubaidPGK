@@ -2840,6 +2840,11 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 64000011152517634, guid: b72f359af5db70449a3af30924ef76a2,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b72f359af5db70449a3af30924ef76a2, type: 2}
   m_IsPrefabParent: 0
@@ -4294,11 +4299,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013319783662, guid: 49eba5bde62234b47bfac145e008aa1a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 35.1
+      value: 31.27
       objectReference: {fileID: 0}
     - target: {fileID: 4000013319783662, guid: 49eba5bde62234b47bfac145e008aa1a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30.2
+      value: -25.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013319783662, guid: 49eba5bde62234b47bfac145e008aa1a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4785,6 +4790,76 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1899169443}
+    - target: {fileID: 64000013162757338, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000010488290112, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000014269452250, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000013640609660, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000012539089646, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000010162657826, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000011365584654, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000010223527608, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000014227079604, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000011726734248, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000013462330126, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000013663924324, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012631888580, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012631888580, guid: 507c51b9ad819d24b8a2fad632b0dbed,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 507c51b9ad819d24b8a2fad632b0dbed, type: 2}
   m_IsPrefabParent: 0
@@ -5884,27 +5959,6 @@ MonoBehaviour:
   m_Script: {fileID: 185759285, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quads: []
-  _sharedIndices: []
-  _vertices: []
-  _uv: []
-  _uv3: []
-  _uv4: []
-  _tangents: []
-  _sharedIndicesUV: []
-  _colors: []
-  userCollisions: 0
-  isSelectable: 1
-  unwrapParameters:
-    hardAngle: 88
-    packMargin: 4
-    angleError: 8
-    areaError: 15
-  asset_guid: 
-  dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
 --- !u!33 &1946985470
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5952,7 +6006,6 @@ MonoBehaviour:
   m_Script: {fileID: 16342205, guid: 0472bdc8d6d15384d98f22ee34302f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _entityType: 0
 --- !u!4 &1946985473
 Transform:
   m_ObjectHideFlags: 0
