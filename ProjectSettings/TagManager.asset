@@ -13,6 +13,7 @@ TagManager:
   - Chain Holder
   - BoxParticle
   - PlayerInterface2
+  - DoorChain
   layers:
   - Default
   - TransparentFX

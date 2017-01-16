@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour {
     public enum PlayerHoldState
     {
         Free,
-        HoldingBall
+        HoldingBall,
+        HoldingDoor
     }
 
     public PlayerHoldState hold { get; set; }
 
-
+    GameObject djoint;
     // General
     private Rigidbody rb;
     public int playerNumber = 0;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour {
     private int invertMovement = 1;
     private bool isInviolability = false;
     public bool isBallReleased { get; private set; }
+    public bool isDoorHolding { get; private set; }
 
 
     // Input
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour {
         hold = PlayerHoldState.HoldingBall;
         rb = GetComponent<Rigidbody>();
         kickTrigger = transform.FindChild("CubePivot").gameObject;
+        isDoorHolding = false;
 
         if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
             //if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball")
@@ -196,24 +199,58 @@ public class PlayerController : MonoBehaviour {
                     playersChain.transform.parent = transform.parent;
                     hold = PlayerHoldState.Free;
                 }
+                else if(isDoorHolding)
+                {
+                    isDoorHolding = false;
+                    Destroy(joint.GetComponent<ConfigurableJoint>());
+                    //playersChain.transform.parent = transform.parent;
+                    hold = PlayerHoldState.Free;
+                }
                 else if (kickTrigger.GetComponent<KickTriggerController>().GetCollider() != null)
                 {
-                    isBallReleased = false;
-                    joint.AddComponent<ConfigurableJoint>();
-                    joint.transform.position = rb.position;
-                    joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
-                    joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
-                    joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
-                    joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
-                    joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
-                    joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
-                    joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
-                    joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
-                    joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
-                    joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
-                    joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
-                    playersChain.transform.parent = transform;
-                    hold = PlayerHoldState.HoldingBall;
+                    Debug.Log(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag.ToString());
+                    if(kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Ball" && isBallReleased == true && isDoorHolding == false)
+                    {
+                        isBallReleased = false;
+                        joint.AddComponent<ConfigurableJoint>();
+                        joint.transform.position = rb.position;
+                        joint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                        joint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                        joint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                        joint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                        joint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                        joint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                        joint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                        joint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                        joint.GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
+                        joint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                        joint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                        playersChain.transform.parent = transform;
+                        hold = PlayerHoldState.HoldingBall;
+                    }
+                    if (kickTrigger.GetComponent<KickTriggerController>().GetCollider().tag == "Chain Holder" && isBallReleased == true && isDoorHolding == false)
+                    {
+                        Debug.Log("sdaffsdafdssa");
+                        djoint = kickTrigger.GetComponent<KickTriggerController>().GetCollider().gameObject;
+                        isDoorHolding = false;
+                        djoint.AddComponent<ConfigurableJoint>();
+                        djoint.transform.position = rb.position;
+                        djoint.GetComponent<ConfigurableJoint>().connectedBody = rb;
+                        djoint.GetComponent<ConfigurableJoint>().connectedAnchor = rb.position;
+                        djoint.GetComponent<ConfigurableJoint>().xMotion = ConfigurableJointMotion.Locked;
+                        djoint.GetComponent<ConfigurableJoint>().zMotion = ConfigurableJointMotion.Locked;
+                        djoint.GetComponent<ConfigurableJoint>().yMotion = ConfigurableJointMotion.Locked;
+                        djoint.GetComponent<ConfigurableJoint>().angularXMotion = ConfigurableJointMotion.Free;
+                        djoint.GetComponent<ConfigurableJoint>().angularYMotion = ConfigurableJointMotion.Locked;
+                        djoint.GetComponent<ConfigurableJoint>().angularZMotion = ConfigurableJointMotion.Free;
+                        djoint.GetComponent<ConfigurableJoint>().projectionDistance = 0.01f;
+                        djoint.GetComponent<ConfigurableJoint>().projectionAngle = 180;
+                        djoint.GetComponent<ConfigurableJoint>().projectionMode = JointProjectionMode.PositionAndRotation;
+                        djoint.GetComponent<ConfigurableJoint>().breakForce = 600;
+                        playersChain.transform.parent = transform;
+                        hold = PlayerHoldState.HoldingDoor;
+                    }
+
                 }
                 yield return new WaitForSeconds(0.2f);
             }
