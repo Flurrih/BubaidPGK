@@ -819,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 1000012805598202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 14.44, z: -2.8084888}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011977189614}
@@ -1010,7 +1010,7 @@ Transform:
   m_GameObject: {fileID: 1000010093755736}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010599015166}
@@ -1036,7 +1036,7 @@ Transform:
   m_GameObject: {fileID: 1000011732317252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010599015166}
@@ -2426,11 +2426,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  speed: 10
-  kickForce: 2500
-  jumpForce: 250
-  dashForce: 2000
-  smashForce: 10000
+  speed: 5
+  kickForce: 1250
+  jumpForce: 175
+  dashForce: 1000
+  smashForce: 5000
   dashCooldown: 2
   smashCooldown: 5
   cam: {fileID: 0}
@@ -2564,7 +2564,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011634333784}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 74e4719a08a4a6a42943e1a735eeeb6c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2593,7 +2593,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.04889369, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.048892498, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2685,7 +2685,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.15645888, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600009, y: 0, z: 0.15645917}
+  m_ConnectedAnchor: {x: 0.9599999, y: 0, z: 0.15645917}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2777,7 +2777,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9600024, y: 0.000000014901161, z: 0.15645982}
+  m_ConnectedAnchor: {x: 0.9600029, y: 0.00000064074993, z: 0.15645601}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2869,7 +2869,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.96000075, y: -0.00000032782555, z: 0.15645982}
+  m_ConnectedAnchor: {x: 0.9599998, y: 0.00000029802322, z: 0.15645601}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2961,7 +2961,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.1564589, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.96000004, y: 0, z: 0.1564591}
+  m_ConnectedAnchor: {x: 0.96000004, y: 0, z: 0.15645862}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -3053,7 +3053,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.15645878, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.96, y: -0.00000014901161, z: 0.15645982}
+  m_ConnectedAnchor: {x: 0.96, y: -0.00000014901161, z: 0.15645601}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -3461,7 +3461,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1412541813
+  randomSeed: -1595491875
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -5214,8 +5214,8 @@ ParticleSystem:
   playOnAwake: 0
   moveWithTransform: 0
   autoRandomSeed: 1
-  scalingMode: 2
-  randomSeed: 1352767633
+  scalingMode: 1
+  randomSeed: 781693599
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -8713,7 +8713,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: -478706583
+  randomSeed: 1796055672
   InitialModule:
     serializedVersion: 2
     enabled: 1
