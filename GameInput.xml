@@ -3,10 +3,10 @@
   <player1>
     <playerNumber>1</playerNumber>
     <Jump>Joystick1Button0</Jump>
-    <Dash>Joystick1Button1</Dash>
-    <Kick>Joystick1Button7</Kick>
-    <Release>Joystick1Button6</Release>
-    <Skill>Joystick1Button2</Skill>
+    <Dash>Joystick1Button2</Dash>
+    <Kick>Joystick1Button5</Kick>
+    <Release>Joystick1Button4</Release>
+    <Skill>Joystick1Button1</Skill>
     <Reset>None</Reset>
     <AxisVertical1>
       <AxisName>Joystick1AxisYInvert</AxisName>
@@ -15,19 +15,19 @@
       <AxisName>Joystick1AxisX</AxisName>
     </AxisHorizontal1>
     <AxisVertical2>
-      <AxisName>Joystick1Axis4Invert</AxisName>
+      <AxisName>Joystick1Axis5Invert</AxisName>
     </AxisVertical2>
     <AxisHorizontal2>
-      <AxisName>Joystick1Axis3</AxisName>
+      <AxisName>Joystick1Axis4</AxisName>
     </AxisHorizontal2>
   </player1>
   <player2>
     <playerNumber>2</playerNumber>
-    <Jump>Joystick2Button1</Jump>
-    <Dash>Joystick2Button0</Dash>
-    <Kick>Joystick2Button7</Kick>
-    <Release>Joystick2Button5</Release>
-    <Skill>Joystick2Button2</Skill>
+    <Jump>Joystick2Button0</Jump>
+    <Dash>Joystick2Button2</Dash>
+    <Kick>Joystick2Button5</Kick>
+    <Release>Joystick2Button4</Release>
+    <Skill>Joystick2Button1</Skill>
     <Reset>None</Reset>
     <AxisVertical1>
       <AxisName>Joystick2AxisYInvert</AxisName>
@@ -36,10 +36,10 @@
       <AxisName>Joystick2AxisX</AxisName>
     </AxisHorizontal1>
     <AxisVertical2>
-      <AxisName>Joystick2Axis6</AxisName>
+      <AxisName>Joystick2Axis5Invert</AxisName>
     </AxisVertical2>
     <AxisHorizontal2>
-      <AxisName>Joystick2Axis3Invert</AxisName>
+      <AxisName>Joystick2Axis4</AxisName>
     </AxisHorizontal2>
   </player2>
 </GameInput>
