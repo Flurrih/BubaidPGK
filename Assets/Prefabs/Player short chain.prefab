@@ -984,7 +984,7 @@ Transform:
   m_GameObject: {fileID: 1000013190224338}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011977189614}
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   pullSpeed: 7
   holdRadius: 1.5
   moveRadius: 7.5
-  moveSpeed: 1
+  moveSpeed: 0.5
   player: {fileID: 1000013250423226}
   playerNumber: 1
   skillCollider: {fileID: 65000014216259870}
@@ -3461,7 +3461,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: -1595491875
+  randomSeed: 296020552
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -5215,7 +5215,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 781693599
+  randomSeed: 1338087355
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -6936,7 +6936,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013190224338}
   serializedVersion: 4
-  lengthInSec: 0.1
+  lengthInSec: 1
   startDelay:
     scalar: 0
     maxCurve:
@@ -6976,15 +6976,15 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 0
-  moveWithTransform: 1
+  moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 2132537944
+  randomSeed: -1529508190
   InitialModule:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 0.05
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7019,7 +7019,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 22.68
+      scalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7355,7 +7355,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     randomizeRotationDirection: 0
-    gravityModifier: 0
+    gravityModifier: 1
     maxNumParticles: 10
     size3D: 0
     rotation3D: 0
@@ -8515,9 +8515,9 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     plane0: {fileID: 0}
     plane1: {fileID: 0}
@@ -8561,7 +8561,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     m_Bounce:
-      scalar: 1
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8635,7 +8635,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 4294959359
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -8713,7 +8713,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1796055672
+  randomSeed: 1643869044
   InitialModule:
     serializedVersion: 2
     enabled: 1

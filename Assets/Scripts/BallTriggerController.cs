@@ -53,7 +53,7 @@ public class BallTriggerController : MonoBehaviour {
         {
             GetComponent<BallMoveController>().State = BallMoveController.BallState.Grounded;
             //particle.startColor = other.gameObject.GetComponent<Renderer>().material.color;
-            Color groundColor = other.gameObject.GetComponent<Renderer>().material.color;
+            Color groundColor = avgColor(other.gameObject.GetComponent<Renderer>().material.GetTexture("_MainTex") as Texture2D);
             groundColor = new Color(groundColor.r - 0.4f, groundColor.g - 0.4f, groundColor.b - 0.4f);
             particleGround.startColor = groundColor;
             particle.startColor = groundColor;
@@ -76,6 +76,20 @@ public class BallTriggerController : MonoBehaviour {
                 groudedTime = 0.0f;
             }
         }
+    }
+
+    private Color avgColor(Texture2D texture)
+    {
+        Color[] textureColors = texture.GetPixels();
+        float r = 0, g = 0, b = 0;
+
+        for (int i = 0; i < textureColors.Length; i++)
+        {
+            r += textureColors[i].r;
+            g += textureColors[i].g;
+            b += textureColors[i].b;
+        }
+            return new Color(r / textureColors.Length, g / textureColors.Length, b / textureColors.Length);
     }
     
 }
