@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class KeybindController : MonoBehaviour {
 
@@ -9,6 +10,32 @@ public class KeybindController : MonoBehaviour {
         Free,
         WaitingForKey
     }
+
+    enum Selection
+    {
+        Jump1,
+        Jump2,
+        Dash1,
+        Dash2,
+        Kick1,
+        Kick2,
+        Release1,
+        Release2,
+        Skill1,
+        Skill2,
+        PlayerHorizontal1,
+        PlayerHorizontal2,
+        PlayerVertical1,
+        PlayerVertical2,
+        BallHorizontal1,
+        BallHorizontal2,
+        BallVertical1,
+        BallVertical2,
+        Menu1,
+        Menu2
+    }
+
+    public StandaloneInputModule inputModule;
 
     [SerializeField]
     private Text jumpValue1, jumpValue2,
@@ -19,7 +46,8 @@ public class KeybindController : MonoBehaviour {
         plh1, plh2,
         plv1, plv2,
         blh1, blh2,
-        blv1, blv2;
+        blv1, blv2,
+        menu1, menu2;
 
     [SerializeField]
     private GameObject settings;
@@ -27,10 +55,22 @@ public class KeybindController : MonoBehaviour {
     private KeyCode changedValue;
     private GameInput.Axis changedAxis;
     private State state;
+    private Selection selected;
 	
 	void Start () {
         Init();
         state = State.Free;
+    }
+
+    void Update()
+    {
+        if (state == State.Free)
+        {
+            if (Input.GetKeyDown(InputManager.gameInput.player1.Skill) || Input.GetKeyDown(InputManager.gameInput.player2.Skill) || Input.GetButtonDown("Cancel"))
+            { 
+                OnBackClick();
+            }
+        }
     }
 
     void Init()
@@ -53,6 +93,8 @@ public class KeybindController : MonoBehaviour {
         blh2.text = InputManager.gameInput.player2.AxisHorizontal2.AxisName;
         blv1.text = InputManager.gameInput.player1.AxisVertical2.AxisName;
         blv2.text = InputManager.gameInput.player2.AxisVertical2.AxisName;
+        menu1.text = InputManager.gameInput.player1.Reset.ToString();
+        menu2.text = InputManager.gameInput.player2.Reset.ToString();
     }
 
     public void OnClick(Text button)
@@ -72,15 +114,17 @@ public class KeybindController : MonoBehaviour {
             
             if (button.rectTransform.parent.name.Contains("1"))
             {
-                if(button.rectTransform.parent.name.Contains("Jump") || button.rectTransform.parent.name.Contains("Dash") || button.rectTransform.parent.name.Contains("Skill") || button.rectTransform.parent.name.Contains("Release") || button.rectTransform.parent.name.Contains("Kick"))
-                {
-                    changedValue = InputManager.getJoystick1Button();
-                }
-                else
-                {
-                    changedValue = KeyCode.ScrollLock;
-                    changedAxis = InputManager.getJoystick1Axis();
-                }
+                //if(button.rectTransform.parent.name.Contains("Jump") || button.rectTransform.parent.name.Contains("Dash") || button.rectTransform.parent.name.Contains("Skill") || button.rectTransform.parent.name.Contains("Release") || button.rectTransform.parent.name.Contains("Kick"))
+                //{
+                //    changedValue = InputManager.getJoystick1Button();
+                //}
+                //else
+                //{
+                //    changedValue = KeyCode.ScrollLock;
+                //    changedAxis = InputManager.getJoystick1Axis();
+                //}
+                changedValue = InputManager.getJoystick1Button();
+                changedAxis = InputManager.getJoystick1Axis();
             }
             if (button.rectTransform.parent.name.Contains("2"))
             {
@@ -121,6 +165,11 @@ public class KeybindController : MonoBehaviour {
                 if (button == skillValue2)
                     InputManager.gameInput.player2.Skill = changedValue;
 
+                if (button == menu1)
+                    InputManager.gameInput.player1.Reset = changedValue;
+                if (button == menu2)
+                    InputManager.gameInput.player2.Reset = changedValue;
+
 
                 if (button == plh1)
                     InputManager.gameInput.player1.AxisHorizontal1 = changedAxis;
@@ -147,9 +196,18 @@ public class KeybindController : MonoBehaviour {
                 state = State.Free;
                 button.fontStyle = FontStyle.Normal;
                 StopAllCoroutines();
+            } else if(state == State.Free)
+            {
+                button.fontStyle = FontStyle.Normal;
+                StopAllCoroutines();
             }
             yield return null;
         }
+    }
+
+    public void OnDisableClick()
+    {
+        state = State.Free;
     }
 
     public void OnBackClick()
