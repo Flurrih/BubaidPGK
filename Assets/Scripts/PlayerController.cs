@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject playersBall;
     public GameObject playersChain;
 
+    public Animator anim;
+
     void Start()
     {
         cam = Camera.main;
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour {
             //transform.FindChild("Ball").rotation = Quaternion.Inverse(rb.rotation);
         }
         //rb.AddForce(horizontal*speed,0, vertical*speed);
+        anim.SetFloat("movement", new Vector3(rb.velocity.x, 0.0f, rb.velocity.z).magnitude);
     }
 
     void Jump()
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Jump.ToString()) && !isJumping)
         {
             isJumping = true;
+            anim.SetBool("Jump", true);
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
         }
     }
@@ -262,10 +266,10 @@ public class PlayerController : MonoBehaviour {
     {
         if (isInviolability == false)
         {
-            //Blood particle
-            //bloodParticle.Clear();
-            //bloodParticle.time = 0;
-            //bloodParticle.Play();
+           
+            bloodParticle.Clear();
+            bloodParticle.time = 0;
+            bloodParticle.Play();
 
             playerHealth -= dmg;
         }
@@ -332,7 +336,10 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionStay(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Ground")
+        {
             isJumping = false;
+            anim.SetBool("Jump", false);
+        }
     }
 
     public bool IsJumping()
