@@ -83,6 +83,7 @@ ModelImporter:
     100150: viking_Spine3
     100152: viking_Spine4
     100154: //RootNode
+    100156: viking_RIKTarget
     400000: but prawy
     400002: but prawy001
     400004: cloth
@@ -161,6 +162,7 @@ ModelImporter:
     400150: viking_Spine3
     400152: viking_Spine4
     400154: //RootNode
+    400156: viking_RIKTarget
     2300000: viking_Head
     2300002: viking_LCalf
     2300004: viking_LCollarbone
@@ -388,7 +390,46 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nInbetween bone default rotation found in this file
+      is different from the one found in the source avatar:\n\t'viking_Spine1' : rotation
+      error = 1.783198 deg\n\t'viking_Spine4' : rotation error = 4.599955 deg\n\t'viking_Ribcage'
+      : rotation error = 1.624670 deg\n\t'viking_Neck2' : rotation error = 3.212375
+      deg\n\nClip 'Take 001' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'viking_LCalf'
+      has translation animation that will be discarded.\n\t'viking_LFoot' has scale
+      animation that will be discarded.\n\t'viking_RCalf' has translation animation
+      that will be discarded.\n\t'viking_RCalf' has scale animation that will be discarded.\n\t'viking_RFoot'
+      has scale animation that will be discarded.\n\t'viking_RDigit11' has scale animation
+      that will be discarded.\n\t'viking_Spine1' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'viking_Spine4' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'viking_Ribcage'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'viking_LPalm'
+      has scale animation that will be discarded.\n\t'viking_LDigit11 1' has scale
+      animation that will be discarded.\n\t'viking_LDigit12' has scale animation that
+      will be discarded.\n\t'viking_LDigit13' has scale animation that will be discarded.\n\t'viking_LDigit21'
+      has scale animation that will be discarded.\n\t'viking_LDigit22' has scale animation
+      that will be discarded.\n\t'viking_LDigit23' has scale animation that will be
+      discarded.\n\t'viking_LDigit31' has scale animation that will be discarded.\n\t'viking_LDigit32'
+      has scale animation that will be discarded.\n\t'viking_LDigit33' has scale animation
+      that will be discarded.\n\t'viking_LDigit41' has scale animation that will be
+      discarded.\n\t'viking_LDigit42' has scale animation that will be discarded.\n\t'viking_LDigit43'
+      has scale animation that will be discarded.\n\t'viking_LDigit51' has scale animation
+      that will be discarded.\n\t'viking_LDigit52' has scale animation that will be
+      discarded.\n\t'viking_LDigit53' has scale animation that will be discarded.\n\t'viking_RForearm'
+      has scale animation that will be discarded.\n\t'viking_RPalm' has scale animation
+      that will be discarded.\n\t'viking_RDigit11 1' has scale animation that will
+      be discarded.\n\t'viking_RDigit12' has scale animation that will be discarded.\n\t'viking_RDigit13'
+      has scale animation that will be discarded.\n\t'viking_RDigit21' has scale animation
+      that will be discarded.\n\t'viking_RDigit22' has scale animation that will be
+      discarded.\n\t'viking_RDigit23' has scale animation that will be discarded.\n\t'viking_RDigit31'
+      has scale animation that will be discarded.\n\t'viking_RDigit32' has scale animation
+      that will be discarded.\n\t'viking_RDigit33' has scale animation that will be
+      discarded.\n\t'viking_RDigit41' has scale animation that will be discarded.\n\t'viking_RDigit42'
+      has scale animation that will be discarded.\n\t'viking_RDigit43' has scale animation
+      that will be discarded.\n\t'viking_RDigit51' has scale animation that will be
+      discarded.\n\t'viking_RDigit52' has scale animation that will be discarded.\n\t'viking_RDigit53'
+      has scale animation that will be discarded.\n\t'viking_Neck2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
