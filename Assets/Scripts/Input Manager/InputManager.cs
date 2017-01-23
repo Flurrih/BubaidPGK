@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class InputManager : MonoBehaviour {
 
@@ -401,79 +402,90 @@ public class InputManager : MonoBehaviour {
 
     void Awake()
     {
-        #region player1Region
-        //GameInput.Axis player1AxisVertical1 = new GameInput.Axis();
+        gameInput = new GameInput();
+        if (!File.Exists("GameInput.xml"))
+        {
+            #region player1Region
+            GameInput.Axis player1AxisVertical1 = new GameInput.Axis();
 
-        //player1AxisVertical1.AxisName = "Joystick1AxisY";
-        //player1AxisVertical1.value = Input.GetAxis(player1AxisVertical1.AxisName);
+            player1AxisVertical1.AxisName = "Joystick1AxisY";
+            player1AxisVertical1.value = Input.GetAxis(player1AxisVertical1.AxisName);
 
-        //GameInput.Axis player1AxisHorizontal1 = new GameInput.Axis();
+            GameInput.Axis player1AxisHorizontal1 = new GameInput.Axis();
 
-        //player1AxisHorizontal1.AxisName = "Joystick1AxisX";
-        //player1AxisHorizontal1.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
+            player1AxisHorizontal1.AxisName = "Joystick1AxisX";
+            player1AxisHorizontal1.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
 
-        //GameInput.Axis player1AxisVertical2 = new GameInput.Axis();
+            GameInput.Axis player1AxisVertical2 = new GameInput.Axis();
 
-        //player1AxisVertical2.AxisName = "Joystick1Axis4";
-        //player1AxisVertical2.value = Input.GetAxis(player1AxisVertical1.AxisName);
+            player1AxisVertical2.AxisName = "Joystick1Axis4";
+            player1AxisVertical2.value = Input.GetAxis(player1AxisVertical1.AxisName);
 
-        //GameInput.Axis player1AxisHorizontal2 = new GameInput.Axis();
+            GameInput.Axis player1AxisHorizontal2 = new GameInput.Axis();
 
-        //player1AxisHorizontal2.AxisName = "Joystick1Axis3";
-        //player1AxisHorizontal2.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
+            player1AxisHorizontal2.AxisName = "Joystick1Axis3";
+            player1AxisHorizontal2.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
 
-        //GameInput.PlayerInput player1 = new GameInput.PlayerInput(
-        //    1,
-        //    KeyCode.Joystick1Button0,
-        //    KeyCode.Joystick1Button1,
-        //    KeyCode.Joystick1Button7,
-        //    KeyCode.Joystick1Button6,
-        //    KeyCode.Joystick1Button2,
-        //    player1AxisVertical1,
-        //    player1AxisHorizontal1,
-        //    player1AxisVertical2,
-        //    player1AxisHorizontal2
-        //    );
+            GameInput.PlayerInput player1 = new GameInput.PlayerInput(
+                1,
+                KeyCode.Joystick1Button0,
+                KeyCode.Joystick1Button1,
+                KeyCode.Joystick1Button7,
+                KeyCode.Joystick1Button6,
+                KeyCode.Joystick1Button2,
+                KeyCode.Joystick1Button9,
+                player1AxisVertical1,
+                player1AxisHorizontal1,
+                player1AxisVertical2,
+                player1AxisHorizontal2
+                );
 
-        #endregion
+            #endregion
 
-        #region player2Region
-        //GameInput.Axis player2AxisVertical1 = new GameInput.Axis();
+            #region player2Region
+            GameInput.Axis player2AxisVertical1 = new GameInput.Axis();
 
-        //player2AxisVertical1.AxisName = "Joystick2AxisY";
-        //player2AxisVertical1.value = Input.GetAxis(player1AxisVertical1.AxisName);
+            player2AxisVertical1.AxisName = "Joystick2AxisY";
+            player2AxisVertical1.value = Input.GetAxis(player1AxisVertical1.AxisName);
 
-        //GameInput.Axis player2AxisHorizontal1 = new GameInput.Axis();
+            GameInput.Axis player2AxisHorizontal1 = new GameInput.Axis();
 
-        //player2AxisHorizontal1.AxisName = "Joystick2AxisX";
-        //player2AxisHorizontal1.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
+            player2AxisHorizontal1.AxisName = "Joystick2AxisX";
+            player2AxisHorizontal1.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
 
-        //GameInput.Axis player2AxisVertical2 = new GameInput.Axis();
+            GameInput.Axis player2AxisVertical2 = new GameInput.Axis();
 
-        //player2AxisVertical2.AxisName = "Joystick1Axis6";
-        //player2AxisVertical2.value = Input.GetAxis(player1AxisVertical1.AxisName);
+            player2AxisVertical2.AxisName = "Joystick1Axis6";
+            player2AxisVertical2.value = Input.GetAxis(player1AxisVertical1.AxisName);
 
-        //GameInput.Axis player2AxisHorizontal2 = new GameInput.Axis();
+            GameInput.Axis player2AxisHorizontal2 = new GameInput.Axis();
 
-        //player2AxisHorizontal2.AxisName = "Joystick1Axis3";
-        //player2AxisHorizontal2.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
+            player2AxisHorizontal2.AxisName = "Joystick1Axis3";
+            player2AxisHorizontal2.value = Input.GetAxis(player1AxisHorizontal1.AxisName);
 
-        //GameInput.PlayerInput player2 = new GameInput.PlayerInput(
-        //    2,
-        //    KeyCode.Joystick2Button1,
-        //    KeyCode.Joystick2Button0,
-        //    KeyCode.Joystick2Button7,
-        //    KeyCode.Joystick2Button5,
-        //    KeyCode.Joystick2Button2,
-        //    player2AxisVertical1,
-        //    player2AxisHorizontal1,
-        //    player2AxisVertical2,
-        //    player2AxisHorizontal2
-        //    );
+            GameInput.PlayerInput player2 = new GameInput.PlayerInput(
+                2,
+                KeyCode.Joystick2Button1,
+                KeyCode.Joystick2Button0,
+                KeyCode.Joystick2Button7,
+                KeyCode.Joystick2Button5,
+                KeyCode.Joystick2Button2,
+                KeyCode.Joystick2Button9,
+                player2AxisVertical1,
+                player2AxisHorizontal1,
+                player2AxisVertical2,
+                player2AxisHorizontal2
+                );
 
-        #endregion
+            #endregion
 
+            gameInput.player1 = player1;
+            gameInput.player2 = player2;
+
+            GameInput.Save(gameInput, "GameInput.xml");
+        }
         gameInput = GameInput.LoadDefault();
+        
     }
 
     

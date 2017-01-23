@@ -1,0 +1,1416 @@
+fileFormatVersion: 2
+guid: 813258cedec7161469c12530808d224d
+timeCreated: 1484736304
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: but prawy
+    100002: but prawy001
+    100004: cloth
+    100006: helm
+    100008: klamra
+    100010: lowerBody
+    100012: oko002
+    100014: oko1
+    100016: pasek
+    100018: przywieszka
+    100020: skora
+    100022: upperbody
+    100024: viking_
+    100026: viking_Head
+    100028: viking_LCalf
+    100030: viking_LCollarbone
+    100032: viking_LDigit11
+    100034: viking_LDigit11 1
+    100036: viking_LDigit12
+    100038: viking_LDigit13
+    100040: viking_LDigit21
+    100042: viking_LDigit22
+    100044: viking_LDigit23
+    100046: viking_LDigit31
+    100048: viking_LDigit32
+    100050: viking_LDigit33
+    100052: viking_LDigit41
+    100054: viking_LDigit42
+    100056: viking_LDigit43
+    100058: viking_LDigit51
+    100060: viking_LDigit52
+    100062: viking_LDigit53
+    100064: viking_LFoot
+    100066: viking_LForearm
+    100068: viking_LPalm
+    100070: viking_LPlatform
+    100072: viking_LThigh
+    100074: viking_LUpperarm
+    100076: viking_Neck1
+    100078: viking_Neck2
+    100080: viking_Pelvis
+    100082: viking_PelvisBone002
+    100084: viking_PelvisBone003
+    100086: viking_PelvisBone004
+    100088: viking_PelvisBone005
+    100090: viking_PelvisBone006
+    100092: viking_RCalf
+    100094: viking_RCollarbone
+    100096: viking_RDigit11
+    100098: viking_RDigit11 1
+    100100: viking_RDigit12
+    100102: viking_RDigit13
+    100104: viking_RDigit21
+    100106: viking_RDigit22
+    100108: viking_RDigit23
+    100110: viking_RDigit31
+    100112: viking_RDigit32
+    100114: viking_RDigit33
+    100116: viking_RDigit41
+    100118: viking_RDigit42
+    100120: viking_RDigit43
+    100122: viking_RDigit51
+    100124: viking_RDigit52
+    100126: viking_RDigit53
+    100128: viking_RFoot
+    100130: viking_RForearm
+    100132: viking_Ribcage
+    100134: viking_RibcageBone001
+    100136: viking_RibcageBone001Bone001
+    100138: viking_RibcageBone001Bone001Bone001
+    100140: viking_RPalm
+    100142: viking_RPlatform
+    100144: viking_RThigh
+    100146: viking_RUpperarm
+    100148: viking_Spine1
+    100150: viking_Spine2
+    100152: viking_Spine3
+    100154: viking_Spine4
+    100156: //RootNode
+    400000: but prawy
+    400002: but prawy001
+    400004: cloth
+    400006: helm
+    400008: klamra
+    400010: lowerBody
+    400012: oko002
+    400014: oko1
+    400016: pasek
+    400018: przywieszka
+    400020: skora
+    400022: upperbody
+    400024: viking_
+    400026: viking_Head
+    400028: viking_LCalf
+    400030: viking_LCollarbone
+    400032: viking_LDigit11
+    400034: viking_LDigit11 1
+    400036: viking_LDigit12
+    400038: viking_LDigit13
+    400040: viking_LDigit21
+    400042: viking_LDigit22
+    400044: viking_LDigit23
+    400046: viking_LDigit31
+    400048: viking_LDigit32
+    400050: viking_LDigit33
+    400052: viking_LDigit41
+    400054: viking_LDigit42
+    400056: viking_LDigit43
+    400058: viking_LDigit51
+    400060: viking_LDigit52
+    400062: viking_LDigit53
+    400064: viking_LFoot
+    400066: viking_LForearm
+    400068: viking_LPalm
+    400070: viking_LPlatform
+    400072: viking_LThigh
+    400074: viking_LUpperarm
+    400076: viking_Neck1
+    400078: viking_Neck2
+    400080: viking_Pelvis
+    400082: viking_PelvisBone002
+    400084: viking_PelvisBone003
+    400086: viking_PelvisBone004
+    400088: viking_PelvisBone005
+    400090: viking_PelvisBone006
+    400092: viking_RCalf
+    400094: viking_RCollarbone
+    400096: viking_RDigit11
+    400098: viking_RDigit11 1
+    400100: viking_RDigit12
+    400102: viking_RDigit13
+    400104: viking_RDigit21
+    400106: viking_RDigit22
+    400108: viking_RDigit23
+    400110: viking_RDigit31
+    400112: viking_RDigit32
+    400114: viking_RDigit33
+    400116: viking_RDigit41
+    400118: viking_RDigit42
+    400120: viking_RDigit43
+    400122: viking_RDigit51
+    400124: viking_RDigit52
+    400126: viking_RDigit53
+    400128: viking_RFoot
+    400130: viking_RForearm
+    400132: viking_Ribcage
+    400134: viking_RibcageBone001
+    400136: viking_RibcageBone001Bone001
+    400138: viking_RibcageBone001Bone001Bone001
+    400140: viking_RPalm
+    400142: viking_RPlatform
+    400144: viking_RThigh
+    400146: viking_RUpperarm
+    400148: viking_Spine1
+    400150: viking_Spine2
+    400152: viking_Spine3
+    400154: viking_Spine4
+    400156: //RootNode
+    4300000: upperbody
+    4300002: lowerBody
+    4300004: but prawy
+    4300006: cloth
+    4300008: pasek
+    4300010: klamra
+    4300012: skora
+    4300014: przywieszka
+    4300016: oko1
+    4300018: helm
+    4300020: but prawy001
+    4300022: oko002
+    7400000: Take 001
+    7400002: Take 001 //// viking_Pelvis
+    7400004: Take 001 //// viking_LPlatform
+    7400006: Take 001 //// viking_RPlatform
+    7400008: Take 001 //// viking_LThigh
+    7400010: Take 001 //// viking_LCalf
+    7400012: Take 001 //// viking_LFoot
+    7400014: Take 001 //// viking_LDigit11
+    7400016: Take 001 //// viking_RThigh
+    7400018: Take 001 //// viking_RCalf
+    7400020: Take 001 //// viking_RFoot
+    7400022: Take 001 //// viking_RDigit11
+    7400024: Take 001 //// viking_Spine1
+    7400026: Take 001 //// viking_Spine2
+    7400028: Take 001 //// viking_Spine3
+    7400030: Take 001 //// viking_Spine4
+    7400032: Take 001 //// viking_Ribcage
+    7400034: Take 001 //// viking_LCollarbone
+    7400036: Take 001 //// viking_LUpperarm
+    7400038: Take 001 //// viking_LForearm
+    7400040: Take 001 //// viking_LPalm
+    7400042: Take 001 //// viking_LDigit11 1
+    7400044: Take 001 //// viking_LDigit12
+    7400046: Take 001 //// viking_LDigit13
+    7400048: Take 001 //// viking_LDigit21
+    7400050: Take 001 //// viking_LDigit22
+    7400052: Take 001 //// viking_LDigit23
+    7400054: Take 001 //// viking_LDigit31
+    7400056: Take 001 //// viking_LDigit32
+    7400058: Take 001 //// viking_LDigit33
+    7400060: Take 001 //// viking_LDigit41
+    7400062: Take 001 //// viking_LDigit42
+    7400064: Take 001 //// viking_LDigit43
+    7400066: Take 001 //// viking_LDigit51
+    7400068: Take 001 //// viking_LDigit52
+    7400070: Take 001 //// viking_LDigit53
+    7400072: Take 001 //// viking_RCollarbone
+    7400074: Take 001 //// viking_RUpperarm
+    7400076: Take 001 //// viking_RForearm
+    7400078: Take 001 //// viking_RPalm
+    7400080: Take 001 //// viking_RDigit11 1
+    7400082: Take 001 //// viking_RDigit12
+    7400084: Take 001 //// viking_RDigit13
+    7400086: Take 001 //// viking_RDigit21
+    7400088: Take 001 //// viking_RDigit22
+    7400090: Take 001 //// viking_RDigit23
+    7400092: Take 001 //// viking_RDigit31
+    7400094: Take 001 //// viking_RDigit32
+    7400096: Take 001 //// viking_RDigit33
+    7400098: Take 001 //// viking_RDigit41
+    7400100: Take 001 //// viking_RDigit42
+    7400102: Take 001 //// viking_RDigit43
+    7400104: Take 001 //// viking_RDigit51
+    7400106: Take 001 //// viking_RDigit52
+    7400108: Take 001 //// viking_RDigit53
+    7400110: Take 001 //// viking_Neck1
+    7400112: Take 001 //// viking_Neck2
+    7400114: Take 001 //// viking_Head
+    7400116: Take 001 //// viking_RibcageBone001
+    7400118: Take 001 //// viking_RibcageBone001Bone001
+    7400120: Take 001 //// viking_RibcageBone001Bone001Bone001
+    7400122: Take 001 //// viking_PelvisBone002
+    7400124: Take 001 //// viking_PelvisBone003
+    7400126: Take 001 //// viking_PelvisBone004
+    7400128: Take 001 //// viking_PelvisBone005
+    7400130: Take 001 //// viking_PelvisBone006
+    9500000: //RootNode
+    11100000: //RootNode
+    11100002: but prawy
+    11100004: but prawy001
+    11100006: cloth
+    11100008: helm
+    11100010: klamra
+    11100012: lowerBody
+    11100014: oko002
+    11100016: oko1
+    11100018: pasek
+    11100020: przywieszka
+    11100022: skora
+    11100024: upperbody
+    11100026: viking_Head
+    11100028: viking_LCalf
+    11100030: viking_LCollarbone
+    11100032: viking_LDigit11
+    11100034: viking_LDigit11 1
+    11100036: viking_LDigit12
+    11100038: viking_LDigit13
+    11100040: viking_LDigit21
+    11100042: viking_LDigit22
+    11100044: viking_LDigit23
+    11100046: viking_LDigit31
+    11100048: viking_LDigit32
+    11100050: viking_LDigit33
+    11100052: viking_LDigit41
+    11100054: viking_LDigit42
+    11100056: viking_LDigit43
+    11100058: viking_LDigit51
+    11100060: viking_LDigit52
+    11100062: viking_LDigit53
+    11100064: viking_LFoot
+    11100066: viking_LForearm
+    11100068: viking_LPalm
+    11100070: viking_LPlatform
+    11100072: viking_LThigh
+    11100074: viking_LUpperarm
+    11100076: viking_Neck1
+    11100078: viking_Neck2
+    11100080: viking_Pelvis
+    11100082: viking_PelvisBone002
+    11100084: viking_PelvisBone003
+    11100086: viking_PelvisBone004
+    11100088: viking_PelvisBone005
+    11100090: viking_PelvisBone006
+    11100092: viking_RCalf
+    11100094: viking_RCollarbone
+    11100096: viking_RDigit11
+    11100098: viking_RDigit11 1
+    11100100: viking_RDigit12
+    11100102: viking_RDigit13
+    11100104: viking_RDigit21
+    11100106: viking_RDigit22
+    11100108: viking_RDigit23
+    11100110: viking_RDigit31
+    11100112: viking_RDigit32
+    11100114: viking_RDigit33
+    11100116: viking_RDigit41
+    11100118: viking_RDigit42
+    11100120: viking_RDigit43
+    11100122: viking_RDigit51
+    11100124: viking_RDigit52
+    11100126: viking_RDigit53
+    11100128: viking_RFoot
+    11100130: viking_RForearm
+    11100132: viking_Ribcage
+    11100134: viking_RibcageBone001
+    11100136: viking_RibcageBone001Bone001
+    11100138: viking_RibcageBone001Bone001Bone001
+    11100140: viking_RPalm
+    11100142: viking_RPlatform
+    11100144: viking_RThigh
+    11100146: viking_RUpperarm
+    11100148: viking_Spine1
+    11100150: viking_Spine2
+    11100152: viking_Spine3
+    11100154: viking_Spine4
+    13700000: but prawy
+    13700002: but prawy001
+    13700004: cloth
+    13700006: helm
+    13700008: klamra
+    13700010: lowerBody
+    13700012: oko002
+    13700014: oko1
+    13700016: pasek
+    13700018: przywieszka
+    13700020: skora
+    13700022: upperbody
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nInbetween bone default rotation found in this file
+      is different from the one found in the source avatar:\n\t'viking_Spine1' : rotation
+      error = 1.783198 deg\n\t'viking_Spine4' : rotation error = 4.599968 deg\n\t'viking_Ribcage'
+      : rotation error = 1.624656 deg\n\t'viking_Neck2' : rotation error = 3.212375
+      deg\n\nClip 'Take 001' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'viking_Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'viking_Spine4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'viking_Ribcage'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'viking_LDigit12'
+      has scale animation that will be discarded.\n\t'viking_LDigit13' has scale animation
+      that will be discarded.\n\t'viking_LDigit22' has scale animation that will be
+      discarded.\n\t'viking_LDigit23' has scale animation that will be discarded.\n\t'viking_LDigit31'
+      has scale animation that will be discarded.\n\t'viking_LDigit32' has scale animation
+      that will be discarded.\n\t'viking_LDigit33' has scale animation that will be
+      discarded.\n\t'viking_LDigit41' has scale animation that will be discarded.\n\t'viking_LDigit42'
+      has scale animation that will be discarded.\n\t'viking_LDigit43' has scale animation
+      that will be discarded.\n\t'viking_LDigit51' has scale animation that will be
+      discarded.\n\t'viking_LDigit52' has scale animation that will be discarded.\n\t'viking_LDigit53'
+      has scale animation that will be discarded.\n\t'viking_RDigit11 1' has scale
+      animation that will be discarded.\n\t'viking_RDigit12' has scale animation that
+      will be discarded.\n\t'viking_RDigit13' has scale animation that will be discarded.\n\t'viking_RDigit21'
+      has scale animation that will be discarded.\n\t'viking_RDigit22' has scale animation
+      that will be discarded.\n\t'viking_RDigit23' has scale animation that will be
+      discarded.\n\t'viking_RDigit31' has scale animation that will be discarded.\n\t'viking_RDigit32'
+      has scale animation that will be discarded.\n\t'viking_RDigit33' has scale animation
+      that will be discarded.\n\t'viking_RDigit41' has scale animation that will be
+      discarded.\n\t'viking_RDigit42' has scale animation that will be discarded.\n\t'viking_RDigit43'
+      has scale animation that will be discarded.\n\t'viking_RDigit51' has scale animation
+      that will be discarded.\n\t'viking_RDigit52' has scale animation that will be
+      discarded.\n\t'viking_RDigit53' has scale animation that will be discarded.\n\t'viking_Neck2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: but prawy
+        weight: 1
+      - path: but prawy001
+        weight: 1
+      - path: cloth
+        weight: 1
+      - path: helm
+        weight: 1
+      - path: klamra
+        weight: 1
+      - path: lowerBody
+        weight: 1
+      - path: oko1
+        weight: 1
+      - path: oko002
+        weight: 1
+      - path: pasek
+        weight: 1
+      - path: przywieszka
+        weight: 1
+      - path: skora
+        weight: 1
+      - path: upperbody
+        weight: 1
+      - path: viking_LPlatform
+        weight: 1
+      - path: viking_Pelvis
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot/viking_LDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone002
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone003
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone004
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone005
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone006
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot/viking_RDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12/viking_LDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22/viking_LDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32/viking_LDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42/viking_LDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52/viking_LDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2/viking_Head
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12/viking_RDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22/viking_RDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32/viking_RDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42/viking_RDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52/viking_RDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001/viking_RibcageBone001Bone001Bone001
+        weight: 1
+      - path: viking_RPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: viking_Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_Spine2
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_Spine3
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_Neck1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit11
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit11
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit11 1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit12
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit13
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit21
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit22
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit23
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit31
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit32
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit33
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit41
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit42
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit43
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit51
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit52
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_LDigit53
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit11 1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit12
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit13
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit21
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit22
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit23
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit31
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit32
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit33
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit41
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit42
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit43
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit51
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit52
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: viking_RDigit53
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: viking_with_bones(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: but prawy
+      position: {x: 0.04581116, y: -0.19840312, z: -0.03441897}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: but prawy001
+      position: {x: -0.04598883, y: -0.19840312, z: -0.03441897}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: cloth
+      position: {x: 0.0061304364, y: 0.10841193, z: 0.003429216}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: helm
+      position: {x: -0.00013700037, y: 0.17986387, z: 0.0061273323}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: klamra
+      position: {x: 0.002168973, y: 0.0023050522, z: 0.05263429}
+      rotation: {x: 0.000000021855694, y: -0.000000007450581, z: 1.6283761e-16, w: 1}
+      scale: {x: 2.0459862, y: 2.0459862, z: 2.0459862}
+      transformModified: 1
+    - name: lowerBody
+      position: {x: 0.0063159834, y: 0.10841193, z: 0.003429216}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: oko1
+      position: {x: 0.009393149, y: 0.1731327, z: 0.024487415}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: oko002
+      position: {x: -0.0099835275, y: 0.17329933, z: 0.024487415}
+      rotation: {x: -0.7010574, y: -0.09229618, z: -0.09229606, w: 0.7010574}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasek
+      position: {x: 0.0061304364, y: 0.10841193, z: 0.003429216}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: przywieszka
+      position: {x: -0.000025122314, y: 0.094170555, z: 0.05261934}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: skora
+      position: {x: -0.00036464212, y: 0.2258081, z: -0.050254695}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: upperbody
+      position: {x: 0.0063159834, y: 0.10842393, z: 0.003293882}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: viking_LPlatform
+      position: {x: -0.04234527, y: -0.1632669, z: -0.07864991}
+      rotation: {x: 0.85056067, y: 0.05063031, z: -0.5212242, w: -0.04804645}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: viking_RPlatform
+      position: {x: 0.031997778, y: -0.18295643, z: 0.09416793}
+      rotation: {x: 0.26374373, y: -0.59422314, z: -0.43039057, w: 0.6261805}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: viking_Pelvis
+      position: {x: -0.0005572099, y: 0.1789301, z: 0.009507062}
+      rotation: {x: 0.499127, y: -0.50087154, z: -0.49912688, w: 0.5008715}
+      scale: {x: 1.0000031, y: 1.0000032, z: 1.0000011}
+      transformModified: 1
+    - name: viking_PelvisBone005
+      position: {x: -0.0023317838, y: -0.03524328, z: 0}
+      rotation: {x: 0.13052636, y: 0.9914448, z: -0.000000059604638, w: 0.000000059604638}
+      scale: {x: 1, y: 1.0000014, z: 1.0000007}
+      transformModified: 1
+    - name: viking_PelvisBone006
+      position: {x: 0.00018448113, y: 0.0528734, z: 0.023980105}
+      rotation: {x: 0.105377674, y: 0.1499371, z: -0.9805597, w: 0.07012209}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000017}
+      transformModified: 1
+    - name: viking_PelvisBone004
+      position: {x: -0.0040453314, y: 0.0071662413, z: -0.061594836}
+      rotation: {x: 0.20227496, y: 0.048767928, z: 0.97755706, w: 0.032995734}
+      scale: {x: 1.0000023, y: 1.000002, z: 1.0000024}
+      transformModified: 1
+    - name: viking_PelvisBone003
+      position: {x: -0.0040453337, y: 0.0071662366, z: 0.061594836}
+      rotation: {x: -0.20227498, y: -0.048767984, z: 0.9775571, w: 0.032995716}
+      scale: {x: 1.0000032, y: 1.0000049, z: 1.0000037}
+      transformModified: 1
+    - name: viking_PelvisBone002
+      position: {x: 0.00018447876, y: 0.052873407, z: -0.023980105}
+      rotation: {x: 0.10537756, y: 0.14993721, z: 0.9805597, w: -0.07012207}
+      scale: {x: 1.0000013, y: 1.0000006, z: 0.9999993}
+      transformModified: 1
+    - name: viking_LThigh
+      position: {x: -0.003342769, y: 0.009114286, z: 0.030607032}
+      rotation: {x: 0.066539526, y: 0.9922177, z: -0.005534783, w: 0.105099246}
+      scale: {x: 1.000003, y: 1.0000015, z: 1.0000039}
+      transformModified: 1
+    - name: viking_LCalf
+      position: {x: -0.08598177, y: -0.0000005245209, z: 0.000000114440915}
+      rotation: {x: 0.0031054926, y: 0.085369505, z: 0.016921973, w: 0.9962008}
+      scale: {x: 0.99999714, y: 1.0000039, z: 1.0000004}
+      transformModified: 1
+    - name: viking_LFoot
+      position: {x: -0.093120575, y: 0, z: 0}
+      rotation: {x: -0.08208718, y: -0.04298076, z: -0.75572556, w: 0.64830023}
+      scale: {x: 0.99999607, y: 1.0000052, z: 1.0000006}
+      transformModified: 1
+    - name: viking_LDigit11
+      position: {x: -0.04810934, y: -0.0014437103, z: 0.00000042438506}
+      rotation: {x: 0.00008834898, y: -0.042984772, z: -0.004175962, w: 0.999067}
+      scale: {x: 0.9999975, y: 1.0000025, z: 1.0000001}
+      transformModified: 1
+    - name: viking_Spine1
+      position: {x: -0.012052834, y: -0.013434061, z: 2.9802322e-10}
+      rotation: {x: 0.000000044703484, y: 0.000000074505806, z: 0.012750626, w: -0.9999187}
+      scale: {x: 1.0000025, y: 1.0000029, z: 1.0000023}
+      transformModified: 1
+    - name: viking_Spine2
+      position: {x: -0.03913478, y: 2.9802322e-10, z: 0}
+      rotation: {x: -0.0000009124245, y: -0.0000001128395, z: -0.065977894, w: -0.9978211}
+      scale: {x: 1.0000005, y: 1.0000012, z: 1.0000017}
+      transformModified: 1
+    - name: viking_Spine3
+      position: {x: -0.031132175, y: -8.9406965e-10, z: -2.9802322e-10}
+      rotation: {x: -0.0000009536744, y: 0.0000001192093, z: 0.040491883, w: 0.9991799}
+      scale: {x: 1.0000019, y: 1, z: 1.0000013}
+      transformModified: 1
+    - name: viking_Spine4
+      position: {x: -0.034055762, y: 0, z: 0}
+      rotation: {x: -0.000000044716103, y: -0.000000031329236, z: -0.2696885, w: 0.96294767}
+      scale: {x: 1.0000031, y: 1.0000042, z: 1.000002}
+      transformModified: 1
+    - name: viking_Ribcage
+      position: {x: -0.046875633, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.00000008940697, y: 0.000000014901161, z: 0.17661577, w: 0.9842799}
+      scale: {x: 0.99999565, y: 0.9999947, z: 0.9999975}
+      transformModified: 1
+    - name: viking_RCollarbone
+      position: {x: 0.003370018, y: 0.05472381, z: -0.0058465353}
+      rotation: {x: 0.059134252, y: 0.6905637, z: -0.16916232, w: -0.7007205}
+      scale: {x: 1.0000024, y: 1.0000011, z: 1.000001}
+      transformModified: 1
+    - name: viking_RUpperarm
+      position: {x: -0.06941189, y: 0.0000000047683715, z: 0}
+      rotation: {x: -0.11378946, y: -0.023574565, z: -0.15999953, w: 0.9802532}
+      scale: {x: 1.000001, y: 0.9999998, z: 0.99999785}
+      transformModified: 1
+    - name: viking_RForearm
+      position: {x: -0.084830895, y: -0.000000007152557, z: 0}
+      rotation: {x: -0.1081411, y: 0.01989358, z: -0.027369166, w: 0.99355966}
+      scale: {x: 0.9999982, y: 0.9999996, z: 1.0000025}
+      transformModified: 1
+    - name: viking_RPalm
+      position: {x: -0.077836916, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.6665901, y: 0.029848682, z: 0.030024191, w: 0.7442213}
+      scale: {x: 0.999981, y: 1.0000185, z: 1.0000007}
+      transformModified: 1
+    - name: viking_RDigit11 1
+      position: {x: -0.0025943995, y: -0.000000038146972, z: -0.00863517}
+      rotation: {x: 0.033502385, y: -0.44322675, z: -0.060909107, w: 0.89371014}
+      scale: {x: 0.99996054, y: 0.9999998, z: 1.0000335}
+      transformModified: 1
+    - name: viking_RDigit12
+      position: {x: -0.0053789425, y: 0, z: 0.0000000047683715}
+      rotation: {x: 0.0000015191794, y: 0.0139981145, z: 0.0000016482013, w: 0.999902}
+      scale: {x: 0.9999517, y: 0.99999726, z: 1.0000403}
+      transformModified: 1
+    - name: viking_RDigit13
+      position: {x: -0.009078407, y: 0, z: -0.0000000047683715}
+      rotation: {x: -0.0000013216201, y: 0.008902518, z: -0.00000047225046, w: 0.9999604}
+      scale: {x: 0.99990356, y: 0.999995, z: 1.0000824}
+      transformModified: 1
+    - name: viking_RDigit21
+      position: {x: -0.022283478, y: 0.000000019073486, z: -0.008184595}
+      rotation: {x: 0.0102421, y: -0.11837755, z: -0.014320974, w: 0.9928126}
+      scale: {x: 0.99997026, y: 1, z: 1.0000243}
+      transformModified: 1
+    - name: viking_RDigit22
+      position: {x: -0.0058604465, y: 0, z: 0}
+      rotation: {x: 0.002297985, y: 0.0048608077, z: 0.036656555, w: 0.9993134}
+      scale: {x: 0.9999278, y: 1.0000455, z: 1.0000155}
+      transformModified: 1
+    - name: viking_RDigit23
+      position: {x: -0.005633621, y: 0, z: 0}
+      rotation: {x: 0.002223577, y: 0.025408877, z: 0.087128095, w: 0.9958706}
+      scale: {x: 0.9998532, y: 1.0000936, z: 1.000032}
+      transformModified: 1
+    - name: viking_RDigit31
+      position: {x: -0.021850348, y: -0.000000009536743, z: -0.0019293785}
+      rotation: {x: 0.0000007152557, y: -0.09320643, z: 0.000000050291412, w: 0.99564683}
+      scale: {x: 0.9999574, y: 1.0000412, z: 0.99999595}
+      transformModified: 1
+    - name: viking_RDigit32
+      position: {x: -0.008534199, y: -0.000000009536743, z: -0.0000000047683715}
+      rotation: {x: 0.04262211, y: 0.0037618473, z: 0.035428762, w: 0.9984559}
+      scale: {x: 0.99989974, y: 1.0001005, z: 0.999991}
+      transformModified: 1
+    - name: viking_RDigit33
+      position: {x: -0.00660572, y: 0.000000009536743, z: 0.0000000023841857}
+      rotation: {x: 0.0018685977, y: -0.006872259, z: 0.10022588, w: 0.99493927}
+      scale: {x: 0.9998004, y: 1.0001963, z: 0.99998134}
+      transformModified: 1
+    - name: viking_RDigit41
+      position: {x: -0.021791391, y: -0.0020202827, z: 0.0046747182}
+      rotation: {x: 0.0010678171, y: -0.055450875, z: -0.019213432, w: 0.998276}
+      scale: {x: 0.99999905, y: 0.9999996, z: 0.9999948}
+      transformModified: 1
+    - name: viking_RDigit42
+      position: {x: -0.0082028145, y: 0.000000009536743, z: 0.0000000023841857}
+      rotation: {x: -0.032734547, y: 0.0025248246, z: 0.031738892, w: 0.99895686}
+      scale: {x: 0.99994534, y: 1.0000532, z: 0.99999034}
+      transformModified: 1
+    - name: viking_RDigit43
+      position: {x: -0.007846747, y: 0, z: 0}
+      rotation: {x: 0.040440205, y: 0.023610312, z: 0.0042540077, w: 0.9988939}
+      scale: {x: 0.9999097, y: 1.0000887, z: 0.99998313}
+      transformModified: 1
+    - name: viking_RDigit51
+      position: {x: -0.021466035, y: -0.0014297199, z: 0.009446091}
+      rotation: {x: -0.024695083, y: 0.034251247, z: 0.012788009, w: 0.99902624}
+      scale: {x: 0.99995583, y: 1.0000416, z: 0.99999577}
+      transformModified: 1
+    - name: viking_RDigit52
+      position: {x: -0.005732701, y: 0, z: 0}
+      rotation: {x: 0.1258664, y: 0.0037900242, z: 0.033606037, w: 0.99147063}
+      scale: {x: 0.999891, y: 1.0001109, z: 0.9999883}
+      transformModified: 1
+    - name: viking_RDigit53
+      position: {x: -0.0067796037, y: 0, z: 0.0000000011920929}
+      rotation: {x: -0.030763045, y: 0.0032401488, z: 0.005547345, w: 0.99950606}
+      scale: {x: 0.99982435, y: 1.0001751, z: 0.99998}
+      transformModified: 1
+    - name: viking_LCollarbone
+      position: {x: 0.0033700275, y: 0.05472381, z: 0.0058465363}
+      rotation: {x: 0.059134036, y: 0.69056356, z: 0.16916221, w: 0.7007206}
+      scale: {x: 1.0000005, y: 1.0000013, z: 1.0000008}
+      transformModified: 1
+    - name: viking_LUpperarm
+      position: {x: -0.06941189, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.11378918, y: 0.023574406, z: -0.1599993, w: 0.98025334}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.99999917}
+      transformModified: 1
+    - name: viking_LForearm
+      position: {x: -0.08483088, y: 5.9604643e-10, z: 0}
+      rotation: {x: 0.1081441, y: -0.019892998, z: -0.027368927, w: 0.9935593}
+      scale: {x: 0.9999988, y: 1.0000014, z: 1.0000026}
+      transformModified: 1
+    - name: viking_LPalm
+      position: {x: -0.077836916, y: 0.0000000047683715, z: 0}
+      rotation: {x: -0.6665897, y: -0.029847626, z: 0.03002438, w: 0.7442217}
+      scale: {x: 0.99997973, y: 1.000017, z: 1.0000046}
+      transformModified: 1
+    - name: viking_LDigit11 1
+      position: {x: -0.002594354, y: 0.00000013828277, z: 0.008635148}
+      rotation: {x: -0.033502053, y: 0.44322374, z: -0.060908966, w: 0.89371157}
+      scale: {x: 0.999962, y: 1.0000402, z: 0.9999982}
+      transformModified: 1
+    - name: viking_LDigit12
+      position: {x: -0.005378952, y: 0, z: 0}
+      rotation: {x: -0.0000014919212, y: -0.013997995, z: 0.0000015852223, w: 0.999902}
+      scale: {x: 0.999957, y: 1.0000832, z: 0.99995965}
+      transformModified: 1
+    - name: viking_LDigit13
+      position: {x: -0.009078407, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.0000013267512, y: -0.0089024855, z: -0.00000040879576, w: 0.9999604}
+      scale: {x: 0.99991554, y: 1.0001651, z: 0.99991995}
+      transformModified: 1
+    - name: viking_LDigit21
+      position: {x: -0.022283442, y: -0.0000000333786, z: 0.0081846425}
+      rotation: {x: -0.010241206, y: 0.11837912, z: -0.014323224, w: 0.9928124}
+      scale: {x: 0.99997425, y: 1.0000398, z: 0.99998677}
+      transformModified: 1
+    - name: viking_LDigit22
+      position: {x: -0.0058604456, y: -0.0000000047683715, z: 0}
+      rotation: {x: -0.0022977316, y: -0.004861458, z: 0.036655355, w: 0.9993135}
+      scale: {x: 0.99996823, y: 1.0000467, z: 0.9999863}
+      transformModified: 1
+    - name: viking_LDigit23
+      position: {x: -0.0056336257, y: 0.0000000023841857, z: 0}
+      rotation: {x: -0.0022231021, y: -0.025408536, z: 0.08712794, w: 0.99587065}
+      scale: {x: 0.99993706, y: 1.0000917, z: 0.9999722}
+      transformModified: 1
+    - name: viking_LDigit31
+      position: {x: -0.021850301, y: -0.0000000047683715, z: 0.001929388}
+      rotation: {x: 0.0000002980231, y: 0.09320646, z: -0.0000008735803, w: 0.9956468}
+      scale: {x: 0.9999949, y: 0.99999857, z: 1.0000074}
+      transformModified: 1
+    - name: viking_LDigit32
+      position: {x: -0.0085342, y: 0.000000009536743, z: 0}
+      rotation: {x: -0.042620573, y: -0.0037671463, z: 0.035433613, w: 0.99845576}
+      scale: {x: 0.9999864, y: 1.0000024, z: 1.0000126}
+      transformModified: 1
+    - name: viking_LDigit33
+      position: {x: -0.0066057253, y: 0, z: 0.000000009536743}
+      rotation: {x: -0.0018671593, y: 0.006873094, z: 0.100224495, w: 0.9949394}
+      scale: {x: 0.9999752, y: 1, z: 1.0000252}
+      transformModified: 1
+    - name: viking_LDigit41
+      position: {x: -0.021791423, y: -0.0020203067, z: -0.004674797}
+      rotation: {x: -0.0010672803, y: 0.055450868, z: -0.019213894, w: 0.998276}
+      scale: {x: 0.9999539, y: 1.0000398, z: 1.0000064}
+      transformModified: 1
+    - name: viking_LDigit42
+      position: {x: -0.008202812, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.032736946, y: -0.0025219042, z: 0.03172383, w: 0.9989572}
+      scale: {x: 0.99992526, y: 1.0000631, z: 1.0000125}
+      transformModified: 1
+    - name: viking_LDigit43
+      position: {x: -0.007846747, y: 0.0000000047683715, z: -0.000000009536743}
+      rotation: {x: -0.040440686, y: -0.023610255, z: 0.004254498, w: 0.99889386}
+      scale: {x: 0.9999009, y: 1.0000751, z: 1.0000247}
+      transformModified: 1
+    - name: viking_LDigit51
+      position: {x: -0.021466043, y: -0.0014297246, z: -0.009446201}
+      rotation: {x: 0.024692288, y: -0.034249734, z: 0.012789815, w: 0.9990264}
+      scale: {x: 0.9999529, y: 1.0000402, z: 1.0000075}
+      transformModified: 1
+    - name: viking_LDigit52
+      position: {x: -0.0057327007, y: 0, z: -0.000000009536743}
+      rotation: {x: -0.12586837, y: -0.0037856488, z: 0.03360936, w: 0.9914703}
+      scale: {x: 0.99993265, y: 1.0000571, z: 1.0000112}
+      transformModified: 1
+    - name: viking_LDigit53
+      position: {x: -0.006779599, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0.030762337, y: -0.003240215, z: 0.005547175, w: 0.9995061}
+      scale: {x: 0.9999018, y: 1.0000727, z: 1.0000249}
+      transformModified: 1
+    - name: viking_Neck1
+      position: {x: -0.0001541996, y: -0.000678921, z: -5.9604643e-10}
+      rotation: {x: 0.00000006880616, y: 0.000000008429086, z: -0.42063951, w: 0.90722793}
+      scale: {x: 1.0000023, y: 1.000001, z: 1.0000004}
+      transformModified: 1
+    - name: viking_Neck2
+      position: {x: -0.018854102, y: 0, z: 0}
+      rotation: {x: -0.00000003852364, y: 0.000000012674301, z: 0.37700704, w: 0.9262104}
+      scale: {x: 0.9999999, y: 0.99999964, z: 0.99999964}
+      transformModified: 1
+    - name: viking_Head
+      position: {x: -0.01745099, y: 0.0000000023841857, z: 0}
+      rotation: {x: 0.000000100638104, y: -0.0000000013025483, z: 0.06316441, w: 0.9980031}
+      scale: {x: 1.0000001, y: 1.0000011, z: 1.0000012}
+      transformModified: 1
+    - name: viking_RibcageBone001
+      position: {x: -0.017146645, y: -0.01795092, z: 0.0000000023841857}
+      rotation: {x: 0.21643956, y: 0.976296, z: 6.2315303e-10, w: 0.00000005701609}
+      scale: {x: 1.000006, y: 1.000004, z: 1.0000037}
+      transformModified: 1
+    - name: viking_RibcageBone001Bone001
+      position: {x: -0.053753383, y: 0, z: 0}
+      rotation: {x: -0.000000038407148, y: 0.000000034643094, z: -0.13052627, w: 0.9914449}
+      scale: {x: 0.9999995, y: 1.000001, z: 0.99999905}
+      transformModified: 1
+    - name: viking_RibcageBone001Bone001Bone001
+      position: {x: -0.06396654, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0.0871557, w: 0.9961947}
+      scale: {x: 1.0000021, y: 1.0000019, z: 1.000001}
+      transformModified: 1
+    - name: viking_RThigh
+      position: {x: -0.003342762, y: 0.009114289, z: -0.030607032}
+      rotation: {x: 0.06655117, y: 0.99221694, z: 0.00553003, w: -0.10509954}
+      scale: {x: 1.0000011, y: 1.0000013, z: 1.0000019}
+      transformModified: 1
+    - name: viking_RCalf
+      position: {x: -0.08598175, y: -0.0000004982948, z: -0.000000096559525}
+      rotation: {x: -0.0031250059, y: -0.08505569, z: 0.017026415, w: 0.9962259}
+      scale: {x: 0.9999999, y: 1.0000057, z: 1.000003}
+      transformModified: 1
+    - name: viking_RFoot
+      position: {x: -0.093120575, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0.0819423, y: 0.042428486, z: -0.75578666, w: 0.6482838}
+      scale: {x: 0.9999951, y: 1.0000044, z: 1.0000005}
+      transformModified: 1
+    - name: viking_RDigit11
+      position: {x: -0.04810933, y: -0.0014437103, z: -0.0000004196167}
+      rotation: {x: -0.000088430934, y: 0.043499876, z: -0.004224741, w: 0.99904454}
+      scale: {x: 0.9999982, y: 1.0000029, z: 1.0000005}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

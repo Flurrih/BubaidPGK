@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour {
 
 
 
-    private enum MenuSelected
+    public enum MenuSelected
     {
         Play,
         Settings,
@@ -22,7 +22,7 @@ public class MenuController : MonoBehaviour {
 
     public GameObject settings;
 
-    private MenuSelected selected;
+    public MenuSelected selected;
 
     private Animator animator;
     private AnimatorStateInfo animatorState;
@@ -38,6 +38,11 @@ public class MenuController : MonoBehaviour {
 
     void Update()
     {
+
+        if (Input.GetButton("Submit"))
+        {
+            Debug.Log("Submit");
+        }
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
         settingsEntered = settings.activeSelf;
         if (!settingsEntered)
@@ -61,7 +66,7 @@ public class MenuController : MonoBehaviour {
                 selected = MenuSelected.Exit;
             }
 
-            if (Input.GetButton(InputManager.gameInput.player1.Jump.ToString()) || Input.GetButton(InputManager.gameInput.player2.Jump.ToString()))
+            if (Input.GetButton(InputManager.gameInput.player1.Jump.ToString()) || Input.GetButton(InputManager.gameInput.player2.Jump.ToString()) || Input.GetButton("Submit"))
             {
 
                 if (selected == MenuSelected.Play)
@@ -93,7 +98,9 @@ public class MenuController : MonoBehaviour {
     {
         while(true)
         {
-            if (Input.GetAxis(InputManager.gameInput.player1.AxisHorizontal1.AxisName) >= 0.75f || Input.GetAxis(InputManager.gameInput.player2.AxisHorizontal1.AxisName) >= 0.75f)
+            if (Input.GetAxis(InputManager.gameInput.player1.AxisHorizontal1.AxisName) >= 0.75f || 
+                Input.GetAxis(InputManager.gameInput.player2.AxisHorizontal1.AxisName) >= 0.75f ||
+                Input.GetAxisRaw("Horizontal") > 0)
             {
                 if (!animatorState.IsName(Const.ExitAnim))
                 {
@@ -102,7 +109,9 @@ public class MenuController : MonoBehaviour {
                 }
             }
 
-            if (Input.GetAxis(InputManager.gameInput.player1.AxisHorizontal1.AxisName) <= -0.75f || Input.GetAxis(InputManager.gameInput.player2.AxisHorizontal1.AxisName) <= -0.75f)
+            if (Input.GetAxis(InputManager.gameInput.player1.AxisHorizontal1.AxisName) <= -0.75f ||
+                Input.GetAxis(InputManager.gameInput.player2.AxisHorizontal1.AxisName) <= -0.75f ||
+                Input.GetAxisRaw("Horizontal") < -0)
             {
                 if (!animatorState.IsName(Const.SettingsAnim))
                 {

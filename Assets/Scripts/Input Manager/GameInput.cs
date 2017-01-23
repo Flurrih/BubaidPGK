@@ -80,7 +80,7 @@ public class GameInput {
     {
         XmlSerializer ser = new XmlSerializer(typeof(GameInput));
 
-        FileStream fs = new FileStream("GameInput.xml", FileMode.Open);
+        FileStream fs = new FileStream("GameInput.xml", FileMode.OpenOrCreate);
 
         GameInput GI = (GameInput)ser.Deserialize(fs);
         return GI;
