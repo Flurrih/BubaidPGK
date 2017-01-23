@@ -44,8 +44,11 @@ public class HealthBarScript : MonoBehaviour {
         if (player != null)
         {
             fillAmount = MapHealth(player.GetComponent<PlayerController>().GetHealth(), 0, 100, 0, 1);
-            if (fillAmount != healthContent.fillAmount)
-                healthContent.fillAmount = Mathf.Lerp(healthContent.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
+            if (healthContent.fillAmount > fillAmount)
+            {
+                    healthContent.fillAmount -= 0.01f;
+            }
+                
         }
         else
         {
