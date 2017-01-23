@@ -23,7 +23,7 @@ public class ActiveWeaponController : MonoBehaviour {
 
     void ChangeActiveWeapon()
     {
-        if (player != null)
+        if (player != null && ball != null)
         {
             if (player.GetComponent<PlayerController>().isBallReleased == true)
             {
