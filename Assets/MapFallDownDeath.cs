@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class MapFallDownDeath : MonoBehaviour {
-
+    
 	// Use this for initialization
 	void Start () {
 	
@@ -13,7 +13,6 @@ public class MapFallDownDeath : MonoBehaviour {
         if (transform.position.y < -20)
         {
             GetComponent<PlayerController>().GotHit(100);
-            Debug.Log("d");
         }
 
 	}
