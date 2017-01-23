@@ -4624,7 +4624,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 813258cedec7161469c12530808d224d, type: 3}
   m_Controller: {fileID: 9100000, guid: 0062bed82c73a924b8cce50e263b5b83, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -4733,6 +4733,7 @@ MonoBehaviour:
   joint: {fileID: 1000012690620340}
   playersBall: {fileID: 1000011634333784}
   playersChain: {fileID: 1000011965357494}
+  anim: {fileID: 95000013050640104}
 --- !u!114 &114000012709666448
 MonoBehaviour:
   m_ObjectHideFlags: 1
