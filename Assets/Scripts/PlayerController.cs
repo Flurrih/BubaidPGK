@@ -83,12 +83,6 @@ public class PlayerController : MonoBehaviour {
         FireButton();
         playerMovement(invertMovement);
         Jump();
-
-
-        if (Input.GetButton(InputManager.gameInput.getPlayerInput(playerNumber).Reset.ToString()))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        }
     }
 
     void playerMovement(int invert)

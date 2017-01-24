@@ -1603,6 +1603,7 @@ GameObject:
   - 65: {fileID: 65000010185735342}
   - 114: {fileID: 114000012709765708}
   - 153: {fileID: 153000010992090232}
+  - 114: {fileID: 114000010035108302}
   m_Layer: 11
   m_Name: Ball
   m_TagString: Ball
@@ -4571,8 +4572,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.15}
+  m_Size: {x: 1.1, y: 2, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012949724168
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4631,6 +4632,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010035108302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013913699892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b29c528a91e549b69422ee8b60742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1000010597169288}
 --- !u!114 &114000010043070126
 MonoBehaviour:
   m_ObjectHideFlags: 1
