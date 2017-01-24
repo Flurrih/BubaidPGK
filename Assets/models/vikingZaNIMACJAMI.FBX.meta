@@ -364,7 +364,10 @@ ModelImporter:
     4300144: viking_PelvisBone004
     4300146: viking_PelvisBone005
     4300148: viking_PelvisBone006
-    7400000: Take 001
+    7400000: Run
+    7400002: Idle
+    7400004: Jump
+    7400006: Fall
     9500000: //RootNode
     11100000: //RootNode
     13700000: but prawy
@@ -440,10 +443,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Run
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 200
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -623,6 +626,582 @@ ModelImporter:
       - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001
         weight: 0
       - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001/viking_RibcageBone001Bone001Bone001
+        weight: 0
+      - path: viking_RPlatform
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: but prawy
+        weight: 0
+      - path: but prawy001
+        weight: 0
+      - path: cloth
+        weight: 0
+      - path: helm
+        weight: 0
+      - path: klamra
+        weight: 0
+      - path: lowerBody
+        weight: 0
+      - path: oko1
+        weight: 0
+      - path: oko002
+        weight: 0
+      - path: pasek
+        weight: 0
+      - path: przywieszka
+        weight: 0
+      - path: skora
+        weight: 0
+      - path: upperbody
+        weight: 0
+      - path: viking_LPlatform
+        weight: 0
+      - path: viking_Pelvis
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot/viking_LDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone002
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone003
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone004
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone005
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone006
+        weight: 0
+      - path: viking_Pelvis/viking_RThigh
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot/viking_RDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12/viking_LDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22/viking_LDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32/viking_LDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42/viking_LDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52/viking_LDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2/viking_Head
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12/viking_RDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22/viking_RDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32/viking_RDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42/viking_RDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52/viking_RDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001/viking_RibcageBone001Bone001Bone001
+        weight: 0
+      - path: viking_RIKTarget
+        weight: 0
+      - path: viking_RPlatform
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 138
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: but prawy
+        weight: 0
+      - path: but prawy001
+        weight: 0
+      - path: cloth
+        weight: 0
+      - path: helm
+        weight: 0
+      - path: klamra
+        weight: 0
+      - path: lowerBody
+        weight: 0
+      - path: oko1
+        weight: 0
+      - path: oko002
+        weight: 0
+      - path: pasek
+        weight: 0
+      - path: przywieszka
+        weight: 0
+      - path: skora
+        weight: 0
+      - path: upperbody
+        weight: 0
+      - path: viking_LPlatform
+        weight: 0
+      - path: viking_Pelvis
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot/viking_LDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone002
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone003
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone004
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone005
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone006
+        weight: 0
+      - path: viking_Pelvis/viking_RThigh
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot/viking_RDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12/viking_LDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22/viking_LDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32/viking_LDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42/viking_LDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52/viking_LDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2/viking_Head
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12/viking_RDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22/viking_RDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32/viking_RDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42/viking_RDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52/viking_RDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001/viking_RibcageBone001Bone001Bone001
+        weight: 0
+      - path: viking_RIKTarget
+        weight: 0
+      - path: viking_RPlatform
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fall
+      takeName: Take 001
+      firstFrame: 178
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: but prawy
+        weight: 0
+      - path: but prawy001
+        weight: 0
+      - path: cloth
+        weight: 0
+      - path: helm
+        weight: 0
+      - path: klamra
+        weight: 0
+      - path: lowerBody
+        weight: 0
+      - path: oko1
+        weight: 0
+      - path: oko002
+        weight: 0
+      - path: pasek
+        weight: 0
+      - path: przywieszka
+        weight: 0
+      - path: skora
+        weight: 0
+      - path: upperbody
+        weight: 0
+      - path: viking_LPlatform
+        weight: 0
+      - path: viking_Pelvis
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot
+        weight: 1
+      - path: viking_Pelvis/viking_LThigh/viking_LCalf/viking_LFoot/viking_LDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_PelvisBone002
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone003
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone004
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone005
+        weight: 0
+      - path: viking_Pelvis/viking_PelvisBone006
+        weight: 0
+      - path: viking_Pelvis/viking_RThigh
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot
+        weight: 1
+      - path: viking_Pelvis/viking_RThigh/viking_RCalf/viking_RFoot/viking_RDigit11
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit11
+          1/viking_LDigit12/viking_LDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit21/viking_LDigit22/viking_LDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit31/viking_LDigit32/viking_LDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit41/viking_LDigit42/viking_LDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_LCollarbone/viking_LUpperarm/viking_LForearm/viking_LPalm/viking_LDigit51/viking_LDigit52/viking_LDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_Neck1/viking_Neck2/viking_Head
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit11
+          1/viking_RDigit12/viking_RDigit13
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit21/viking_RDigit22/viking_RDigit23
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit31/viking_RDigit32/viking_RDigit33
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit41/viking_RDigit42/viking_RDigit43
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RCollarbone/viking_RUpperarm/viking_RForearm/viking_RPalm/viking_RDigit51/viking_RDigit52/viking_RDigit53
+        weight: 1
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001
+        weight: 0
+      - path: viking_Pelvis/viking_Spine1/viking_Spine2/viking_Spine3/viking_Spine4/viking_Ribcage/viking_RibcageBone001/viking_RibcageBone001Bone001/viking_RibcageBone001Bone001Bone001
+        weight: 0
+      - path: viking_RIKTarget
         weight: 0
       - path: viking_RPlatform
         weight: 0

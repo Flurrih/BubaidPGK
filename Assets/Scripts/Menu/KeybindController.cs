@@ -35,8 +35,6 @@ public class KeybindController : MonoBehaviour {
         Menu2
     }
 
-    public StandaloneInputModule inputModule;
-
     [SerializeField]
     private Text jumpValue1, jumpValue2,
         dashValue1, dashValue2,
@@ -70,7 +68,7 @@ public class KeybindController : MonoBehaviour {
             { 
                 OnBackClick();
             }
-        }
+        }   
     }
 
     void Init()
