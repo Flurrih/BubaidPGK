@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class GamePauseController : MonoBehaviour {
     enum ButtonState { Pressed, Released}
@@ -10,7 +12,8 @@ public class GamePauseController : MonoBehaviour {
     ButtonState buttonState;
     int x;
 
-
+    [SerializeField]
+    GameObject pause;
 
     enum ButtonHandled { Yes, No}
     ButtonHandled buttonHandled;
@@ -46,8 +49,27 @@ public class GamePauseController : MonoBehaviour {
         }
 
         if (menuState == MenuState.Open)
+        {
             Time.timeScale = 0;
+            pause.SetActive(true);
+        }
         if (menuState == MenuState.Closed)
+        {
             Time.timeScale = 1;
+            pause.SetActive(false);
+        }
+    }
+
+    public void OnContinue()
+    {
+        menuState = MenuState.Closed;
+    }
+
+    public void OnExit()
+    {
+        menuState = MenuState.Closed;
+        SceneManager.LoadSceneAsync("Menu");
     }
 }
+
+
