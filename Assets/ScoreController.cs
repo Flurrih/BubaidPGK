@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour {
 
@@ -37,6 +38,13 @@ public class ScoreController : MonoBehaviour {
 
         score.text = player2Score + " : " + player1Score;
         Debug.Log(player2Score + " : " + player1Score);
+
+        if (player2Score >= 3 || player1Score >= 3)
+        {
+            PlayerPrefs.SetInt("player1Score", 0);
+            PlayerPrefs.SetInt("player2Score", 0);
+            SceneManager.LoadSceneAsync("Menu");
+        }
     }
 
     void OnApplicationQuit()
