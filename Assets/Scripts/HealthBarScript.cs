@@ -52,7 +52,8 @@ public class HealthBarScript : MonoBehaviour {
         }
         else
         {
-            healthContent.fillAmount = MapHealth(0, 0, 100, 0, 1);
+            if(healthContent != null)
+                healthContent.fillAmount = MapHealth(0, 0, 100, 0, 1);
         }
     }
 

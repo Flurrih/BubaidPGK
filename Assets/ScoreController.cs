@@ -8,7 +8,9 @@ public class ScoreController : MonoBehaviour {
     public GameObject player1, player2;
     int player1Score=0, player2Score=0;
     Text score;
-
+    public GameObject winnerText;
+    float t;
+    public MenuAudioController menuAudio;
     void Start()
     {
         score = GetComponent<Text>();
@@ -17,6 +19,8 @@ public class ScoreController : MonoBehaviour {
             player1Score = PlayerPrefs.GetInt("player1Score");
         if (PlayerPrefs.HasKey("player2Score"))
             player2Score = PlayerPrefs.GetInt("player2Score");
+        winnerText.SetActive(false);
+        t = 2.5f;
     }
 	
 	// Update is called once per frame
@@ -41,9 +45,27 @@ public class ScoreController : MonoBehaviour {
 
         if (player2Score >= 3 || player1Score >= 3)
         {
-            PlayerPrefs.SetInt("player1Score", 0);
-            PlayerPrefs.SetInt("player2Score", 0);
-            SceneManager.LoadSceneAsync("Menu");
+            if (player1Score >= 3)
+            {
+                winnerText.GetComponentInChildren<Text>().text = "Player 1 won!";
+            }
+            if (player2Score >= 3)
+            {
+                winnerText.GetComponentInChildren<Text>().text = "Player 2 won!";
+            }
+            winnerText.SetActive(true);
+            
+            t -= Time.deltaTime;
+
+            if(t < 0)
+            {
+                player2Score = 0;
+                player1Score = 0;
+                PlayerPrefs.SetInt("player1Score", 0);
+                PlayerPrefs.SetInt("player2Score", 0);
+                SceneManager.LoadSceneAsync("Menu");
+            }
+
         }
     }
 
