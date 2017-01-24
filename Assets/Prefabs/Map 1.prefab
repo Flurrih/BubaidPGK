@@ -62,7 +62,7 @@ GameObject:
   - 136: {fileID: 136000010878972904}
   m_Layer: 0
   m_Name: beczka (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - 23: {fileID: 23000013796951214}
   m_Layer: 0
   m_Name: stone7 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - 23: {fileID: 23000013701194708}
   m_Layer: 0
   m_Name: stone5 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 4000013171018944}
   m_Layer: 0
   m_Name: Map 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - 23: {fileID: 23000011081975156}
   m_Layer: 0
   m_Name: stone5 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - 23: {fileID: 23000011665248326}
   m_Layer: 0
   m_Name: stone1 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +230,7 @@ GameObject:
   - 23: {fileID: 23000010638087864}
   m_Layer: 0
   m_Name: stone1 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,9 +245,10 @@ GameObject:
   - 4: {fileID: 4000013307091362}
   - 33: {fileID: 33000010317584564}
   - 23: {fileID: 23000013352638866}
+  - 64: {fileID: 64000010217431850}
   m_Layer: 0
   m_Name: stone5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +485,7 @@ GameObject:
   - 23: {fileID: 23000014005174952}
   m_Layer: 0
   m_Name: stone16 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,7 +593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011289435512
 GameObject:
   m_ObjectHideFlags: 1
@@ -653,7 +654,7 @@ GameObject:
   - 23: {fileID: 23000013133835318}
   m_Layer: 0
   m_Name: stone7 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,7 +842,7 @@ GameObject:
   - 23: {fileID: 23000014166354422}
   m_Layer: 0
   m_Name: stone2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -858,6 +859,22 @@ GameObject:
   - 23: {fileID: 23000013069206278}
   m_Layer: 0
   m_Name: stone5 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011734206172
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013163324270}
+  - 20: {fileID: 20000012120311954}
+  m_Layer: 0
+  m_Name: Shadowmap Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -893,7 +910,7 @@ GameObject:
   - 23: {fileID: 23000010407275566}
   m_Layer: 0
   m_Name: stone5 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +998,7 @@ GameObject:
   - 23: {fileID: 23000010023305244}
   m_Layer: 0
   m_Name: stone9 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1083,7 @@ GameObject:
   - 23: {fileID: 23000012491670672}
   m_Layer: 0
   m_Name: stone4 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1100,7 @@ GameObject:
   - 23: {fileID: 23000013064274812}
   m_Layer: 0
   m_Name: stone16 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,7 +1338,7 @@ GameObject:
   - 23: {fileID: 23000012710490590}
   m_Layer: 0
   m_Name: stone1 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1358,7 +1375,7 @@ GameObject:
   - 136: {fileID: 136000013689671392}
   m_Layer: 0
   m_Name: beczka (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1558,7 +1575,7 @@ GameObject:
   - 23: {fileID: 23000012027904060}
   m_Layer: 0
   m_Name: stone14
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1748,9 +1765,10 @@ GameObject:
   - 4: {fileID: 4000011437201716}
   - 33: {fileID: 33000013155699274}
   - 23: {fileID: 23000011828107734}
+  - 64: {fileID: 64000010390353324}
   m_Layer: 0
   m_Name: stone12
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1817,7 +1835,7 @@ GameObject:
   - 23: {fileID: 23000011777347006}
   m_Layer: 0
   m_Name: stone5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1830,6 +1848,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013427602010}
+  - 64: {fileID: 64000010755097444}
   m_Layer: 0
   m_Name: Stones
   m_TagString: Untagged
@@ -1917,7 +1936,7 @@ GameObject:
   - 23: {fileID: 23000011864998912}
   m_Layer: 0
   m_Name: stone16 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2000,7 +2019,7 @@ GameObject:
   - 23: {fileID: 23000011766235992}
   m_Layer: 0
   m_Name: stone4 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2017,7 +2036,7 @@ GameObject:
   - 23: {fileID: 23000010179874414}
   m_Layer: 0
   m_Name: stone1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2034,7 +2053,7 @@ GameObject:
   - 23: {fileID: 23000010183494868}
   m_Layer: 0
   m_Name: stone16
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2049,9 +2068,10 @@ GameObject:
   - 4: {fileID: 4000013463041162}
   - 33: {fileID: 33000012770202514}
   - 23: {fileID: 23000013839683786}
+  - 64: {fileID: 64000011959921756}
   m_Layer: 0
   m_Name: stone4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,7 +2160,7 @@ GameObject:
   - 65: {fileID: 65000013951525832}
   m_Layer: 0
   m_Name: stone5 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2240,7 +2260,7 @@ GameObject:
   - 23: {fileID: 23000011060205550}
   m_Layer: 0
   m_Name: stone7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,9 +2293,10 @@ GameObject:
   - 4: {fileID: 4000010295460084}
   - 33: {fileID: 33000010221656228}
   - 23: {fileID: 23000010572073728}
+  - 64: {fileID: 64000013307161520}
   m_Layer: 0
   m_Name: stone9
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2395,9 +2416,10 @@ GameObject:
   - 4: {fileID: 4000013796545284}
   - 33: {fileID: 33000010353982040}
   - 23: {fileID: 23000012670912346}
+  - 64: {fileID: 64000010208766332}
   m_Layer: 0
   m_Name: stone11
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2451,7 +2473,7 @@ GameObject:
   - 23: {fileID: 23000012497523642}
   m_Layer: 0
   m_Name: stone5 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2558,7 +2580,7 @@ GameObject:
   - 136: {fileID: 136000010587440638}
   m_Layer: 0
   m_Name: beczka
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3048,6 +3070,7 @@ Transform:
   - {fileID: 4000012762139546}
   - {fileID: 4000010534764782}
   - {fileID: 4000014089900554}
+  - {fileID: 4000013163324270}
   m_Father: {fileID: 4000010710895226}
   m_RootOrder: 4
 --- !u!4 &4000010964849538
@@ -3431,10 +3454,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012396194264}
-  m_LocalRotation: {x: -0.61936677, y: 0.12699053, z: 0.08228167, w: 0.77038175}
-  m_LocalPosition: {x: 3.88, y: 0.41, z: -51.46}
+  m_LocalRotation: {x: -0.60284257, y: 0.19058521, z: 0.1617907, w: 0.75768197}
+  m_LocalPosition: {x: 3.61, y: 0.59, z: -50.27}
   m_LocalScale: {x: 12, y: 12, z: 12}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -77.188, y: 24.887001, z: 3.8710003}
   m_Children:
   - {fileID: 4000011654415158}
   - {fileID: 4000011387992572}
@@ -4015,6 +4038,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013427602010}
   m_RootOrder: 8
+--- !u!4 &4000013163324270
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011734206172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: -13.947715}
+  m_LocalScale: {x: 4, y: 3.9999998, z: 3.9999998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010898351896}
+  m_RootOrder: 4
 --- !u!4 &4000013171018944
 Transform:
   m_ObjectHideFlags: 1
@@ -4656,6 +4692,40 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011148421560}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 13.947715
+  far clip plane: 14.147715
+  field of view: 78.2
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!20 &20000012120311954
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011734206172}
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
@@ -8744,6 +8814,54 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010549191188}
   m_Mesh: {fileID: 4300004, guid: 0ecfbe54d3c54d84c8cb70b759fa7834, type: 3}
+--- !u!64 &64000010208766332
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014041034416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 347a1fe79a5db8346bc69cb24a201986, type: 3}
+--- !u!64 &64000010217431850
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010458878524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 693e8e46e832cf94299761e29fcb613e, type: 3}
+--- !u!64 &64000010390353324
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013109075732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: bca0e503856912449ab27925c61b7c7c, type: 3}
+--- !u!64 &64000010755097444
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013145077276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!64 &64000011152517634
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -8768,6 +8886,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 93a74f1af8cc33545b9d1932099fa555, type: 3}
+--- !u!64 &64000011959921756
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013443319190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 983aa735dbc2c1643971aba5185ea8e7, type: 3}
 --- !u!64 &64000012885989378
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -8792,6 +8922,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: 93a74f1af8cc33545b9d1932099fa555, type: 3}
+--- !u!64 &64000013307161520
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013785793998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 6997ae67bccd1144c8fa881d9d50b946, type: 3}
 --- !u!64 &64000013673957752
 MeshCollider:
   m_ObjectHideFlags: 1
